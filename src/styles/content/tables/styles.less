@@ -1,0 +1,242 @@
+& when (@table-enabled) {
+
+  tr,
+  .table-row {
+
+    &:hover {
+
+      .table-display-on-row-hover {
+        visibility: visible;
+      }
+    }
+
+    &.inactive {
+
+      .expanding-table-primary-cell,
+      .icon-grey,
+      .status-text,
+      .table-cell-link-primary,
+      .table-cell-link-secondary,
+      .table-cell-value {
+        color: @table-cell-inactive-color;
+        text-decoration: none;
+      }
+
+      .expanding-table-primary-cell {
+
+        &.is-expandable {
+
+          &:before {
+            border-left-color: @table-cell-inactive-color;
+          }
+        }
+      }
+
+      .task-status-error,
+      .task-status-failed,
+      .text-error-state {
+        color: @danger-color;
+      }
+    }
+
+    .table-display-on-row-hover {
+      visibility: hidden;
+    }
+
+    // Because dropdown menus render at the root of the body tag, the :hover
+    // pseudoclass doesn't apply when the user's mouse enters the dropdown.
+    // This forces the button to stay visible while the dropdown menu is open.
+    .dropdown {
+
+      &.open {
+
+        .table-display-on-row-hover {
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  th {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
+
+  td {
+    // This property is necessary for table cells to respect the text-overflow
+    // property. http://stackoverflow.com/questions/9789723/css-text-overflow-in-a-table-cell
+    max-width: 0;
+    vertical-align: middle;
+  }
+
+  .table-header-title {
+    vertical-align: middle;
+  }
+
+  .table-header-help-icon {
+    margin-left: @base-spacing-unit * 0.25;
+  }
+
+  &.table-header-nowrap {
+
+    th {
+      white-space: nowrap;
+    }
+  }
+
+  .table-cell-emphasized {
+    color: @table-cell-highlight-color;
+    font-weight: 700;
+  }
+
+  .flush-left {
+    padding-left: 0;
+  }
+
+  .table-cell-link-primary,
+  .table-cell-link-secondary {
+    color: @table-cell-highlight-color;
+    text-decoration: none;
+
+    &:hover {
+      color: @table-cell-highlight-color;
+      text-decoration: underline;
+    }
+  }
+
+  .table-cell-link-primary {
+    font-weight: 700;
+  }
+
+  .table-hide-header {
+
+    thead {
+      display: none;
+    }
+  }
+
+  .table-cell-flex-box {
+    align-items: center;
+    display: flex;
+  }
+
+  .table-cell-icon {
+    flex: 0 0 auto;
+  }
+
+  .table-cell-value {
+    flex: 1 1 auto;
+    // This property is necessary for table cells to respect the text-overflow
+    // property. http://stackoverflow.com/questions/9789723/css-text-overflow-in-a-table-cell
+    line-height: normal;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  // TODO: Is there a better way to handle this?
+  .table-cell-details-secondary {
+    font-size: 0.85rem;
+    line-height: 1.16rem;
+  }
+
+  // TODO: Should this match the CNVS padding size conventions?
+  .table-cell-short {
+    padding-bottom: @table-cell-padding-bottom * 3/4;
+    padding-top: @table-cell-padding-top * 3/4;
+  }
+
+  // When VirtualList is used, the first and last rows in tbody are the
+  // spacer cells.
+  .table-virtual-list {
+
+    tr {
+
+      &:nth-last-child(2) {
+
+        td {
+          border-bottom: none;
+          border-radius: 0 0 @table-border-radius @table-border-radius;
+        }
+      }
+    }
+  }
+
+  .table-break-word {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+  .table-column-tooltip {
+    width: @icon-mini-width + @base-spacing-unit * 1/6;
+  }
+
+  .table-fixed-layout {
+    table-layout: fixed;
+  }
+
+  &.table-align {
+
+    &-top {
+
+      td {
+        vertical-align: top;
+      }
+    }
+
+    &-middle {
+
+      td {
+        vertical-align: middle;
+      }
+    }
+
+    &-bottom {
+
+      td {
+        vertical-align: bottom;
+      }
+    }
+  }
+}
+
+& when (@table-enabled) and (@layout-screen-small-enabled) {
+
+  @media (min-width: @layout-screen-small-min-width) {
+
+    .table-column-tooltip {
+      width: @icon-mini-width + @base-spacing-unit-screen-small * 1/6;
+    }
+  }
+}
+
+& when (@table-enabled) and (@layout-screen-medium-enabled) {
+
+  @media (min-width: @layout-screen-medium-min-width) {
+
+    .table-column-tooltip {
+      width: @icon-mini-width + @base-spacing-unit-screen-medium * 1/6;
+    }
+  }
+}
+
+& when (@table-enabled) and (@layout-screen-large-enabled) {
+
+  @media (min-width: @layout-screen-large-min-width) {
+
+    .table-column-tooltip {
+      width: @icon-mini-width + @base-spacing-unit-screen-large * 1/6;
+    }
+  }
+}
+
+& when (@table-enabled) and (@layout-screen-jumbo-enabled) {
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    .table-column-tooltip {
+      width: @icon-mini-width + @base-spacing-unit-screen-jumbo * 1/6;
+    }
+  }
+}

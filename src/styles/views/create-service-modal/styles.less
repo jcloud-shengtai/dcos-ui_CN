@@ -1,0 +1,233 @@
+& when (@create-services-modal-enabled) {
+
+  .create-service-modal {
+
+    &-service-picker {
+      align-items: stretch;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      &-option {
+        flex: 0 0 auto;
+
+        .panel-content {
+          justify-content: center;
+        }
+      }
+    }
+
+    &-form {
+      display: flex;
+      flex: 1 1 auto;
+
+      &-container {
+        display: flex;
+        flex: 1 0 auto;
+        flex-direction: row;
+      }
+
+      &__scrollbar-container {
+        display: flex;
+        flex: 1 0 auto;
+
+        // We need these specific flex properties to fix an IE11 bug.
+        // https://github.com/philipwalton/flexbugs#3-min-height-on-a-flex-container-wont-apply-to-its-flex-items
+        & > .gm-scrollbar-container,
+        & > .gm-prevented {
+
+          & > .gm-scroll-view {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+      }
+
+      .menu-tabbed-container {
+        flex: 1 1 auto;
+        min-width: 0;
+      }
+
+      .menu-tabbed-vertical {
+
+        &:after {
+          bottom: -@modal-full-screen-body-padding-vertical;
+          height: auto;
+          top: -@modal-full-screen-body-padding-vertical;
+        }
+      }
+    }
+
+    &-json-only {
+      display: flex;
+      flex: 1 1 auto;
+      flex-direction: column;
+
+      &-introduction {
+        flex: 0 0 auto;
+        margin-bottom: @create-services-modal-json-editor-introduction-margin-bottom;
+      }
+
+      &-editor {
+        border-radius: @create-services-modal-json-editor-border-radius;
+        overflow: hidden;
+
+        &-container {
+          flex: 1 1 auto;
+          height: 100%;
+          position: relative;
+
+          .ace_editor {
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+
+  // TODO: Remove this custom margin and rely on the FormSection component to
+  // apply margins for us. DCOS-11803
+  .artifacts-section {
+    margin-top: @base-spacing-unit * 3/4;
+  }
+}
+
+& when (@create-services-modal-enabled) and (@layout-screen-small-enabled) {
+
+  @media (min-width: @layout-screen-small-min-width) {
+
+    .create-service-modal {
+
+      &-form {
+
+        &-container {
+
+          .menu-tabbed-vertical {
+
+            &:after {
+              bottom: -@modal-full-screen-body-padding-vertical-screen-small;
+              top: -@modal-full-screen-body-padding-vertical-screen-small;
+            }
+          }
+        }
+      }
+
+      &-json-only {
+
+        &-introduction {
+          margin-bottom: @create-services-modal-json-editor-introduction-margin-bottom-screen-small;
+        }
+      }
+    }
+
+    .artifacts-section {
+      margin-top: @base-spacing-unit-screen-small * 3/4;
+    }
+  }
+}
+
+& when (@create-services-modal-enabled) and (@layout-screen-medium-enabled) {
+
+  @media (min-width: @layout-screen-medium-min-width) {
+
+    .create-service-modal {
+
+      &-form {
+
+        &-container {
+
+          .menu-tabbed-vertical {
+
+            &:after {
+              bottom: -@modal-full-screen-body-padding-vertical-screen-medium;
+              top: -@modal-full-screen-body-padding-vertical-screen-medium;
+            }
+          }
+        }
+      }
+
+      &-json-only {
+
+        &-introduction {
+          margin-bottom: @create-services-modal-json-editor-introduction-margin-bottom-screen-medium;
+        }
+      }
+    }
+
+    .artifacts-section {
+      margin-top: @base-spacing-unit-screen-medium * 3/4;
+    }
+  }
+}
+
+& when (@create-services-modal-enabled) and (@layout-screen-large-enabled) {
+
+  @media (min-width: @layout-screen-large-min-width) {
+
+    .create-service-modal {
+
+      &-form {
+
+        &-container {
+
+          .menu-tabbed-vertical {
+
+            &:after {
+              bottom: -@modal-full-screen-body-padding-vertical-screen-large;
+              top: -@modal-full-screen-body-padding-vertical-screen-large;
+            }
+          }
+        }
+      }
+
+      &-json-only {
+
+        &-introduction {
+          margin-bottom: @create-services-modal-json-editor-introduction-margin-bottom-screen-large;
+        }
+      }
+    }
+
+    .artifacts-section {
+      margin-top: @base-spacing-unit-screen-large * 3/4;
+    }
+  }
+}
+
+& when (@create-services-modal-enabled) and (@layout-screen-jumbo-enabled) {
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    .create-service-modal {
+
+      &-form {
+
+        &-container {
+
+          .menu-tabbed-vertical {
+
+            &:after {
+              bottom: -@modal-full-screen-body-padding-vertical-screen-jumbo;
+              top: -@modal-full-screen-body-padding-vertical-screen-jumbo;
+            }
+          }
+        }
+      }
+
+      &-json-only {
+
+        &-introduction {
+          margin-bottom: @create-services-modal-json-editor-introduction-margin-bottom-screen-jumbo;
+        }
+      }
+    }
+
+    .artifacts-section {
+      margin-top: @base-spacing-unit-screen-jumbo * 3/4;
+    }
+  }
+}

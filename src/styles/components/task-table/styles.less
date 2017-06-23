@@ -1,0 +1,139 @@
+& when (@task-table-enabled) {
+
+  .task-table-column {
+
+    &-host-address,
+    &-cpus,
+    &-mem,
+    &-name,
+    &-updated,
+    &-version {
+      display: none;
+    }
+
+    &-checkbox {
+      width: 30px;
+    }
+
+    &-primary {
+      width: auto;
+    }
+
+    &-name {
+      width: 80px;
+    }
+
+    &-host-address {
+      width: 120px;
+    }
+
+    &-status {
+      width: 90px;
+    }
+
+    &-health {
+      width: 70px;
+    }
+
+    &-logs {
+      width: 32px;
+    }
+
+    &-cpus {
+      width: 65px;
+    }
+
+    &-mem {
+      width: 80px;
+    }
+
+    &-updated {
+      width: 130px;
+    }
+
+    &-version {
+      overflow-wrap: break-word;
+      width: 175px;
+      word-wrap: break-word;
+    }
+
+    &-cpus,
+    &-mem {
+      text-align: right;
+    }
+  }
+}
+
+& when (@task-table-enabled) and (@layout-screen-small-enabled) {
+
+  @media (min-width: @layout-screen-small-min-width) {
+
+    .task-table-column {
+
+      &-name {
+        display: table-cell;
+
+        col& {
+          display: table-column;
+        }
+      }
+    }
+  }
+}
+
+& when (@task-table-enabled) and (@layout-screen-medium-enabled) {
+
+  @media (min-width: @layout-screen-medium-min-width) {
+
+    .task-table-column {
+
+      &-host-address {
+        display: table-cell;
+
+        col& {
+          display: table-column;
+        }
+      }
+    }
+  }
+}
+
+& when (@task-table-enabled) and (@layout-screen-large-enabled) {
+
+  @media (min-width: @layout-screen-large-min-width) {
+
+    .task-table-column {
+
+      &-cpus,
+      &-mem {
+        display: table-cell;
+
+        col& {
+          display: table-column;
+        }
+      }
+
+      &-name {
+        width: 120px;
+      }
+    }
+  }
+}
+
+& when (@task-table-enabled) and (@layout-screen-jumbo-enabled) {
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    .task-table-column {
+
+      &-updated,
+      &-version {
+        display: table-cell;
+
+        col& {
+          display: table-column;
+        }
+      }
+    }
+  }
+}

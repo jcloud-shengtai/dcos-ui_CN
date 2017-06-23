@@ -1,0 +1,221 @@
+& when (@dropdown-menu-enabled) {
+
+  .dropdown {
+
+    &.dropdown-wide {
+
+      &,
+      .dropdown-toggle {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
+  .dropdown-toggle {
+    display: inline-block;
+    white-space: nowrap;
+
+    &,
+    &.button {
+
+      &:after {
+        margin-top: @button-dropdown-caret-margin-top / -2;
+      }
+    }
+
+    &.button-split-content {
+
+      &:after {
+        display: none;
+      }
+
+      .button-split-content-wrapper {
+
+        .button-split-content-item {
+
+          &:first-child {
+            flex-grow: 1;
+          }
+        }
+
+        &:after {
+          &:extend(.button.dropdown-toggle:after all);
+          margin-top: 0;
+        }
+      }
+
+      &.button-inverse {
+
+        .button-split-content-wrapper {
+
+          &:after {
+            &:extend(.button.button-inverse.dropdown-toggle:after all);
+            margin-top: 0;
+          }
+        }
+      }
+    }
+
+    .badge-container {
+      display: inline-flex;
+    }
+
+    &.dropdown-toggle-transparent {
+      background: transparent;
+      border: none;
+      height: auto;
+      padding: 0;
+
+      &:hover {
+        background: transparent;
+      }
+    }
+
+    &.dropdown-toggle-caret-align-top {
+
+      &:after {
+        align-self: flex-start;
+        margin-top: @base-spacing-unit * 1/4;
+      }
+    }
+
+    // TODO: Remove this when CNVS doesn't use the !important tag.
+    // https://github.com/mesosphere/canvas/issues/24
+    .dropdown-toggle-label {
+      display: inline-block !important;
+    }
+
+    .dropdown-toggle-label-primary,
+    .dropdown-toggle-label-secondary {
+      display: block;
+    }
+
+    .dropdown-toggle-label-primary {
+      line-height: 1.2;
+    }
+
+    .dropdown-toggle-label-secondary {
+      color: @label-muted-color;
+      font-size: 0.9rem;
+      font-weight: 400;
+    }
+  }
+
+  .dropdown-menu {
+    // Overrides default Canvas styles.
+    float: initial;
+    left: initial;
+    z-index: @z-index-dropdown;
+  }
+
+  .dropdown-menu-list {
+
+    li {
+
+      &.clickable {
+        cursor: pointer;
+      }
+
+      &:first-child {
+
+        &.hidden {
+
+          & + li {
+
+            &.dropdown-menu-section-header {
+              margin-top: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .dropdown-menu-down-leave {
+    z-index: @z-index-dropdown;
+  }
+
+  .dropdown-menu-up-leave {
+    z-index: @z-index-dropdown;
+  }
+
+  .dropdown-menu-section-header {
+
+    li& {
+      margin-top: @dropdown-menu-header-margin-top;
+      padding: @dropdown-menu-header-padding-vertical @dropdown-menu-header-padding-horizontal;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    label {
+      color: @dropdown-menu-header-color;
+      font-size: @dropdown-menu-header-font-size;
+      margin: 0;
+    }
+  }
+
+  .dropdown-menu-item-padding-surrogate {
+    &:extend(.dropdown-menu-list li all);
+    display: block;
+  }
+}
+
+& when (@dropdown-menu-enabled) and (@layout-screen-small-enabled) {
+
+  @media (min-width: @layout-screen-small-min-width) {
+
+    .dropdown-menu-section-header {
+
+      li& {
+        margin-top: @dropdown-menu-header-margin-top-screen-small;
+        padding: @dropdown-menu-header-padding-vertical-screen-small @dropdown-menu-header-padding-horizontal-screen-small;
+      }
+    }
+  }
+}
+
+& when (@dropdown-menu-enabled) and (@layout-screen-medium-enabled) {
+
+  @media (min-width: @layout-screen-medium-min-width) {
+
+    .dropdown-menu-section-header {
+
+      li& {
+        margin-top: @dropdown-menu-header-margin-top-screen-medium;
+        padding: @dropdown-menu-header-padding-vertical-screen-medium @dropdown-menu-header-padding-horizontal-screen-medium;
+      }
+    }
+  }
+}
+
+& when (@dropdown-menu-enabled) and (@layout-screen-large-enabled) {
+
+  @media (min-width: @layout-screen-large-min-width) {
+
+    .dropdown-menu-section-header {
+
+      li& {
+        margin-top: @dropdown-menu-header-margin-top-screen-large;
+        padding: @dropdown-menu-header-padding-vertical-screen-large @dropdown-menu-header-padding-horizontal-screen-large;
+      }
+    }
+  }
+}
+
+& when (@dropdown-menu-enabled) and (@layout-screen-jumbo-enabled) {
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    .dropdown-menu-section-header {
+
+      li& {
+        margin-top: @dropdown-menu-header-margin-top-screen-jumbo;
+        padding: @dropdown-menu-header-padding-vertical-screen-jumbo @dropdown-menu-header-padding-horizontal-screen-jumbo;
+      }
+    }
+  }
+}

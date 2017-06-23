@@ -1,0 +1,149 @@
+& when (@service-table-enabled) {
+
+  .service-table {
+    table-layout: fixed;
+
+    &-column {
+
+      &-cpus,
+      &-mem,
+      &-disk {
+        display: none;
+
+        td&,
+        th& {
+          text-align: right;
+        }
+      }
+
+      &-mem,
+      &-disk {
+        width: 85px;
+      }
+
+      &-name {
+        width: auto;
+      }
+
+      &-status {
+        width: 144px;
+      }
+
+      &-cpus {
+        width: 65px;
+      }
+    }
+
+    // We don't want the status bar to increase the height of the table row
+    // when it wraps to two lines.
+    .status-bar-wrapper {
+      line-height: 1;
+    }
+
+    .status-bar-indicator {
+      margin-right: @base-spacing-unit * 1/2;
+    }
+
+    .status-bar-text {
+      white-space: nowrap;
+    }
+  }
+
+  .status-waiting-indicator {
+    margin-left: @base-spacing-unit * 1/4;
+  }
+}
+
+& when (@service-table-enabled) and (@layout-screen-small-enabled) {
+
+  @media (min-width: @layout-screen-small-min-width) {
+
+    .service-table {
+
+      &-column {
+
+        &-status {
+          width: 160px;
+        }
+      }
+    }
+
+    .status-waiting-indicator {
+      margin-left: @base-spacing-unit-screen-small * 1/4;
+    }
+  }
+}
+
+& when (@service-table-enabled) and (@layout-screen-medium-enabled) {
+
+  @media (min-width: @layout-screen-medium-min-width) {
+
+    .service-table {
+
+      &-column {
+
+        &-cpus,
+        &-mem,
+        &-disk {
+          display: table-cell;
+
+          col& {
+            display: table-column;
+          }
+        }
+
+        &-status {
+          width: 220px;
+        }
+      }
+
+      .status-bar-wrapper {
+        white-space: nowrap;
+      }
+    }
+
+    .status-waiting-indicator {
+      margin-left: @base-spacing-unit-screen-medium * 1/4;
+    }
+  }
+}
+
+& when (@service-table-enabled) and (@layout-screen-large-enabled) {
+
+  @media (min-width: @layout-screen-large-min-width) {
+
+    .service-table {
+
+      &-column {
+
+        &-status {
+          width: 264px;
+        }
+      }
+    }
+
+    .status-waiting-indicator {
+      margin-left: @base-spacing-unit-screen-large * 1/4;
+    }
+  }
+}
+
+& when (@service-table-enabled) and (@layout-screen-jumbo-enabled) {
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    .service-table {
+
+      &-column {
+
+        &-status {
+          width: 312px;
+        }
+      }
+    }
+
+    .status-waiting-indicator {
+      margin-left: @base-spacing-unit-screen-jumbo * 1/4;
+    }
+  }
+}

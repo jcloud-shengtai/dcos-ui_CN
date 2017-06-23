@@ -1,0 +1,134 @@
+& when (@modal-enabled) {
+
+  .modal {
+    // We need the extra specificity here, so we have to nest.
+    .modal-header,
+    .modal-footer {
+      flex: 0 0 auto;
+    }
+  }
+
+  .modal-body-wrapper {
+    flex: 1 1 auto;
+  }
+
+  .modal-body {
+
+    & > p {
+
+      // Remove bottom margins on the last paragraph tag when they are a direct
+      // descendent of .modal-body.
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    & > div {
+
+      &:last-child {
+
+        & > p {
+
+          // In some cases we wrap paragraph tags in divs, so we select the
+          // last descending div, and then its last descending paragraph tag.
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .modal-close {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    height: @base-spacing-unit;
+    position: absolute;
+    right: @base-spacing-unit * -1.5;
+    top: @base-spacing-unit * -1.5;
+    width: @base-spacing-unit;
+
+    &:hover,
+    &:active {
+      background: transparent;
+
+      .icon {
+        color: @white;
+      }
+    }
+
+    .icon {
+      color: fade(@white, 80%);
+    }
+  }
+
+  .modal-content-loading-indicator {
+    height: 165px;
+  }
+
+  .modal-body-offset {
+    margin: -@modal-body-padding-top -@modal-body-padding-right -@modal-body-padding-bottom -@modal-body-padding-left;
+    overflow-x: hidden;
+  }
+
+  .modal-body-padding-surrogate {
+    padding: @modal-body-padding-top @modal-body-padding-right @modal-body-padding-bottom @modal-body-padding-left;
+  }
+}
+
+& when (@layout-screen-small-enabled) {
+
+  @media (min-width: @layout-screen-small-min-width) {
+
+    .modal-body-offset {
+      margin: -@modal-body-padding-top-screen-small -@modal-body-padding-right-screen-small -@modal-body-padding-bottom-screen-small -@modal-body-padding-left-screen-small;
+    }
+
+    .modal-body-padding-surrogate {
+      padding: @modal-body-padding-top-screen-small @modal-body-padding-right-screen-small @modal-body-padding-bottom-screen-small @modal-body-padding-left-screen-small;
+    }
+  }
+}
+
+& when (@layout-screen-medium-enabled) {
+
+  @media (min-width: @layout-screen-medium-min-width) {
+
+    .modal-body-offset {
+      margin: -@modal-body-padding-top-screen-medium -@modal-body-padding-right-screen-medium -@modal-body-padding-bottom-screen-medium -@modal-body-padding-left-screen-medium;
+    }
+
+    .modal-body-padding-surrogate {
+      padding: @modal-body-padding-top-screen-medium @modal-body-padding-right-screen-medium @modal-body-padding-bottom-screen-medium @modal-body-padding-left-screen-medium;
+    }
+  }
+}
+
+& when (@layout-screen-large-enabled) {
+
+  @media (min-width: @layout-screen-large-min-width) {
+
+    .modal-body-offset {
+      margin: -@modal-body-padding-top-screen-large -@modal-body-padding-right-screen-large -@modal-body-padding-bottom-screen-large -@modal-body-padding-left-screen-large;
+    }
+
+    .modal-body-padding-surrogate {
+      padding: @modal-body-padding-top-screen-large @modal-body-padding-right-screen-large @modal-body-padding-bottom-screen-large @modal-body-padding-left-screen-large;
+    }
+  }
+}
+
+& when (@layout-screen-jumbo-enabled) {
+
+  @media (min-width: @layout-screen-jumbo-min-width) {
+
+    .modal-body-offset {
+      margin: -@modal-body-padding-top-screen-jumbo -@modal-body-padding-right-screen-jumbo -@modal-body-padding-bottom-screen-jumbo -@modal-body-padding-left-screen-jumbo;
+    }
+
+    .modal-body-padding-surrogate {
+      padding: @modal-body-padding-top-screen-jumbo @modal-body-padding-right-screen-jumbo @modal-body-padding-bottom-screen-jumbo @modal-body-padding-left-screen-jumbo;
+    }
+  }
+}

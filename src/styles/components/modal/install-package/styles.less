@@ -1,0 +1,101 @@
+& when (@install-package-modal-enabled) {
+
+  .modal {
+
+    &.modal-install-package-advanced-view {
+
+      .multiple-form-modal-body {
+        display: flex;
+      }
+
+      .modal-body-wrapper {
+        display: flex;
+        flex-basis: 677px;
+        max-height: none;
+
+        .multiple-form-modal-body {
+          display: block;
+        }
+      }
+
+      .modal-install-package-tab-form-wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+
+      .modal-install-package-body-and-header {
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: column;
+        // IE11 requires a minimum height of at least one pixel.
+        min-height: 1px;
+        position: relative;
+
+        .tab-form-wrapper {
+          display: flex;
+          flex: 1 1 auto;
+          flex-direction: column;
+        }
+
+        .modal-header {
+          flex: 0 0 auto;
+        }
+
+        .multiple-form {
+          display: flex;
+          flex: 1 1 auto;
+          height: auto;
+          // IE11 requires a minimum height of at least one pixel.
+          min-height: 1px;
+        }
+
+        .multiple-form-left-column,
+        .multiple-form-right-column {
+          height: auto;
+          // IE11 requires a minimum height of at least one pixel.
+          min-height: 1px;
+        }
+
+        .multiple-form-left-column {
+          flex: 1 1 33%;
+        }
+
+        .multiple-form-right-column {
+          flex: 1 1 67%;
+        }
+      }
+
+      .modal-footer {
+        flex: 0 0 auto;
+      }
+
+      .review-config {
+        flex: 1 1 auto;
+
+        .configuration-map {
+
+          &-section {
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+
+    &--install-package {
+
+      &__review {
+
+        &__wrapper {
+          display: flex;
+          flex: 1 1 auto;
+          flex-direction: column;
+          min-height: 1px;
+        }
+      }
+    }
+  }
+}
