@@ -1,5 +1,5 @@
 # DC/OS UI [![Velocity](http://jenkins.mesosphere.com/buildStatus/icon?job=public-dcos-ui-master)](http://jenkins.mesosphere.com/view/DCOS%20UI/job/public-dcos-ui-master/)
-fc
+fc hc
 ## Requirements
 
 Node 4.4.x and NPM 3.9.x (and above) are **required**. We suggest using [nvm](https://github.com/creationix/nvm) or [n](https://github.com/tj/n) to keep multiple Node versions on your system.
