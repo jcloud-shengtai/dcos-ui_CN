@@ -15,7 +15,7 @@ module.exports = class PodTerminationHistory extends Item {
   }
 
   getMessage() {
-    return this.get("message") || "Pod terminated";
+    return this.get("message") || "Pod 已关闭";
   }
 
   getStartedAt() {
