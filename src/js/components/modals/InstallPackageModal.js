@@ -349,13 +349,13 @@ class InstallPackageModal
         <div className="modal-footer">
           <div className="button-collection button-collection-align-horizontal-center flush-bottom">
             <button className="button" onClick={this.props.onClose}>
-              Cancel
+              取消
             </button>
             <button
               className="button button-success"
               onClick={this.handleAcceptBetaTerms}
             >
-              Accept
+              接受
             </button>
           </div>
         </div>

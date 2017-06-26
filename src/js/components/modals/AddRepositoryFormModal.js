@@ -66,7 +66,7 @@ class AddRepositoryFormModal extends mixin(StoreMixin) {
       {
         fieldType: "text",
         name: "name",
-        placeholder: "Repository Name",
+        placeholder: "库名称",
         required: true,
         showError: false,
         showLabel: false,
@@ -79,7 +79,7 @@ class AddRepositoryFormModal extends mixin(StoreMixin) {
       {
         fieldType: "text",
         name: "uri",
-        placeholder: "URL",
+        placeholder: "网址",
         required: true,
         validationErrorText: "Must be a valid url with http:// or https://",
         showLabel: false,
@@ -90,7 +90,7 @@ class AddRepositoryFormModal extends mixin(StoreMixin) {
       {
         fieldType: "number",
         name: "priority",
-        placeholder: "Priority",
+        placeholder: "优先级",
         required: false,
         min: "0",
         max: `${numberOfRepositories}`,
@@ -112,12 +112,12 @@ class AddRepositoryFormModal extends mixin(StoreMixin) {
   getButtonDefinition() {
     return [
       {
-        text: "Close",
+        text: "关闭",
         className: "button button-medium",
         isClose: true
       },
       {
-        text: "Add",
+        text: "添加",
         className: "button button-success button-medium",
         isSubmit: true
       }
@@ -148,7 +148,7 @@ class AddRepositoryFormModal extends mixin(StoreMixin) {
         disabled={state.disableButtons}
         buttonDefinition={this.getButtonDefinition()}
         modalProps={{
-          header: <ModalHeading>Add Repository</ModalHeading>,
+          header: <ModalHeading>添加存储库</ModalHeading>,
           showHeader: true
         }}
         onChange={this.resetState}

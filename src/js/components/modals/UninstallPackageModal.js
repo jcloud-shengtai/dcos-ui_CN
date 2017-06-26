@@ -133,10 +133,10 @@ class UninstallPackageModal extends mixin(StoreMixin) {
 
     return (
       <div className="text-align-center">
-        <h3 className="flush-top">Are you sure?</h3>
+        <h3 className="flush-top">您确定吗?</h3>
         {errorMessage}
         <p className={paragraphTagClasses}>
-          {`${cosmosPackage.getAppIdName()} will be uninstalled from ${Config.productName}. All tasks belonging to this package will be killed.`}
+          {`${cosmosPackage.getAppIdName()} 将会从 ${Config.productName}中卸载。 所有属于该软件包的任务将会被停止。`}
         </p>
       </div>
     );
