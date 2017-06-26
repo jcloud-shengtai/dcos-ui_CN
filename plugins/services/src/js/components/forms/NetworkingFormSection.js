@@ -89,7 +89,7 @@ class NetworkingFormSection extends mixin(StoreMixin) {
 
     const tooltipContent = (
       <span>
-        {`This host port will be accessible as an environment variable called '$PORT${index}'. `}
+        {`主机端口将会作为一个可访问的名称为 '$PORT${index}' 的环境变量.`}
         <a
           href="https://mesosphere.github.io/marathon/docs/ports.html"
           target="_blank"
@@ -108,7 +108,7 @@ class NetworkingFormSection extends mixin(StoreMixin) {
         <FieldLabel>
           <FormGroupHeading>
             <FormGroupHeadingContent primary={true}>
-              Host Port
+              主机 端口
             </FormGroupHeadingContent>
             <FormGroupHeadingContent>
               <Tooltip
@@ -159,9 +159,7 @@ class NetworkingFormSection extends mixin(StoreMixin) {
     );
     const loadBalancerTooltipContent = (
       <span>
-        {`Load balance the service internally (layer 4), and create a service
-        address. For external (layer 7) load balancing, create an external
-        load balancer and attach this service. `}
+        {`服务内置负载均衡 (layer 4), 以及创建服务地址. 若想使用外部负载均衡 (layer 7), 创建一个外部的负载均衡并且附加与该服务上. `}
         <a href={loadBalancerDocsURI} target="_blank">
           More Information
         </a>
@@ -182,7 +180,7 @@ class NetworkingFormSection extends mixin(StoreMixin) {
             />
             <FormGroupHeading>
               <FormGroupHeadingContent primary={true}>
-                Enable Load Balanced Service Address
+                开启负载均衡的服务地址
               </FormGroupHeadingContent>
               <FormGroupHeadingContent>
                 <Tooltip
@@ -253,7 +251,7 @@ class NetworkingFormSection extends mixin(StoreMixin) {
 
     const helpText = (
       <FieldHelp>
-        Load balance this service internally at {hostName}
+        该服务的内置负载均衡位于 {hostName}
       </FieldHelp>
     );
 
@@ -263,7 +261,7 @@ class NetworkingFormSection extends mixin(StoreMixin) {
           <FieldLabel>
             <FormGroupHeading>
               <FormGroupHeadingContent primary={true}>
-                Load Balanced Port
+                负载均衡端口
               </FormGroupHeadingContent>
               <FormGroupHeadingContent>
                 <Tooltip
@@ -317,7 +315,7 @@ class NetworkingFormSection extends mixin(StoreMixin) {
       <span>
         {"Most services will use TCP. "}
         <a href="https://mesosphere.github.io/marathon/docs/ports.html">
-          More information
+          更多信息
         </a>
         .
       </span>
@@ -328,7 +326,7 @@ class NetworkingFormSection extends mixin(StoreMixin) {
         <FieldLabel>
           <FormGroupHeading>
             <FormGroupHeadingContent primary={true}>
-              Protocol
+              协议
             </FormGroupHeadingContent>
             <FormGroupHeadingContent>
               <Tooltip
@@ -388,7 +386,7 @@ class NetworkingFormSection extends mixin(StoreMixin) {
     return (
       <FormGroup className="column-3" showError={Boolean(containerPortError)}>
         <FieldLabel>
-          Container Port
+          容器端口
         </FieldLabel>
         <FieldInput
           min="0"
@@ -421,7 +419,7 @@ class NetworkingFormSection extends mixin(StoreMixin) {
         <FieldLabel>
           <FormGroupHeading>
             <FormGroupHeadingContent primary={true}>
-              Port Mapping
+              端口映射
             </FormGroupHeadingContent>
           </FormGroupHeading>
         </FieldLabel>
@@ -431,7 +429,7 @@ class NetworkingFormSection extends mixin(StoreMixin) {
             name={`portDefinitions.${index}.portMapping`}
             type="checkbox"
           />
-          Enabled
+          启用
         </FieldLabel>
       </FormGroup>
     );
@@ -481,7 +479,7 @@ class NetworkingFormSection extends mixin(StoreMixin) {
                   </FormGroupHeadingContent>
                   <FormGroupHeadingContent>
                     <Tooltip
-                      content="Name your endpoint to search for it by a meaningful name, rather than the port number."
+                      content="尽可能为你的服务端点设置一个有意义的名字."
                       interactive={true}
                       maxWidth={300}
                       scrollContainer=".gm-scroll-view"
@@ -515,7 +513,7 @@ class NetworkingFormSection extends mixin(StoreMixin) {
         const name = overlay.getName();
 
         return {
-          text: `Virtual Network: ${name}`,
+          text: `虚拟网络: ${name}`,
           value: `${USER}.${name}`
         };
       })
@@ -542,13 +540,13 @@ class NetworkingFormSection extends mixin(StoreMixin) {
     // Runtime is Mesos
     if (!type || type === NONE) {
       disabledMap[BRIDGE] =
-        "BRIDGE networking is not compatible with the Mesos runtime";
+        "Mesos runtime 不兼容桥接网络";
     }
 
     // Runtime is Universal Container Runtime
     if (type === MESOS) {
       disabledMap[BRIDGE] =
-        "BRIDGE networking is not compatible with the Universal Container Runtime";
+        "Universal Container Runtime 不兼容桥接网络";
     }
 
     const tooltipContent = Object.keys(disabledMap)
@@ -563,10 +561,10 @@ class NetworkingFormSection extends mixin(StoreMixin) {
     const selections = (
       <FieldSelect name="container.docker.network" value={network}>
         <option disabled={Boolean(disabledMap[HOST])} value={HOST}>
-          Host
+          主机
         </option>
         <option disabled={Boolean(disabledMap[BRIDGE])} value={BRIDGE}>
-          Bridge
+          桥接
         </option>
         {this.getVirtualNetworks(disabledMap)}
       </FieldSelect>
@@ -604,10 +602,10 @@ class NetworkingFormSection extends mixin(StoreMixin) {
     const serviceEndpointsTooltipContent = (
       <span>
         {
-          "Service endpoints map traffic from a single VIP to multiple IP addresses and ports. "
+          "服务端点 从一个VIP映射到多个IP和端口号. "
         }
         <a href={serviceEndpointsDocsURI} target="_blank">
-          More Information
+          更多信息
         </a>
       </span>
     );
@@ -636,7 +634,7 @@ class NetworkingFormSection extends mixin(StoreMixin) {
       (isMesosRuntime || isUniversalContainerizer) &&
       (isUserNetwork || isBridgeNetwork)
     ) {
-      const tooltipMessage = `Service Endpoints are not available in the ${ContainerConstants.labelMap[type]}`;
+      const tooltipMessage = `${ContainerConstants.labelMap[type]} 上的服务端点不可用`;
 
       return (
         <Tooltip
@@ -650,7 +648,7 @@ class NetworkingFormSection extends mixin(StoreMixin) {
             {heading}
           </h3>
           <p key="service-endpoints-description">
-            DC/OS can automatically generate a Service Address to connect to each of your load balanced endpoints.
+            DC/OS 可以自动生成能够连接到负载均衡的服务地址.
           </p>
         </Tooltip>
       );
@@ -662,7 +660,7 @@ class NetworkingFormSection extends mixin(StoreMixin) {
           {heading}
         </h3>
         <p key="service-endpoints-description">
-          DC/OS can automatically generate a Service Address to connect to each of your load balanced endpoints.
+          DC/OS 可以自动生成能够连接到负载均衡端点的服务地址.
         </p>
         {this.getServiceEndpoints()}
         <FormRow key="service-endpoints-add-button">
@@ -673,7 +671,7 @@ class NetworkingFormSection extends mixin(StoreMixin) {
                 path: "portDefinitions"
               })}
             >
-              Add Service Endpoint
+              增加服务端点
             </AddButton>
           </FormGroup>
         </FormRow>
@@ -687,10 +685,10 @@ class NetworkingFormSection extends mixin(StoreMixin) {
     return (
       <div>
         <h3 className="short-bottom" key="service-endpoints-header">
-          Ports Auto Assign
+          自动分配端口
         </h3>
         <p key="service-endpoints-description">
-          DC/OS can automatically assign ports
+          DC/OS 能够自动分配端口
         </p>
         <FieldLabel matchInputHeight={true}>
           <FieldInput
@@ -698,7 +696,7 @@ class NetworkingFormSection extends mixin(StoreMixin) {
             name="portsAutoAssign"
             type="checkbox"
           />
-          Assign Host Ports Automatically
+          自动分配主机端口
         </FieldLabel>
       </div>
     );
@@ -714,7 +712,7 @@ class NetworkingFormSection extends mixin(StoreMixin) {
             name={`portDefinitions.${index}.automaticPort`}
             type="checkbox"
           />
-          Assign Automatically
+          自动分配
         </FieldLabel>
       </FormGroup>
     );
@@ -728,13 +726,13 @@ class NetworkingFormSection extends mixin(StoreMixin) {
 
     const tooltipContent = (
       <span>
-        {"Choose BRIDGE, HOST, or USER networking. Refer to the "}
+        {"选择桥接, 主机, 或者 用户网络 时. 可参考 "}
         <a
           href="https://mesosphere.github.io/marathon/docs/ports.html"
           target="_blank"
         >
-          ports documentation
-        </a> for more information.
+          端口相关文档
+        </a> 以获取更多信息.
       </span>
     );
 
@@ -751,7 +749,7 @@ class NetworkingFormSection extends mixin(StoreMixin) {
             <FieldLabel>
               <FormGroupHeading>
                 <FormGroupHeadingContent primary={true}>
-                  Network Type
+                  网络类型
                 </FormGroupHeadingContent>
                 <FormGroupHeadingContent>
                   <Tooltip

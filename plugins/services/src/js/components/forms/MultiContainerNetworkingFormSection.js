@@ -74,7 +74,7 @@ class MultiContainerNetworkingFormSection extends mixin(StoreMixin) {
         <FieldLabel>
           <FormGroupHeading>
             <FormGroupHeadingContent primary={true}>
-              Container Port
+              容器端口
             </FormGroupHeadingContent>
           </FormGroupHeading>
         </FieldLabel>
@@ -112,12 +112,12 @@ class MultiContainerNetworkingFormSection extends mixin(StoreMixin) {
 
     const tooltipContent = (
       <span>
-        {`This host port will be accessible as an environment variable called ${environmentVariableName}'. `}
+        {`该主机端口会作为一个可访问的环境变量 ${environmentVariableName}'. `}
         <a
           href="https://mesosphere.github.io/marathon/docs/ports.html"
           target="_blank"
         >
-          More information
+          更多信息
         </a>
       </span>
     );
@@ -131,7 +131,7 @@ class MultiContainerNetworkingFormSection extends mixin(StoreMixin) {
         <FieldLabel>
           <FormGroupHeading>
             <FormGroupHeadingContent primary={true}>
-              Host Port
+              主机 端口
             </FormGroupHeadingContent>
             <FormGroupHeadingContent>
               <Tooltip
@@ -164,7 +164,7 @@ class MultiContainerNetworkingFormSection extends mixin(StoreMixin) {
             name={`containers.${containerIndex}.endpoints.${index}.automaticPort`}
             type="checkbox"
           />
-          Assign Automatically
+          自动分配
         </FieldLabel>
       </FormGroup>
     ];
@@ -205,11 +205,9 @@ class MultiContainerNetworkingFormSection extends mixin(StoreMixin) {
     );
     const loadBalancerTooltipContent = (
       <span>
-        {`Load balance the service internally (layer 4), and create a service
-        address. For external (layer 7) load balancing, create an external
-        load balancer and attach this service. `}
+        {`服务内置负载均衡 (layer 4)以及服务地址. 创建一个外部负载均衡并附加到该服务上以使用外部负载均衡 (layer 7). `}
         <a href={loadBalancerDocsURI} target="_blank">
-          More Information
+          更多信息
         </a>
       </span>
     );
@@ -225,7 +223,7 @@ class MultiContainerNetworkingFormSection extends mixin(StoreMixin) {
             />
             <FormGroupHeading>
               <FormGroupHeadingContent primary={true}>
-                Enable Load Balanced Service Address
+                启用负载均衡服务地址
               </FormGroupHeadingContent>
               <FormGroupHeadingContent>
                 <Tooltip
@@ -241,7 +239,7 @@ class MultiContainerNetworkingFormSection extends mixin(StoreMixin) {
               </FormGroupHeadingContent>
             </FormGroupHeading>
             <FieldHelp>
-              Load balance this service internally at
+              该服务内部的负载均衡位于
               {" "}
               {ServiceConfigUtil.buildHostNameFromVipLabel(address)}
             </FieldHelp>
@@ -261,9 +259,9 @@ class MultiContainerNetworkingFormSection extends mixin(StoreMixin) {
 
     const assignTooltip = (
       <span>
-        {"Most services will use TCP. "}
+        {"大多数服务会使用 TCP 协议. "}
         <a href="https://mesosphere.github.io/marathon/docs/ports.html">
-          More information
+          更多信息
         </a>
         .
       </span>
@@ -274,7 +272,7 @@ class MultiContainerNetworkingFormSection extends mixin(StoreMixin) {
         <FieldLabel>
           <FormGroupHeading>
             <FormGroupHeadingContent primary={true}>
-              Protocol
+              协议
             </FormGroupHeadingContent>
             <FormGroupHeadingContent>
               <Tooltip
@@ -353,7 +351,7 @@ class MultiContainerNetworkingFormSection extends mixin(StoreMixin) {
               <FieldLabel>
                 <FormGroupHeading>
                   <FormGroupHeadingContent primary={true}>
-                    Service Endpoint Name
+                    服务端点名称
                   </FormGroupHeadingContent>
                 </FormGroupHeading>
               </FieldLabel>
@@ -389,7 +387,7 @@ class MultiContainerNetworkingFormSection extends mixin(StoreMixin) {
       return (
         <div key={index}>
           <h4 className="short-bottom">
-            <Icon id="container" size="mini" color="purple" />
+            <Icon id="container" size="mini" color="#2f81f7" />
             {` ${container.name}`}
           </h4>
           {this.getServiceContainerEndpoints(endpoints, index)}
@@ -400,7 +398,7 @@ class MultiContainerNetworkingFormSection extends mixin(StoreMixin) {
                 path: `containers.${index}.endpoints`
               })}
             >
-              Add Service Endpoint
+              增加服务端点
             </AddButton>
           </div>
         </div>
@@ -414,7 +412,7 @@ class MultiContainerNetworkingFormSection extends mixin(StoreMixin) {
         const name = overlay.getName();
 
         return {
-          text: `Virtual Network: ${name}`,
+          text: `虚拟网络: ${name}`,
           value: `${CONTAINER}.${name}`
         };
       })
@@ -446,7 +444,7 @@ class MultiContainerNetworkingFormSection extends mixin(StoreMixin) {
     return (
       <FieldSelect name="networks.0" value={network}>
         <option value={HOST}>
-          Host
+          主机
         </option>
         {this.getVirtualNetworks()}
       </FieldSelect>
@@ -461,13 +459,13 @@ class MultiContainerNetworkingFormSection extends mixin(StoreMixin) {
 
     const networkTypeTooltipContent = (
       <span>
-        {"Choose BRIDGE, HOST, or USER networking. Refer to the "}
+        {"选择桥接，主机，或用户网络时. 请参见 "}
         <a
           href="https://mesosphere.github.io/marathon/docs/ports.html"
           target="_blank"
         >
-          ports documentation
-        </a> for more information.
+          端口相关文档
+        </a> 来获取更多信息.
       </span>
     );
 
@@ -477,10 +475,10 @@ class MultiContainerNetworkingFormSection extends mixin(StoreMixin) {
     const serviceEndpointsTooltipContent = (
       <span>
         {
-          "Service endpoints map traffic from a single VIP to multiple IP addresses and ports. "
+          "服务端点从单个VIP到映射到多个IP和端口. "
         }
         <a href={serviceEndpointsDocsURI} target="_blank">
-          More Information
+          更多信息
         </a>
       </span>
     );
@@ -488,17 +486,17 @@ class MultiContainerNetworkingFormSection extends mixin(StoreMixin) {
     return (
       <div className="form flush-bottom">
         <h2 className="flush-top short-bottom">
-          Networking
+          网络
         </h2>
         <p>
-          Configure the networking for your service.
+          为您的服务配置网络信息.
         </p>
         <FormRow>
           <FormGroup className="column-6" showError={Boolean(networkError)}>
             <FieldLabel>
               <FormGroupHeading>
                 <FormGroupHeadingContent primary={true}>
-                  Network Type
+                  网络类型
                 </FormGroupHeadingContent>
                 <FormGroupHeadingContent>
                   <Tooltip
@@ -515,7 +513,7 @@ class MultiContainerNetworkingFormSection extends mixin(StoreMixin) {
             </FieldLabel>
             {this.getTypeSelections()}
             <FieldHelp>
-              The network type will be shared across all your containers.
+              网络类型会在你的所有容器中共享.
             </FieldHelp>
             <FieldError>{networkError}</FieldError>
           </FormGroup>
@@ -523,7 +521,7 @@ class MultiContainerNetworkingFormSection extends mixin(StoreMixin) {
         <h3 className="short-bottom">
           <FormGroupHeading>
             <FormGroupHeadingContent primary={true}>
-              Service Endpoints
+              服务端点
             </FormGroupHeadingContent>
             <FormGroupHeadingContent>
               <Tooltip
@@ -540,7 +538,7 @@ class MultiContainerNetworkingFormSection extends mixin(StoreMixin) {
           </FormGroupHeading>
         </h3>
         <p>
-          DC/OS can automatically generate a Service Address to connect to each of your load balanced endpoints
+          DC/OS 可以动态的生成能够连接到负载均衡端点的服务地址
         </p>
         {this.getServiceEndpoints()}
       </div>

@@ -76,7 +76,7 @@ class CreateServiceJsonOnly extends React.Component {
           path: [],
           type: SYNTAX_ERROR,
           variables: {},
-          message: "The input entered is not a valid JSON string"
+          message: "所输入的内容不是有效的json数据"
         }
       ]);
     }
@@ -94,9 +94,9 @@ class CreateServiceJsonOnly extends React.Component {
     return (
       <div className="create-service-modal-json-only container container-wide">
         <div className="create-service-modal-json-only-introduction">
-          <FieldLabel>JSON Configuration</FieldLabel>
+          <FieldLabel>JSON 配置</FieldLabel>
           <FieldHelp>
-            Use this text area to customize your configuration via JSON.
+            在此文本框内以 JSON 的方式进行配置.
           </FieldHelp>
         </div>
         <div className="create-service-modal-json-only-editor-container">

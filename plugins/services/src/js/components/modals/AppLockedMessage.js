@@ -6,22 +6,21 @@ import Pod from "../../structs/Pod";
 import ServiceTree from "../../structs/ServiceTree";
 
 const AppLockedMessage = function({ service }) {
-  let itemType = "Service";
+  let itemType = "服务";
 
   if (service instanceof Pod) {
     itemType = "Pod";
   }
 
   if (service instanceof ServiceTree) {
-    itemType = "Group";
+    itemType = "分组";
   }
 
   return (
     <h4 className="text-align-center text-danger flush-top">
       {itemType}
       {" "}
-      is currently locked by one or more deployments. Press the button
-      again to forcefully change and deploy the new configuration.
+      当前已被一个或多个部署动作锁定. 再次点击按钮将会强制全量部署配置的变动.
     </h4>
   );
 };
