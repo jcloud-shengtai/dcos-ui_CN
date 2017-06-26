@@ -129,7 +129,7 @@ class JobsTab extends mixin(StoreMixin) {
       return (
         <FilterHeadline
           onReset={this.resetFilter}
-          name="Jobs"
+          name="任务"
           currentLength={filteredJobs.length}
           totalLength={jobs.length}
         />
@@ -161,7 +161,7 @@ class JobsTab extends mixin(StoreMixin) {
       <Page>
         <Page.Header
           addButton={{
-            label: "Create a job",
+            label: "创建任务",
             onItemSelect: this.handleOpenJobFormModal
           }}
           breadcrumbs={<JobsBreadcrumbs jobID={item.id} />}

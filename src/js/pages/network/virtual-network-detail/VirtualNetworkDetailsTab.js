@@ -18,7 +18,7 @@ class VirtualNetworkDetailsTab extends React.Component {
           <ConfigurationMapSection>
             <ConfigurationMapRow>
               <ConfigurationMapLabel>
-                Name
+                名称
               </ConfigurationMapLabel>
               <ConfigurationMapValue>
                 {overlay.getName()}
@@ -26,7 +26,7 @@ class VirtualNetworkDetailsTab extends React.Component {
             </ConfigurationMapRow>
             <ConfigurationMapRow>
               <ConfigurationMapLabel>
-                IP Subnet
+                IP子网
               </ConfigurationMapLabel>
               <ConfigurationMapValue>
                 {overlay.getSubnet()}

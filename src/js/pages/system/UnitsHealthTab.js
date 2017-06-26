@@ -24,7 +24,7 @@ const UnitHealthBreadcrumbs = () => {
   const crumbs = [
     <Breadcrumb key={0} title="Components">
       <BreadcrumbTextContent>
-        <Link to="/components">Components</Link>
+        <Link to="/components">组件列表</Link>
       </BreadcrumbTextContent>
     </Breadcrumb>
   ];
@@ -204,7 +204,7 @@ class UnitsHealthTab extends mixin(StoreMixin) {
                 className="button button-primary"
                 target="_blank"
               >
-                Download Snapshot
+                下载
               </a>
             </FilterBar>
           </div>

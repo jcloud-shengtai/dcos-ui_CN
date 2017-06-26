@@ -9,7 +9,7 @@ class SystemOverviewPage extends React.Component {
 }
 
 SystemOverviewPage.routeConfig = {
-  label: "System Overview",
+  label: "系统总览",
   icon: <Icon id="cluster-inverse" size="small" family="product" />,
   matches: /^\/system-overview/
 };

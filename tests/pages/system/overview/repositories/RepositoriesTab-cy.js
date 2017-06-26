@@ -42,7 +42,7 @@ describe("Installed Packages Tab", function() {
     cy.get("@filterTextbox").type("foo_bar_baz_qux");
 
     cy.get("@tableRowCell").should(function($tableCell) {
-      expect($tableCell[0].textContent).to.equal("No data");
+      expect($tableCell[0].textContent).to.equal("无结果");
     });
   });
 
