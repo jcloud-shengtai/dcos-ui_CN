@@ -172,7 +172,7 @@ class ServiceBreadcrumbs extends React.Component {
     const { serviceID, taskID, taskName, extra } = this.props;
 
     let crumbs = [
-      <Breadcrumb key={-1} title="Services">
+      <Breadcrumb key={-1} title="服务">
         <BreadcrumbTextContent>
           <Link to="/services">服务</Link>
         </BreadcrumbTextContent>
