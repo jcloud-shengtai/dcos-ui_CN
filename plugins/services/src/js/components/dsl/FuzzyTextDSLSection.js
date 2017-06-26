@@ -65,12 +65,12 @@ class FuzzyTextDSLSection extends React.Component {
       >
 
         <FormGroup>
-          <FieldLabel>Has the words</FieldLabel>
+          <FieldLabel>包含关键字</FieldLabel>
           <FieldInput
             disabled={!enabled}
             name="text"
             onChange={this.handleTextChange}
-            placeholder="Enter words found in name"
+            placeholder="输入名称关键字"
             value={data.text}
           />
         </FormGroup>
