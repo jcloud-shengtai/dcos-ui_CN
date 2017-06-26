@@ -17,7 +17,7 @@ var ServicesPage = React.createClass({
 
   statics: {
     routeConfig: {
-      label: "Services",
+      label: "服务",
       icon: <Icon id="services-inverse" size="small" family="product" />,
       matches: /^\/services/
     }
