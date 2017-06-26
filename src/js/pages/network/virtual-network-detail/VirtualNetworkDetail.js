@@ -18,7 +18,7 @@ const NetworksDetailBreadcrumbs = ({ overlayID, overlay }) => {
   const crumbs = [
     <Breadcrumb key={0} title="Networks">
       <BreadcrumbTextContent>
-        <Link to="/networking/networks">Networks</Link>
+        <Link to="/networking/networks">网络</Link>
       </BreadcrumbTextContent>
     </Breadcrumb>
   ];
@@ -61,8 +61,8 @@ class VirtualNetworkDetail extends mixin(StoreMixin, TabsMixin) {
 
     // Virtual Network Detail Tabs
     this.tabs_tabs = {
-      "/networking/networks/:overlayName": "Tasks",
-      "/networking/networks/:overlayName/details": "Details"
+      "/networking/networks/:overlayName": "任务",
+      "/networking/networks/:overlayName/details": "详情"
     };
 
     this.store_listeners = [
@@ -153,7 +153,7 @@ class VirtualNetworkDetail extends mixin(StoreMixin, TabsMixin) {
         isActive: currentTab === "/networking/networks/:overlayName"
       },
       {
-        label: "Details",
+        label: "详情",
         callback: () => {
           this.setState({
             currentTab: "/networking/networks/:overlayName/details"

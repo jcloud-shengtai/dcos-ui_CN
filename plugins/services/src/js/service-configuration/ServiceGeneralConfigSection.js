@@ -72,15 +72,15 @@ class ServiceGeneralConfigSection extends ServiceConfigBaseSectionDisplay {
         },
         {
           key: "id",
-          label: "Service ID"
+          label: "服务 ID"
         },
         {
           key: "instances",
-          label: "Instances"
+          label: "实例"
         },
         {
           key: "container.type",
-          label: "Container Runtime",
+          label: "容器运行时环境",
           transformValue(runtime) {
             return labelMap[runtime] || labelMap[NONE];
           }
@@ -91,7 +91,7 @@ class ServiceGeneralConfigSection extends ServiceConfigBaseSectionDisplay {
         },
         {
           key: "mem",
-          label: "Memory",
+          label: "内存",
           transformValue(value) {
             if (value == null) {
               return value;
@@ -102,7 +102,7 @@ class ServiceGeneralConfigSection extends ServiceConfigBaseSectionDisplay {
         },
         {
           key: "disk",
-          label: "Disk",
+          label: "磁盘",
           transformValue(value) {
             if (value == null) {
               return value;
@@ -121,15 +121,15 @@ class ServiceGeneralConfigSection extends ServiceConfigBaseSectionDisplay {
         },
         {
           key: "backoffFactor",
-          label: "Backoff Factor"
+          label: "Backoff 因素"
         },
         {
           key: "maxLaunchDelaySeconds",
-          label: "Backoff Max Launch Delay"
+          label: "Backoff 最大启动延迟"
         },
         {
           key: "minHealthOpacity",
-          label: "Upgrade Min Health Capacity"
+          label: "升级最小健康度"
         },
         {
           key: "maxOverCapacity",
@@ -137,7 +137,7 @@ class ServiceGeneralConfigSection extends ServiceConfigBaseSectionDisplay {
         },
         {
           key: "container.docker.image",
-          label: "Container Image",
+          label: "容器镜像",
           transformValue(value, appConfig) {
             const runtime = findNestedPropertyInObject(
               appConfig,
@@ -150,7 +150,7 @@ class ServiceGeneralConfigSection extends ServiceConfigBaseSectionDisplay {
         },
         {
           key: "container.docker.privileged",
-          label: "Extended Runtime Priv.",
+          label: "运行环境扩展权限.",
           transformValue(value, appConfig) {
             const runtime = findNestedPropertyInObject(
               appConfig,
@@ -167,7 +167,7 @@ class ServiceGeneralConfigSection extends ServiceConfigBaseSectionDisplay {
         },
         {
           key: "container.docker.forcePullImage",
-          label: "Force Pull on Launch",
+          label: "启动时强制拉取",
           transformValue(value, appConfig) {
             const runtime = findNestedPropertyInObject(
               appConfig,
@@ -184,34 +184,34 @@ class ServiceGeneralConfigSection extends ServiceConfigBaseSectionDisplay {
         },
         {
           key: "cmd",
-          label: "Command",
+          label: "命令",
           type: "pre"
         },
         {
           key: "acceptedResourceRoles",
-          label: "Resource Roles",
+          label: "资源规则",
           transformValue(value = []) {
             return value.join(", ");
           }
         },
         {
           key: "dependencies",
-          label: "Dependencies",
+          label: "依赖项",
           transformValue(value = []) {
             return value.join(", ");
           }
         },
         {
           key: "executor",
-          label: "Executor"
+          label: "执行器"
         },
         {
           key: "user",
-          label: "User"
+          label: "用户"
         },
         {
           key: "args",
-          label: "Args",
+          label: "参数",
           transformValue(value = []) {
             if (!value.length) {
               return getDisplayValue(null);
@@ -226,7 +226,7 @@ class ServiceGeneralConfigSection extends ServiceConfigBaseSectionDisplay {
         },
         {
           key: "version",
-          label: "Version"
+          label: "版本"
         },
         {
           key: "fetch",

@@ -22,7 +22,7 @@ const NetworksBreadcrumbs = () => {
   const crumbs = [
     <Breadcrumb key={0} title="Networks">
       <BreadcrumbTextContent>
-        <Link to="/networking/networks">Networks</Link>
+        <Link to="/networking/networks">网络</Link>
       </BreadcrumbTextContent>
     </Breadcrumb>
   ];
@@ -163,7 +163,7 @@ class VirtualNetworksTabContent extends mixin(StoreMixin) {
 }
 
 VirtualNetworksTabContent.routeConfig = {
-  label: "Networks",
+  label: "网络",
   matches: /^\/networking\/networks/
 };
 

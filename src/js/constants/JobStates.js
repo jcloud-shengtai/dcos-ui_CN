@@ -1,35 +1,35 @@
 const JobStates = {
   INITIAL: {
     stateTypes: ["active"],
-    displayName: "Starting"
+    displayName: "启动"
   },
   STARTING: {
     stateTypes: ["active"],
-    displayName: "Starting"
+    displayName: "启动"
   },
   ACTIVE: {
     stateTypes: ["active"],
-    displayName: "Running"
+    displayName: "运行中"
   },
   FAILED: {
     stateTypes: ["completed", "failure"],
-    displayName: "Failed"
+    displayName: "执行失败"
   },
   SUCCESS: {
     stateTypes: ["success"],
-    displayName: "Success"
+    displayName: "执行成功"
   },
   COMPLETED: {
     stateTypes: ["success"],
-    displayName: "Completed"
+    displayName: "完成"
   },
   SCHEDULED: {
     stateTypes: [],
-    displayName: "Scheduled"
+    displayName: "已调度"
   },
   UNSCHEDULED: {
     stateTypes: [],
-    displayName: "Unscheduled"
+    displayName: "未调度"
   }
 };
 

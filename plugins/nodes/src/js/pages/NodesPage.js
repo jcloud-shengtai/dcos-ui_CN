@@ -9,7 +9,7 @@ class NodesPage extends React.Component {
 }
 
 NodesPage.routeConfig = {
-  label: "Nodes",
+  label: "节点",
   icon: <Icon id="servers-inverse" size="small" family="product" />,
   matches: /^\/nodes/
 };

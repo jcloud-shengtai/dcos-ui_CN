@@ -148,7 +148,7 @@ class FormModal extends React.Component {
 FormModal.defaultProps = {
   buttonDefinition: [
     {
-      text: "Cancel",
+      text: "取消",
       className: "button button-medium",
       isClose: true
     },

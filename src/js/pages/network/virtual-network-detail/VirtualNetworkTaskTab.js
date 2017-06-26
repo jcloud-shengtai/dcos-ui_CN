@@ -20,9 +20,9 @@ import VirtualNetworkUtil from "../../../utils/VirtualNetworkUtil";
 import Util from "../../../utils/Util";
 
 const headerMapping = {
-  id: "TASK",
-  ip_address: "CONTAINER IP",
-  port_mappings: "PORT MAPPINGS"
+  id: "任务",
+  ip_address: "IP地址",
+  port_mappings: "端口"
 };
 const METHODS_TO_BIND = [
   "handleSearchStringChange",
