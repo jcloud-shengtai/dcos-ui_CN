@@ -48,7 +48,7 @@ const jobsRoutes = {
       getCrumbs() {
         return [
           {
-            label: "Jobs",
+            label: "任务",
             route: { to: "/jobs" }
           }
         ];
