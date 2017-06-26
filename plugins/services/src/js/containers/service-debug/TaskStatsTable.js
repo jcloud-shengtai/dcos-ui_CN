@@ -116,12 +116,12 @@ class TaskStatsTable extends React.Component {
   }
 
   renderTime(prop, taskStats) {
-    let label = "seconds";
+    let label = "秒";
     const lifeTimeSeconds = taskStats[prop]();
     let timeValue = lifeTimeSeconds;
 
     if (lifeTimeSeconds > 3600) {
-      label = "minutes";
+      label = "分钟";
       timeValue = timeValue / 60;
     }
 

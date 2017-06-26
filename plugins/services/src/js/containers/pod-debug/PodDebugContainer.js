@@ -57,7 +57,7 @@ class PodDebugTabView extends React.Component {
     return (
       <div>
         <ConfigurationMapHeading level={2}>
-          Details
+          细节
         </ConfigurationMapHeading>
         <DeclinedOffersTable
           offers={queue.declinedOffers.offers}
@@ -74,9 +74,9 @@ class PodDebugTabView extends React.Component {
       return (
         <ConfigurationMapSection>
           <ConfigurationMapHeading>
-            Last Terminations
+            上一个终端
           </ConfigurationMapHeading>
-          <p>(No data)</p>
+          <p>(无数据)</p>
         </ConfigurationMapSection>
       );
     }
@@ -95,7 +95,7 @@ class PodDebugTabView extends React.Component {
       } else {
         headline = (
           <ConfigurationMapHeading level={2}>
-            Terminated at
+            终止于
             {" "}
             {terminatedAt.toString()}
             {" "}
@@ -112,7 +112,7 @@ class PodDebugTabView extends React.Component {
           <ConfigurationMapSection>
             <ConfigurationMapRow>
               <ConfigurationMapLabel>
-                Instance ID
+                实例 ID
               </ConfigurationMapLabel>
               <ConfigurationMapValue>
                 {item.getId()}
@@ -120,7 +120,7 @@ class PodDebugTabView extends React.Component {
             </ConfigurationMapRow>
             <ConfigurationMapRow>
               <ConfigurationMapLabel>
-                Message
+                消息
               </ConfigurationMapLabel>
               <ConfigurationMapValue>
                 {item.getMessage()}
@@ -128,7 +128,7 @@ class PodDebugTabView extends React.Component {
             </ConfigurationMapRow>
             <ConfigurationMapRow>
               <ConfigurationMapLabel>
-                Started At
+                开始于
               </ConfigurationMapLabel>
               <ConfigurationMapValue>
                 {startedAt.toString()} (<TimeAgo time={startedAt} />)
@@ -138,7 +138,7 @@ class PodDebugTabView extends React.Component {
         </ConfigurationMapSection>,
         <ConfigurationMapSection key={`container-${index}`}>
           <ConfigurationMapHeading level={3}>
-            Containers
+            容器
           </ConfigurationMapHeading>
           <PodContainerTerminationTable containers={item.getContainers()} />
         </ConfigurationMapSection>
@@ -160,11 +160,11 @@ class PodDebugTabView extends React.Component {
     return (
       <ConfigurationMapSection>
         <ConfigurationMapHeading>
-          Last Changes
+          最近修改
         </ConfigurationMapHeading>
         <ConfigurationMapRow>
           <ConfigurationMapLabel>
-            Configuration
+            配置
           </ConfigurationMapLabel>
           <ConfigurationMapValue>
             {lastUpdated.toString()} (<TimeAgo time={lastUpdated} />)
@@ -186,7 +186,7 @@ class PodDebugTabView extends React.Component {
       queue.declinedOffers.summary == null
     ) {
       introText =
-        "Offers will appear here when your service is deploying or waiting for resources.";
+        "当你的服务正在部署或等待资源时，Offers会出现在这里.";
     } else {
       const { declinedOffers: { summary } } = queue;
       const { roles: { offers = 0 } } = summary;
@@ -196,7 +196,7 @@ class PodDebugTabView extends React.Component {
       mainContent = (
         <div>
           <ConfigurationMapHeading level={2}>
-            Summary
+            概要
           </ConfigurationMapHeading>
           <RecentOffersSummary data={summary} />
         </div>
@@ -212,7 +212,7 @@ class PodDebugTabView extends React.Component {
         }}
       >
         <ConfigurationMapHeading>
-          Recent Resource Offers{offerCount}
+          最近资源 Offers{offerCount}
         </ConfigurationMapHeading>
         <p>{introText}</p>
         {mainContent}
@@ -239,9 +239,9 @@ class PodDebugTabView extends React.Component {
     return (
       <Alert>
         {
-          "DC/OS has been waiting for resources and is unable to complete this deployment for "
+          "DC/OS 正在等待资源，无法为 "
         }
-        {DateUtil.getDuration(timeWaiting, null)}{". "}
+        {DateUtil.getDuration(timeWaiting, null)}{"完成这次部署. "}
         <a className="clickable" onClick={this.handleJumpToRecentOffersClick}>
           See recent resource offers
         </a>.

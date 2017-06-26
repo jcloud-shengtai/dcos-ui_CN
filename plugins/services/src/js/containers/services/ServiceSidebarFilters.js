@@ -24,7 +24,7 @@ class ServiceSidebarFilters extends React.Component {
           filterValues={HealthTypes}
           filterLabels={HealthLabels}
           handleFilterChange={this.props.handleFilterChange}
-          title="HEALTH"
+          title="健康度"
         />
         <SidebarFilter
           countByValue={countByValue.filterStatus}
@@ -33,7 +33,7 @@ class ServiceSidebarFilters extends React.Component {
           filterValues={ServiceStatusTypes}
           filterLabels={ServiceStatusLabels}
           handleFilterChange={this.props.handleFilterChange}
-          title="STATUS"
+          title="状态"
         />
         <SidebarLabelsFilter {...props} />
         <SidebarFilter
@@ -43,7 +43,7 @@ class ServiceSidebarFilters extends React.Component {
           filterValues={ServiceOtherTypes}
           filterLabels={ServiceOtherLabels}
           handleFilterChange={this.props.handleFilterChange}
-          title="OTHER"
+          title="其他"
         />
       </div>
     );

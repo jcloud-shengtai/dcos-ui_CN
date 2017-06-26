@@ -163,9 +163,9 @@ class ServicesTable extends React.Component {
     const isSingleInstanceApp = service.getLabels()
       .MARATHON_SINGLE_INSTANCE_APP;
     const instancesCount = service.getInstancesCount();
-    let scaleText = "Scale";
+    let scaleText = "扩展";
     if (isGroup) {
-      scaleText = "Scale By";
+      scaleText = "扩展基于";
     }
 
     const dropdownItems = [
@@ -189,25 +189,25 @@ class ServicesTable extends React.Component {
           hidden: isPod || isGroup || instancesCount === 0
         }),
         id: ServiceActionItem.RESTART,
-        html: "Restart"
+        html: "重启"
       },
       {
         className: classNames({
           hidden: instancesCount === 0
         }),
         id: ServiceActionItem.SUSPEND,
-        html: "Suspend"
+        html: "暂停"
       },
       {
         className: classNames({
           hidden: isGroup || instancesCount > 0
         }),
         id: ServiceActionItem.RESUME,
-        html: "Resume"
+        html: "恢复"
       },
       {
         id: ServiceActionItem.DESTROY,
-        html: <span className="text-danger">Destroy</span>
+        html: <span className="text-danger">销毁</span>
       }
     ];
 
@@ -305,7 +305,7 @@ class ServicesTable extends React.Component {
         prop: "status",
         helpText: (
           <span>
-            {"At-a-glance overview of the global application or group state. "}
+            {"全局应用/分组状态 概览. "}
             <a href={Links.statusHelpLink} target="_blank">
               Read more
             </a>.

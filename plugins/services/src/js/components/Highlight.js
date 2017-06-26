@@ -11,8 +11,7 @@ function regExpPropType(props, propName, componentName, location) {
     var propType = typeof props[propName];
 
     return new Error(
-      `"Invalid ${location} '${propName}' of type '${propType}' supplied to ` +
-        `'${componentName}', expected 'RegExp'.`
+      `"'${componentName}' 提供的 ${location} '${propName}'  '${propType}' 类型无效 , 需要 'RegExp'.`
     );
   }
 }

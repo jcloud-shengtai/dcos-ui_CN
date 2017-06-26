@@ -6,7 +6,7 @@ import ResourceValidatorUtil from "../../utils/ResourceValidatorUtil";
 import ServiceValidatorUtil from "../../utils/ServiceValidatorUtil";
 
 const General = {
-  title: "General",
+  title: "基础信息",
   description: (
     <span>
       Configure your container service here or

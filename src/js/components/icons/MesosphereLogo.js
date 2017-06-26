@@ -20,7 +20,7 @@ module.exports = class MesosphereLogo extends React.Component {
             y2="23.55"
             gradientTransform="matrix(1 0 0 -1 0 90.4)"
           >
-            <stop offset="0" style={{ stopColor: "#9351E5" }} />
+            <stop offset="0" style={{ stopColor: "#2f81f7" }} />
             <stop offset="1" style={{ stopColor: "#EF468B" }} />
           </linearGradient>
         </defs>

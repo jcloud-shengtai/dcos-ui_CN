@@ -20,7 +20,7 @@ const EmptyServiceTree = function({ onCreateGroup, onCreateService }) {
     <AlertPanel>
       <AlertPanelHeader>No running services</AlertPanelHeader>
       <p className="tall">
-        Run a new service or create a new group to help organize your services.
+        运行一个新的服务或者创建一个分组来帮助你规划组织你的服务.
       </p>
       {footer}
     </AlertPanel>

@@ -107,7 +107,7 @@ class SearchLog extends React.Component {
 
     return (
       <span className="search-count small flush text-muted">
-        {`${watching} out of ${totalFound}`}
+        {`当前 ${watching} / 总计 ${totalFound}`}
       </span>
     );
   }

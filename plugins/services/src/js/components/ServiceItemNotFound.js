@@ -26,7 +26,7 @@ const ServiceItemNotFound = function({ message }) {
 };
 
 ServiceItemNotFound.defaultProps = {
-  message: "Not Found."
+  message: "未找到."
 };
 
 ServiceItemNotFound.propTypes = {
