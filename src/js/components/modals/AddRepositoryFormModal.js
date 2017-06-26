@@ -81,7 +81,7 @@ class AddRepositoryFormModal extends mixin(StoreMixin) {
         name: "uri",
         placeholder: "网址",
         required: true,
-        validationErrorText: "Must be a valid url with http:// or https://",
+        validationErrorText: "必须是包含http:// 或者 https:// 的合法网址。",
         showLabel: false,
         writeType: "input",
         validation: /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_+.~#?&//=]*)$/,
@@ -95,7 +95,7 @@ class AddRepositoryFormModal extends mixin(StoreMixin) {
         min: "0",
         max: `${numberOfRepositories}`,
         step: "1",
-        validationErrorText: `Must be a positive integer between 0 and ${numberOfRepositories} representing its priority. 0 is the highest and ${numberOfRepositories} denotes the lowest priority.`,
+        validationErrorText: `必须是 0 到 ${numberOfRepositories} 之间的正整数, 表示其优先级。0 表示最高优先级， ${numberOfRepositories} 表示最低优先级。`,
         showLabel: false,
         writeType: "input",
         validation(value) {

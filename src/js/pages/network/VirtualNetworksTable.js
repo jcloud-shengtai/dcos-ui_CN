@@ -6,9 +6,9 @@ import { Table } from "reactjs-components";
 import OverlayList from "../../structs/OverlayList";
 
 const headerMapping = {
-  name: "Name",
-  subnet: "IP Subnet",
-  prefix: "Agent Prefix Length"
+  name: "名称",
+  subnet: "IP子网",
+  prefix: "代理前缀长度"
 };
 
 class VirtualNetworksTable extends React.Component {

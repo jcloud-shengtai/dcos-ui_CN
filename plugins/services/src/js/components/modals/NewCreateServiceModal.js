@@ -829,7 +829,7 @@ class NewCreateServiceModal extends Component {
       servicePickerActive ||
       (this.isLocationEdit(location) && !serviceReviewActive)
     ) {
-      label = "Cancel";
+      label = "取消";
     }
 
     return [
@@ -873,7 +873,7 @@ class NewCreateServiceModal extends Component {
           header={<ModalHeading>Discard Changes?</ModalHeading>}
           open={this.state.isConfirmOpen}
           onClose={this.handleCloseConfirmModal}
-          leftButtonText="Cancel"
+          leftButtonText="取消"
           leftButtonCallback={this.handleCloseConfirmModal}
           rightButtonText="Discard"
           rightButtonClassName="button button-danger"

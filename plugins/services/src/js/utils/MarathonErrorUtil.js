@@ -57,7 +57,7 @@ const MarathonErrorUtil = {
         return [
           {
             path: [],
-            message: "An unknown error occurred (Marathon did not provide any description)",
+            message: "发生未知错误 (Marathon 没有提供任何描述)",
             type: ServiceErrorTypes.GENERIC,
             variables: {}
           }
