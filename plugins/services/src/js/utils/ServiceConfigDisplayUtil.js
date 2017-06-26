@@ -32,7 +32,7 @@ const ServiceConfigDisplayUtil = {
   getContainerNameWithIcon(container) {
     return (
       <span>
-        <Icon id="container" size="mini" color="purple" />
+        <Icon id="container" size="mini" color="#2f81f7" />
         <span>&nbsp;{container.name}</span>
       </span>
     );
@@ -61,7 +61,7 @@ const ServiceConfigDisplayUtil = {
   getSharedIconWithLabel() {
     return (
       <span>
-        <Icon id="container" size="mini" color="purple" />
+        <Icon id="container" size="mini" color="#2f81f7" />
         <em>&nbsp;Shared</em>
       </span>
     );

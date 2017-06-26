@@ -443,7 +443,7 @@ class MultiContainerHealthChecksFormSection extends Component {
             <h4 className="form-header short-bottom">
               <FormGroupHeading>
                 <FormGroupHeadingContent>
-                  <Icon id="container" size="mini" color="purple" />
+                  <Icon id="container" size="mini" color="#2f81f7" />
                 </FormGroupHeadingContent>
                 <FormGroupHeadingContent primary={true}>
                   {container.name}
