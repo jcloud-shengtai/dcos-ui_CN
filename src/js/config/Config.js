@@ -10,7 +10,7 @@ var Config = {
   cosmosAPIPrefix: "/package",
   secretsAPIPrefix: "/secrets/v1",
   delayAfterErrorCount: 5,
-  documentationURI: "http://www.jd.com/",
+  documentationURI: "http://www.jcloud.com/",
   marathonDocsURI: "https://mesosphere.github.io/marathon/docs/",
   mesosDocsURI: "https://mesos.apache.org/documentation/latest/",
   downloadsURI: "https://downloads.dcos.io",
