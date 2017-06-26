@@ -187,7 +187,7 @@ class TasksView extends mixin(SaveStateMixin) {
     return (
       <div className="button-collection flush-bottom">
         <Tooltip
-          content="Restarting tasks is not supported while the service is deploying."
+          content="服务正在部署，无法重启任务."
           suppress={!isDeploying}
           width={200}
           wrapperClassName="button-group"
@@ -199,7 +199,7 @@ class TasksView extends mixin(SaveStateMixin) {
           </button>
         </Tooltip>
         <Tooltip
-          content="Stopping a scheduler task is not supported."
+          content="不支持停止定时任务操作."
           suppress={!hasSchedulerTask}
           width={200}
           wrapText={true}

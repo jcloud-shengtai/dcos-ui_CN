@@ -398,7 +398,7 @@ class DeploymentsTab extends mixin(StoreMixin) {
           header={heading}
           onClose={this.handleRollbackCancel}
           leftButtonCallback={this.handleRollbackCancel}
-          leftButtonText="Cancel"
+          leftButtonText="取消"
           rightButtonClassName="button button-danger"
           rightButtonCallback={this.handleRollbackConfirm}
           rightButtonText="Continue Rollback"

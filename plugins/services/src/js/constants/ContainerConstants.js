@@ -5,8 +5,8 @@ module.exports = {
     NONE: "NONE"
   },
   labelMap: {
-    DOCKER: "Docker Engine",
-    MESOS: "Universal Container Runtime",
-    NONE: "Mesos Runtime"
+    DOCKER: "Docker 引擎",
+    MESOS: "Universal 容器运行时",
+    NONE: "Mesos 运行时"
   }
 };

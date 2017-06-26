@@ -287,7 +287,7 @@ class LogView extends React.Component {
         onClick={this.handleGoToBottom}
         className="button go-to-bottom-button"
       >
-        Go to bottom
+        到最末端
       </button>
     );
   }
@@ -296,7 +296,7 @@ class LogView extends React.Component {
     if (this.props.hasLoadedTop) {
       return (
         <div className="text-muted">
-          (AT BEGINNING OF FILE)
+          (已是文件开始)
         </div>
       );
     }

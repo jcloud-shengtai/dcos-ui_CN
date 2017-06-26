@@ -1,3 +1,4 @@
+
 import classNames from "classnames";
 import React from "react";
 import { Link, routerShape } from "react-router";
@@ -63,7 +64,7 @@ var NodesOverview = React.createClass({
 
   statics: {
     routeConfig: {
-      label: "Nodes",
+      label: "节点",
       icon: <Icon family="product" id="servers-inverse" />,
       matches: /^\/nodes/
     },

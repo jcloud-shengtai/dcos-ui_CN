@@ -19,7 +19,7 @@ class ServiceStatusWarning extends Component {
         DateUtil.strToMs(DeclinedOffersUtil.getTimeWaiting(item.getQueue()));
 
       return this.getTooltip(
-        `DC/OS has been waiting for resources and is unable to complete this deployment for ${DateUtil.getDuration(timeWaiting, null)}.`
+        `DC/OS 正在等待资源，当前无法完成 ${DateUtil.getDuration(timeWaiting, null)} 的部署.`
       );
     }
 
@@ -43,7 +43,7 @@ class ServiceStatusWarning extends Component {
 
     if (appsWithWarningsCount > 0) {
       return this.getTooltip(
-        `DC/OS is waiting for resources and is unable to complete the deployment of ${appsWithWarningsCount} ${StringUtil.pluralize("service", appsWithWarningsCount)} in this group.`
+        `DC/OS 正在等待资源，当前无法完成该组的 ${appsWithWarningsCount} ${StringUtil.pluralize("service", appsWithWarningsCount)} 部署.`
       );
     }
 
@@ -66,7 +66,7 @@ class ServiceStatusWarning extends Component {
   getUnableToLaunchWarning(item) {
     if (this.shouldShowUnableToLaunchWarning(item)) {
       return this.getTooltip(
-        `DC/OS has been unable to complete this deployment for ${DateUtil.getDuration(Date.now() - DateUtil.strToMs(item.getQueue().since), null)}.`
+        `DC/OS 无法完成 ${DateUtil.getDuration(Date.now() - DateUtil.strToMs(item.getQueue().since), null)} 的部署.`
       );
     }
 

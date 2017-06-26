@@ -104,25 +104,25 @@ class ServiceScaleFormModal extends React.Component {
   }
 
   getHeader() {
-    let headerText = "Service";
+    let headerText = "服务";
 
     if (this.props.service instanceof Pod) {
       headerText = "Pod";
     }
 
     if (this.props.service instanceof ServiceTree) {
-      headerText = "Group";
+      headerText = "分组";
     }
 
-    return <ModalHeading>Scale {headerText}</ModalHeading>;
+    return <ModalHeading>扩展 {headerText}</ModalHeading>;
   }
 
   getBodyText() {
-    let bodyText = "How many instances would you like to scale to?";
+    let bodyText = "您想扩展到多少个实例?";
 
     if (this.props.service instanceof ServiceTree) {
       bodyText =
-        "By which factor would you like to scale all applications within this group?";
+        "您想通过哪个因子来对该分组下的所有服务进行扩展?";
     }
 
     return (
@@ -137,12 +137,12 @@ class ServiceScaleFormModal extends React.Component {
 
     const buttonDefinition = [
       {
-        text: "Cancel",
+        text: "取消",
         className: "button button-medium",
         isClose: true
       },
       {
-        text: "Scale Service",
+        text: "扩展服务",
         className: "button button-primary button-medium",
         isSubmit: true
       }

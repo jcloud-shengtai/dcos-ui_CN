@@ -537,7 +537,7 @@ class ServicesContainer extends React.Component {
       <Page>
         <Page.Header breadcrumbs={<ServiceBreadcrumbs />} />
         <ServiceItemNotFound
-          message={`The service with the ID of "${itemId}" could not be found.`}
+          message={`无法找到 ID 为 "${itemId}" 的服务.`}
         />
       </Page>
     );

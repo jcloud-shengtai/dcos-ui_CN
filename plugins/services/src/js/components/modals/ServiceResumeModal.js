@@ -112,7 +112,7 @@ class ServiceResumeModal extends React.Component {
     return (
       <div>
         <p>
-          This service is currently suspended. Do you want to resume this service? You can change the number of instances to resume by using the field below.
+          该服务当前已被暂停. 您是否想要恢复该服务? 您可以通过指定数字来讲该服务扩展到指定个数的实例.
         </p>
         <FormRow>
           <FormGroup className="column-12 column-small-6 column-small-offset-3 flush-bottom">

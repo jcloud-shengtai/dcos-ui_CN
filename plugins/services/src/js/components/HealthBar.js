@@ -57,7 +57,7 @@ class HealthBar extends React.Component {
     );
 
     if (tasksSummary.length === 0) {
-      return "No Running Tasks";
+      return "没有正在运行的任务";
     }
 
     return tasksSummary;

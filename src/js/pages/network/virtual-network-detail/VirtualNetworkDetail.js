@@ -143,7 +143,7 @@ class VirtualNetworkDetail extends mixin(StoreMixin, TabsMixin) {
 
     const tabs = [
       {
-        label: "Tasks",
+        label: "任务列表",
         callback: () => {
           this.setState({ currentTab: "/networking/networks/:overlayName" });
           this.context.router.push(

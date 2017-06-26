@@ -10,9 +10,9 @@ module.exports = {
   summaryIntro: (
     <span>
       {
-        "When you attempt to deploy a service, DC/OS waits for offers to match the resources your service requires. If the offer does not satisfy the requirement, it is declined and DC/OS retries. "
+        "当你尝试部署服务时, DC/OS 等待 offers 来匹配你的服务所必须的资源. 如果 offer 没有满足要求, 它会降低优先级 并且 DC/OS 会重试. "
       }
-      <a href={summaryDocsURL} target="_blank">Learn more</a>.
+      <a href={summaryDocsURL} target="_blank">查看更多</a>.
     </span>
   )
 };

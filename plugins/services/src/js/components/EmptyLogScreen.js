@@ -7,7 +7,7 @@ function EmptyLogScreen({ logName }) {
   return (
     <div className="flex-grow horizontal-center vertical-center">
       <h3 className="text-align-center flush-top">
-        {`${logName} Log is Currently Empty`}
+        {`${logName} 当前日志为空`}
       </h3>
       <p className="text-align-center flush-bottom">
         Please try again later.

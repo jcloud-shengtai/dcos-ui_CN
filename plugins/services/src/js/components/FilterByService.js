@@ -66,7 +66,7 @@ var FilterByService = React.createClass({
       };
 
       if (service.get("id") === defaultId) {
-        item.selectedHtml = <span>Filter by Service</span>;
+        item.selectedHtml = <span>按照服务过滤</span>;
       }
 
       return item;

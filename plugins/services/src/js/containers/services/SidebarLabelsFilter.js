@@ -95,7 +95,7 @@ class SidebarLabelsFilters extends React.Component {
         html: (
           <div className="button-split-content-wrapper">
             <span className="button-split-content-item">
-              Filter by Label
+              根据标签过滤
             </span>
           </div>
         ),

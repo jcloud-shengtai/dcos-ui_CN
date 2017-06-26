@@ -333,7 +333,7 @@ class TaskTable extends React.Component {
     }
 
     if (!activeState || unknown) {
-      tooltipContent = "No health checks available";
+      tooltipContent = "没有可用的健康检查";
     }
 
     const failing = ["TASK_ERROR", "TASK_FAILED"].includes(state);

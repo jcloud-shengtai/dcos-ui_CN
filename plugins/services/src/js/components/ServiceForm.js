@@ -181,8 +181,7 @@ class ServiceForm extends SchemaForm {
 
           hostNetworkingDefinition = (
             <p>
-              Host ports will be dynamically assigned and mapped
-              to {portMapping}.
+              主机端口将会被动态注册并映射到{portMapping}.
             </p>
           );
         }
@@ -209,7 +208,7 @@ class ServiceForm extends SchemaForm {
           serviceAddressNetworkingDefinition = (
             <div>
               <p>
-                Clients can access your service at these Service Addresses
+                客户端可以从这些服务地址来访问你的服务
               </p>
               <ul className="list list-narrow">
                 {addresses}
@@ -290,7 +289,7 @@ class ServiceForm extends SchemaForm {
         .mapItems(function(overlay) {
           const name = overlay.getName();
 
-          return { html: `Virtual Network: ${name}`, id: name };
+          return { html: `虚拟网络: ${name}`, id: name };
         })
         .getItems();
 

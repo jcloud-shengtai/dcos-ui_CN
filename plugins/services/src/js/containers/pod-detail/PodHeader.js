@@ -31,18 +31,18 @@ class PodHeader extends React.Component {
         className: "hidden",
         id: "__MORE__",
         html: "",
-        selectedHtml: "More"
+        selectedHtml: "更多"
       },
       {
         className: classNames({
           hidden: pod.getInstancesCount() === 0
         }),
         id: PodActionItem.SUSPEND,
-        html: "Suspend"
+        html: "暂停"
       },
       {
         id: PodActionItem.DESTROY,
-        html: <span className="text-danger">Destroy</span>
+        html: <span className="text-danger">销毁</span>
       }
     ];
 
@@ -52,14 +52,14 @@ class PodHeader extends React.Component {
         key="action-button-scale"
         onClick={this.props.onScale}
       >
-        Scale
+        扩展
       </button>,
       <button
         className="button flush-bottom button-stroke"
         key="action-button-edit"
         onClick={this.props.onEdit}
       >
-        Edit
+        编辑
       </button>,
       <Dropdown
         key="actions-dropdown"

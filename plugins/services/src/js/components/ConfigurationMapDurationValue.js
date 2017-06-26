@@ -53,7 +53,7 @@ class ConfigurationMapDurationValue extends React.Component {
 }
 
 ConfigurationMapDurationValue.defaultProps = {
-  defaultValue: <em>Not Configured</em>,
+  defaultValue: <em>未配置</em>,
   multiplicants: MULTIPLICANTS,
   units: "ms",
   value: 0
