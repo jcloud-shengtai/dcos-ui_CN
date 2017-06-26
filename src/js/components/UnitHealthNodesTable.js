@@ -32,7 +32,7 @@ class UnitHealthNodesTable extends React.Component {
     const classNameFn = ResourceTableUtil.getClassName;
     const headings = ResourceTableUtil.renderHeading({
       health: "状态",
-      host_ip: "结点ip",
+      host_ip: "节点",
       role: "角色"
     });
 

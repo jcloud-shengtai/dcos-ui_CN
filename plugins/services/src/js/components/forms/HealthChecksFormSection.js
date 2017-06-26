@@ -81,7 +81,7 @@ class HealthChecksFormSection extends Component {
     return (
       <AdvancedSection>
         <AdvancedSectionLabel>
-          Advanced Health Check Settings
+          健康度检查高级设置
         </AdvancedSectionLabel>
         <AdvancedSectionContent>
           <FormRow>
@@ -123,7 +123,7 @@ class HealthChecksFormSection extends Component {
               <FieldLabel>
                 <FormGroupHeading>
                   <FormGroupHeadingContent primary={true}>
-                    Interval (s)
+                    间隔 (s)
                   </FormGroupHeadingContent>
                   <FormGroupHeadingContent>
                     <Tooltip
@@ -154,7 +154,7 @@ class HealthChecksFormSection extends Component {
               <FieldLabel>
                 <FormGroupHeading>
                   <FormGroupHeadingContent primary={true}>
-                    Timeout (s)
+                    超时 (s)
                   </FormGroupHeadingContent>
                   <FormGroupHeadingContent>
                     <Tooltip
@@ -185,7 +185,7 @@ class HealthChecksFormSection extends Component {
               <FieldLabel>
                 <FormGroupHeading>
                   <FormGroupHeadingContent primary={true}>
-                    Max Failures
+                    最大失败次数
                   </FormGroupHeadingContent>
                   <FormGroupHeadingContent>
                     <Tooltip
@@ -231,7 +231,7 @@ class HealthChecksFormSection extends Component {
           <FieldLabel>
             <FormGroupHeading>
               <FormGroupHeadingContent primary={true}>
-                Command
+                命令
               </FormGroupHeadingContent>
             </FormGroupHeading>
           </FieldLabel>
@@ -265,12 +265,11 @@ class HealthChecksFormSection extends Component {
     const errors = errorsLens.at(key, {}).get(this.props.errors);
 
     const endpointHelpText = (
-      <span>Select a service endpoint that you configured in Networking.</span>
+      <span>选择一个您在网络中配置好的服务端点.</span>
     );
     const pathHelpText = (
       <span>
-        Enter a path that is reachable in your service and where you expect
-        a response code between 200 and 399.
+        输入一个可以访问到你的服务的地址以及期望的响应代码（200-399）.
       </span>
     );
 
@@ -280,7 +279,7 @@ class HealthChecksFormSection extends Component {
           <FieldLabel>
             <FormGroupHeading>
               <FormGroupHeadingContent primary={true}>
-                Service Endpoint
+                服务端点
               </FormGroupHeadingContent>
               <FormGroupHeadingContent>
                 <Tooltip
@@ -308,7 +307,7 @@ class HealthChecksFormSection extends Component {
           <FieldLabel>
             <FormGroupHeading>
               <FormGroupHeadingContent primary={true}>
-                Path
+                路径
               </FormGroupHeadingContent>
               <FormGroupHeadingContent>
                 <Tooltip
@@ -340,7 +339,7 @@ class HealthChecksFormSection extends Component {
               type="checkbox"
               value="HTTPS"
             />
-            Make HTTPS
+            试用HTTPS
           </FieldLabel>
           <FieldError>{errors.protocol}</FieldError>
         </FormGroup>
@@ -376,12 +375,12 @@ class HealthChecksFormSection extends Component {
 
       const tooltipContent = (
         <span>
-          {"You have several protocol options. "}
+          {"多种协议供您选择. "}
           <a
             href="https://mesosphere.github.io/marathon/docs/health-checks.html"
             target="_blank"
           >
-            More Information
+            更多信息
           </a>.
         </span>
       );
@@ -402,7 +401,7 @@ class HealthChecksFormSection extends Component {
               <FieldLabel>
                 <FormGroupHeading>
                   <FormGroupHeadingContent primary={true}>
-                    Protocol
+                    协议
                   </FormGroupHeadingContent>
                   <FormGroupHeadingContent>
                     <Tooltip
@@ -425,7 +424,7 @@ class HealthChecksFormSection extends Component {
                     healthCheck.protocol.replace(MESOS_HTTPS, MESOS_HTTP)
                 }
               >
-                <option value="">Select Protocol</option>
+                <option value="">选择协议</option>
                 <option value={COMMAND}>Command</option>
                 <option value={MESOS_HTTP}>HTTP</option>
               </FieldSelect>
@@ -444,14 +443,12 @@ class HealthChecksFormSection extends Component {
     const { data } = this.props;
     const tooltipContent = (
       <span>
-        {`A health check passes if (1) its HTTP response code is between 200
-        and 399 inclusive, and (2) its response is received within the
-        timeoutSeconds period. `}
+        {`健康度检查在满足以下条件时通过 (1) 响应码在 200 到 399 之间, (2) 在超时前返回全部响应内容. `}
         <a
           href="https://mesosphere.github.io/marathon/docs/health-checks.html"
           target="_blank"
         >
-          More Information
+          更多信息
         </a>.
       </span>
     );
@@ -461,7 +458,7 @@ class HealthChecksFormSection extends Component {
         <h2 className="flush-top short-bottom">
           <FormGroupHeading>
             <FormGroupHeadingContent primary={true}>
-              Health Checks
+              健康度检查
             </FormGroupHeadingContent>
             <FormGroupHeadingContent>
               <Tooltip

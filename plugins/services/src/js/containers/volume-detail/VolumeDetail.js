@@ -50,7 +50,7 @@ class VolumeDetail extends React.Component {
     const volumeId = volume.getId();
 
     const extraCrumbs = [
-      <Breadcrumb key={-1} title="Services">
+      <Breadcrumb key={-1} title="服务">
         <BreadcrumbTextContent>
           <Link
             to={`/services/overview/${encodedServiceId}/volumes/${volumeId}`}

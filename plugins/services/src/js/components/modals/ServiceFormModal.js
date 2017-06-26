@@ -363,8 +363,8 @@ class ServiceFormModal extends React.Component {
       return (
         <CollapsibleErrorMessage
           className="error-for-modal"
-          message={`App is currently locked by one or more deployments.
-            Press the button again to forcefully change and deploy the new configuration.`}
+          message={`应用当前已被一个或多个部署锁定.
+            重新点击按钮来强制全量部署新的配置更改.`}
         />
       );
     }
@@ -380,10 +380,10 @@ class ServiceFormModal extends React.Component {
 
   getSubmitText() {
     if (this.props.isEdit) {
-      return "Deploy Changes";
+      return "部署更改";
     }
 
-    return "Deploy";
+    return "部署";
   }
 
   getFooter() {

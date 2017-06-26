@@ -9,7 +9,7 @@ const ServiceItemNotFound = function({ message }) {
   const footer = (
     <div className="button-collection flush-bottom">
       <Link to="/services" className="button button-stroke">
-        View Services
+        查看服务
       </Link>
     </div>
   );
