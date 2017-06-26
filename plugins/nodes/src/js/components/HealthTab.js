@@ -140,7 +140,7 @@ class HealthTab extends React.Component {
         <FilterHeadline
           currentLength={visibleData.length}
           isFiltering={healthFilter !== "all" || searchString !== ""}
-          name={"Health Check"}
+          name={"节点状态"}
           onReset={this.resetFilter}
           totalLength={units.getItems().length}
         />
