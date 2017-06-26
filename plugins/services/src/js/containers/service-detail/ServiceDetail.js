@@ -86,7 +86,7 @@ class ServiceDetail extends mixin(TabsMixin) {
     // Add the Volumes tab if it isn't already there and the service has
     // at least one volume.
     if (this.tabs_tabs.volumes == null && this.hasVolumes()) {
-      this.tabs_tabs.volumes = "Volumes";
+      this.tabs_tabs.volumes = "卷";
       this.forceUpdate();
     }
   }

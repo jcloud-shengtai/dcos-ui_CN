@@ -50,7 +50,7 @@ class VolumesFormSection extends Component {
           href={MetadataStore.buildDocsURI("/usage/storage/persistent-volume/")}
           target="_blank"
         >
-          More information
+          更多信息
         </a>.
       </span>
     );
@@ -191,7 +191,7 @@ class VolumesFormSection extends Component {
 
     return (
       <option value="HOST">
-        Host Volume
+        主机卷
 
       </option>
     );
@@ -369,7 +369,7 @@ class VolumesFormSection extends Component {
 
     const tooltipContent = (
       <span>
-        {"DC/OS offers several storage options. "}
+        {"DC/OS 提供了多种存储选项. "}
         <a href={MetadataStore.buildDocsURI("/usage/storage/")} target="_blank">
           更多信息
         </a>.
@@ -408,7 +408,7 @@ class VolumesFormSection extends Component {
         </h3>
         <p>
           {
-            "Choose a local persistent volume if you need quick access to stored data. "
+            "如果需要快速访问存储的数据，请选择本地持久卷. "
           }
           <a
             href={MetadataStore.buildDocsURI(

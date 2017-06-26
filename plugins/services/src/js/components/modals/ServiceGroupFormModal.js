@@ -53,7 +53,7 @@ class ServiceGroupFormModal extends React.Component {
       {
         fieldType: "text",
         name: "id",
-        placeholder: "Group name",
+        placeholder: "分组名称",
         required: true,
         showLabel: false,
         writeType: "input",
@@ -87,7 +87,7 @@ class ServiceGroupFormModal extends React.Component {
         buttonDefinition={buttonDefinition}
         disabled={isPending}
         modalProps={{
-          header: <ModalHeading>Create Group</ModalHeading>,
+          header: <ModalHeading>创建分组</ModalHeading>,
           showHeader: true
         }}
         onClose={onClose}
@@ -97,8 +97,10 @@ class ServiceGroupFormModal extends React.Component {
         definition={this.getNewGroupFormDefinition()}
       >
         <p className="text-align-center flush-top">
-          {"Enter a path for the new group under "}
+          {"为新的分组指定一个以开始 "}
           <span className="emphasize">{parentGroupId}</span>
+          {" 的名称 "}
+
         </p>
         {this.getErrorMessage()}
       </FormModal>

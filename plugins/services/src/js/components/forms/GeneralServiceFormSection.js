@@ -53,7 +53,7 @@ const METHODS_TO_BIND = [
 const containerRuntimes = {
   [DOCKER]: {
     label: <span>{labelMap[DOCKER]}</span>,
-    helpText: "Docker’s container runtime. 不支持多容器(Pods) 或 GPU 资源."
+    helpText: "Docker’s 容器. 不支持多容器(Pods) 或 GPU 资源."
   },
   [NONE]: {
     label: <span>{labelMap[NONE]}</span>,
@@ -266,7 +266,7 @@ class GeneralServiceFormSection extends Component {
         <h3 className="short-bottom">
           <FormGroupHeading>
             <FormGroupHeadingContent primary={true}>
-              Placement Constraints
+              Placement 约束
             </FormGroupHeadingContent>
             <FormGroupHeadingContent>
               <Tooltip
@@ -294,7 +294,7 @@ class GeneralServiceFormSection extends Component {
                 path: "constraints"
               })}
             >
-              Add Placement Constraint
+              添加 Placement 约束
             </AddButton>
           </FormGroup>
         </FormRow>
@@ -346,21 +346,21 @@ class GeneralServiceFormSection extends Component {
 
       if (index === 0) {
         fieldLabel = placementConstraintLabel(
-          "Field",
-          "If you enter `hostname`, the constraint will map to the agent node hostname. If you do not enter an agent node hostname, the field will be treated as a Mesos agent node attribute, which allows you to tag an agent node.",
+          "字段",
+          "如果你输入 `hostname`, 约束将会映射到 代理节点 hostname上. 如果你没有输入一个hostname的代理节点, 相关字段就会被当做一个 Mesos 代理节点的属性, 以允许您标记代理节点.",
           { isRequired: true }
         );
         operatorLabel = placementConstraintLabel(
           "Operator",
-          "Operators specify where your app will run.",
+          "Operators制定了你的应用可以在哪里运行.",
           { isRequired: true }
         );
       }
       if (index === 0 && !hideValueColumn) {
         valueLabel = placementConstraintLabel(
           "Value",
-          "Values allow you to further specify your constraint.",
-          { linkText: "Learn more", isRequired: hasOneRequiredValue }
+          "Values 允许您在将来指定您的约束.",
+          { linkText: "了解更多", isRequired: hasOneRequiredValue }
         );
       }
 
@@ -375,7 +375,7 @@ class GeneralServiceFormSection extends Component {
             <FieldInput
               name={`constraints.${index}.fieldName`}
               type="text"
-              placeholer="hostname"
+              placeholer="主机名"
               value={constraint.fieldName}
             />
             <FieldError>{fieldNameError}</FieldError>
@@ -414,7 +414,7 @@ class GeneralServiceFormSection extends Component {
             <FieldHelp
               className={{ hidden: valueIsRequired || valueIsRequiredEmpty }}
             >
-              This field is optional
+              这个字段是可选的
             </FieldHelp>
             <FieldError className={{ hidden: hideValueColumn }}>
               {valueError}
@@ -444,13 +444,13 @@ class GeneralServiceFormSection extends Component {
     const runtimeTooltipContent = (
       <span>
         {
-          "You can run Docker containers with both container runtimes. The Universal Container Runtime is better supported in DC/OS. "
+          "两种容器运行时环境都可以运行docker容器. DC/OS对Universal 容器 有着更好的支持 . "
         }
         <a
           href={MetadataStore.buildDocsURI("/usage/containerizers/")}
           target="_blank"
         >
-          More information
+          更多信息
         </a>.
       </span>
     );
@@ -460,7 +460,7 @@ class GeneralServiceFormSection extends Component {
         <h3 className="short-bottom">
           <FormGroupHeading>
             <FormGroupHeadingContent primary={true}>
-              Container Runtime
+              容器运行时
             </FormGroupHeadingContent>
             <FormGroupHeadingContent>
               <Tooltip
@@ -476,8 +476,7 @@ class GeneralServiceFormSection extends Component {
           </FormGroupHeading>
         </h3>
         <p>
-          The container runtime is responsible for running your service. We
-          support the Mesos and Docker containerizers.
+          容器运行时环境可以运行您的服务. 我们同时支持Mesos容器和Docker容器.
         </p>
         <FormGroup showError={Boolean(typeErrors)}>
           {this.getRuntimeSelections(data)}
@@ -501,7 +500,7 @@ class GeneralServiceFormSection extends Component {
     if (!isEmpty(gpus) && gpus !== 0) {
       isDisabled[DOCKER] = true;
       disabledTooltipContent =
-        "Docker Engine does not support GPU resources, please select Universal Container Runtime if you want to use GPU resources.";
+        "Docker 引擎不支持 GPU 资源, 如果您想使用 GPU 资源，请选择 Universal.";
     }
 
     return Object.keys(containerRuntimes).map((runtimeName, index) => {
@@ -559,20 +558,20 @@ class GeneralServiceFormSection extends Component {
     const { data, errors } = this.props;
     const initialIsExpanded = this.shouldShowAdvancedOptions();
     const title = pluralize(
-      "Service",
+      "服务",
       findNestedPropertyInObject(data, "containers.length") || 1
     );
 
     const idTooltipContent = (
       <span>
         {
-          "Include the path to your service, if applicable. E.g. /dev/tools/my-service. "
+          "如果适用，请将路径包含于您的服务，例如 /dev/tools/my-service. "
         }
         <a
           href="https://mesosphere.github.io/marathon/docs/application-groups.html"
           target="_blank"
         >
-          More information
+          更多信息
         </a>.
       </span>
     );
@@ -583,7 +582,7 @@ class GeneralServiceFormSection extends Component {
           {title}
         </h2>
         <p>
-          Configure your service below. Start by giving your service an ID.
+          配置您的下列服务. 从指定一个ID开始.
         </p>
 
         <FormRow>
@@ -591,7 +590,7 @@ class GeneralServiceFormSection extends Component {
             <FieldLabel>
               <FormGroupHeading required={true}>
                 <FormGroupHeadingContent primary={true}>
-                  Service ID
+                  服务 ID
                 </FormGroupHeadingContent>
                 <FormGroupHeadingContent>
                   <Tooltip
@@ -608,7 +607,7 @@ class GeneralServiceFormSection extends Component {
             </FieldLabel>
             <FieldInput name="id" type="text" value={data.id} />
             <FieldHelp>
-              Give your service a unique name within the cluster, e.g. my-service.
+              给您的服务命名一个唯一的名称, e.g. my-service.
             </FieldHelp>
             <FieldError>{errors.id}</FieldError>
           </FormGroup>
@@ -617,7 +616,7 @@ class GeneralServiceFormSection extends Component {
             <FieldLabel>
               <FormGroupHeading>
                 <FormGroupHeadingContent primary={true}>
-                  Instances
+                  实例
                 </FormGroupHeadingContent>
               </FormGroupHeading>
             </FieldLabel>
@@ -649,29 +648,29 @@ class GeneralServiceFormSection extends Component {
 
         <Confirm
           closeByBackdropClick={true}
-          header={<ModalHeading>Switching to a pod service</ModalHeading>}
+          header={<ModalHeading>转换为一个服务包</ModalHeading>}
           open={this.state.convertToPodModalOpen}
           onClose={this.handleCloseConvertToPodModal}
-          leftButtonText="Close"
+          leftButtonText="关闭"
           leftButtonCallback={this.handleCloseConvertToPodModal}
-          rightButtonText="Continue"
+          rightButtonText="继续"
           rightButtonClassName="button button-success"
           rightButtonCallback={this.handleConvertToPod}
           showHeader={true}
         >
           <p>
             {
-              "Adding another container will automatically put multiple containers into a Pod definition. Your containers will be co-located on the same node and scale together. "
+              "添加另一个容器会自动的将多个容器转换成一个Pod. 你的容器会被分配在相同节点，并一起应用扩展操作. "
             }
             <a
               href={MetadataStore.buildDocsURI("/usage/pods/")}
               target="_blank"
             >
-              More information
+              更多信息
             </a>.
           </p>
           <p>
-            Are you sure you would like to continue and create a Pod? Any data you have already entered will be lost.
+            确定继续创建Pod? 任何您已输入但未保存的信息将会丢失.
           </p>
         </Confirm>
       </div>
