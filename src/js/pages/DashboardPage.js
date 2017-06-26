@@ -40,7 +40,7 @@ function getMesosState() {
 
 const DashboardBreadcrumbs = () => {
   const crumbs = [
-    <Breadcrumb key={0} title="Dashboard">
+    <Breadcrumb key={0} title="仪表盘">
       <BreadcrumbTextContent>
         <Link to="/dashboard">Dashboard</Link>
       </BreadcrumbTextContent>
@@ -135,7 +135,8 @@ var DashboardPage = React.createClass({
 
     return (
       <Link to="/components" className="button button-rounded button-stroke">
-        {`View all ${componentCount} ${componentCountWord}`}
+      //  {`View all ${componentCount} ${componentCountWord}`}
+       {`显示共 ${componentCount} 个组件`}
       </Link>
     );
   },
@@ -171,13 +172,13 @@ var DashboardPage = React.createClass({
     var data = this.internalStorage_get();
 
     return (
-      <Page title="Dashboard">
+      <Page title="仪表盘">
         <Page.Header breadcrumbs={<DashboardBreadcrumbs />} />
         <div className="panel-grid row">
           <div className={columnClasses}>
             <Panel
               className="dashboard-panel dashboard-panel-chart dashboard-panel-chart-timeseries panel"
-              heading={this.getHeading("CPU Allocation")}
+              heading={this.getHeading("CPU分配")}
             >
               <ResourceTimeSeriesChart
                 colorIndex={0}
@@ -192,7 +193,7 @@ var DashboardPage = React.createClass({
           <div className={columnClasses}>
             <Panel
               className="dashboard-panel dashboard-panel-chart dashboard-panel-chart-timeseries panel"
-              heading={this.getHeading("Memory Allocation")}
+              heading={this.getHeading("內存分配")}
             >
               <ResourceTimeSeriesChart
                 colorIndex={6}
@@ -207,7 +208,7 @@ var DashboardPage = React.createClass({
           <div className={columnClasses}>
             <Panel
               className="dashboard-panel dashboard-panel-chart dashboard-panel-chart-timeseries panel"
-              heading={this.getHeading("Disk Allocation")}
+              heading={this.getHeading("磁盘分配")}
             >
               <ResourceTimeSeriesChart
                 colorIndex={3}
@@ -222,7 +223,7 @@ var DashboardPage = React.createClass({
           <div className={columnClasses}>
             <Panel
               className="dashboard-panel dashboard-panel-list dashboard-panel-list-service-health allow-overflow panel"
-              heading={this.getHeading("Services Health")}
+              heading={this.getHeading("服务健康")}
               footer={this.getViewAllServicesBtn()}
               footerClass="text-align-center"
             >
@@ -235,7 +236,7 @@ var DashboardPage = React.createClass({
           <div className={columnClasses}>
             <Panel
               className="dashboard-panel dashboard-panel-chart panel"
-              heading={this.getHeading("Tasks")}
+              heading={this.getHeading("任务")}
             >
               <TasksChart tasks={data.tasks} />
             </Panel>
@@ -243,7 +244,7 @@ var DashboardPage = React.createClass({
           <div className={columnClasses}>
             <Panel
               className="dashboard-panel dashboard-panel-list dashboard-panel-list-component-health panel"
-              heading={this.getHeading("Component Health")}
+              heading={this.getHeading("组件健康")}
               footer={this.getViewAllComponentsButton()}
               footerClass="text-align-center"
             >
@@ -256,7 +257,7 @@ var DashboardPage = React.createClass({
           <div className={columnClasses}>
             <Panel
               className="dashboard-panel dashboard-panel-chart dashboard-panel-chart-timeseries panel"
-              heading={this.getHeading("Nodes")}
+              heading={this.getHeading("节点")}
             >
               <HostTimeSeriesChart
                 data={data.activeNodes}
