@@ -42,7 +42,7 @@ const DashboardBreadcrumbs = () => {
   const crumbs = [
     <Breadcrumb key={0} title="仪表盘">
       <BreadcrumbTextContent>
-        <Link to="/dashboard">Dashboard</Link>
+        <Link to="/dashboard">仪表盘</Link>
       </BreadcrumbTextContent>
     </Breadcrumb>
   ];

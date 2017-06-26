@@ -61,7 +61,7 @@ class ClipboardTrigger extends React.Component {
         id="clipboard"
         size="mini"
         className={`clickable icon-clipboard ${className}`}
-        color="purple"
+        color="#2f81f7"
         onMouseEnter={this.handleCopyIconMouseEnter}
         ref="copyButton"
       />
