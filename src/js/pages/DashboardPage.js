@@ -177,7 +177,7 @@ var DashboardPage = React.createClass({
           <div className={columnClasses}>
             <Panel
               className="dashboard-panel dashboard-panel-chart dashboard-panel-chart-timeseries panel"
-              heading={this.getHeading("CPU分配")}
+              heading={this.getHeading("CPU分配率")}
             >
               <ResourceTimeSeriesChart
                 colorIndex={0}
@@ -192,7 +192,7 @@ var DashboardPage = React.createClass({
           <div className={columnClasses}>
             <Panel
               className="dashboard-panel dashboard-panel-chart dashboard-panel-chart-timeseries panel"
-              heading={this.getHeading("內存分配")}
+              heading={this.getHeading("內存分配率")}
             >
               <ResourceTimeSeriesChart
                 colorIndex={6}
@@ -207,7 +207,7 @@ var DashboardPage = React.createClass({
           <div className={columnClasses}>
             <Panel
               className="dashboard-panel dashboard-panel-chart dashboard-panel-chart-timeseries panel"
-              heading={this.getHeading("磁盘分配")}
+              heading={this.getHeading("磁盘分配率")}
             >
               <ResourceTimeSeriesChart
                 colorIndex={3}
