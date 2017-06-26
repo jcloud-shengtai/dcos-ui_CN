@@ -11,7 +11,7 @@ import ModalHeading from "../modals/ModalHeading";
 import UserStore from "../../stores/UserStore";
 
 const TELEMETRY_NOTIFICATION =
-  "Because telemetry is disabled you must manually notify users of ACL changes.";
+  "系统无法自动通知，请人工通知相关ACL用户。";
 
 const METHODS_TO_BIND = ["handleNewUserSubmit", "onUserStoreCreateSuccess"];
 
@@ -92,7 +92,7 @@ class UserFormModal extends mixin(StoreMixin) {
         {
           fieldType: "text",
           name: "uid",
-          placeholder: "Email",
+          placeholder: "电子邮箱",
           required: true,
           showError: state.errorMsg,
           showLabel: false,
@@ -112,7 +112,7 @@ class UserFormModal extends mixin(StoreMixin) {
     return Hooks.applyFilter(
       "userFormModalHeader",
       <ModalHeading>
-        Add User to Cluster
+        添加集群用户
       </ModalHeading>
     );
   }
@@ -121,7 +121,7 @@ class UserFormModal extends mixin(StoreMixin) {
     return Hooks.applyFilter(
       "userFormModalFooter",
       <p className="flush-bottom text-align-center">
-        <strong>Important:</strong> {TELEMETRY_NOTIFICATION}
+        <strong>注意:</strong> {TELEMETRY_NOTIFICATION}
       </p>
     );
   }

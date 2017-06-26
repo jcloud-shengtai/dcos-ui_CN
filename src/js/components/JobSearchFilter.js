@@ -9,7 +9,7 @@ class JobSearchFilter extends React.Component {
       <FilterInputText
         className="flush-bottom"
         handleFilterChange={this.props.onChange}
-        placeholder="Search"
+        placeholder="搜索"
         searchString={this.props.value}
       />
     );
