@@ -86,7 +86,7 @@ class FilterInputText extends React.Component {
     let color = "white";
 
     if (!inverseStyle) {
-      color = "#2f81f7";
+      color = "blue";
     }
 
     const iconClassNames = classNames("clickable", {
