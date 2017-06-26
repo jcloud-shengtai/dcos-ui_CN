@@ -192,9 +192,10 @@ class PackagesTab extends mixin(StoreMixin) {
       return null;
     }
 
+    //Selected Packages
     return (
       <div className="clearfix">
-        {this.getTitle("Selected Packages", true)}
+        {this.getTitle("选择的包", true)}
         <div className="pod pod-short flush-right flush-left">
           <div className="panel-grid row">
             {this.getSelectedPackages(packages)}
@@ -255,7 +256,7 @@ class PackagesTab extends mixin(StoreMixin) {
           <div className="control-group form-group flex-no-shrink flex-align-right flush-bottom">
             <FilterInputText
               className="flex-grow"
-              placeholder="搜索"
+              placeholder="搜索"  //Search
               searchString={state.searchString}
               handleFilterChange={this.handleSearchStringChange}
             />
