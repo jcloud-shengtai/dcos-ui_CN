@@ -53,7 +53,7 @@ class UnitsHealthTab extends mixin(StoreMixin) {
     ];
 
     this.state = {
-      healthFilter: "全部",
+      healthFilter: "all",
       searchString: ""
     };
 
@@ -160,7 +160,7 @@ class UnitsHealthTab extends mixin(StoreMixin) {
   resetFilter() {
     this.setState({
       searchString: "",
-      healthFilter: "全部"
+      healthFilter: "all"
     });
   }
 
@@ -180,7 +180,7 @@ class UnitsHealthTab extends mixin(StoreMixin) {
           <div className="units-health-table-header">
             <FilterHeadline
               currentLength={visibleData.length}
-              isFiltering={healthFilter !== "全部" || searchString !== ""}
+              isFiltering={healthFilter !== "all" || searchString !== ""}
               name="组件"
               onReset={this.resetFilter}
               totalLength={dataItems.length}
@@ -193,7 +193,7 @@ class UnitsHealthTab extends mixin(StoreMixin) {
               />
               <FilterButtons
                 renderButtonContent={this.getButtonContent}
-                filters={["全部", "正常", "异常"]}
+                filters={["all", "healthy", "unhealthy"]}
                 filterByKey="title"
                 onFilterChange={this.handleHealthFilterChange}
                 itemList={dataHealth}
