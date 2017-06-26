@@ -101,7 +101,7 @@ class UsersPage extends mixin(StoreMixin) {
         key="organization-tab"
         items={items}
         itemID="uid"
-        itemName="user"
+        itemName="用户"
       />,
       this
     );
