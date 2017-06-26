@@ -391,7 +391,7 @@ class InstallPackageModal
       return this.getInstallErrorScreen();
     }
 
-    let buttonText = "Install Package";
+    let buttonText = "安装此包"; //Install Package
 
     if (pendingRequest) {
       buttonText = "Installing...";
@@ -467,7 +467,7 @@ class InstallPackageModal
     const cosmosPackage = CosmosPackagesStore.getPackageDetails();
     const name = cosmosPackage.getName();
     const version = cosmosPackage.getCurrentVersion();
-    let buttonText = "Install";
+    let buttonText = "安装";  //Install
 
     if (pendingRequest) {
       buttonText = "Installing...";
