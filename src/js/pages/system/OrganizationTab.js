@@ -289,7 +289,7 @@ class OrganizationTab extends mixin(StoreMixin, InternalStorageMixin) {
         ) {
           return item.get(prop);
         }),
-        heading: ResourceTableUtil.renderHeading({ uid: "用戶名" })
+        heading: ResourceTableUtil.renderHeading({ uid: "用户" })
       }
     ];
   }
