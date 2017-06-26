@@ -91,7 +91,7 @@ const ServiceUtil = {
       return new Application(data);
     }
 
-    throw Error("Unknown service response: " + JSON.stringify(data));
+    throw Error("未知服务响应: " + JSON.stringify(data));
   },
 
   createSpecFromDefinition(data) {
@@ -108,7 +108,7 @@ const ServiceUtil = {
       return new ApplicationSpec(data);
     }
 
-    throw Error("Unknown service response: " + JSON.stringify(data));
+    throw Error("未知服务响应: " + JSON.stringify(data));
   },
 
   createSpecFromFormModel(formModel, schema, isEdit = false, definition = {}) {

@@ -20,7 +20,7 @@ function checkServiceEndpoints(ports, pathPrefix) {
       if (!vipLabelMatch) {
         return errorsMemo.concat({
           path: pathPrefix.concat([index, "labels", label]),
-          message: "VIP label must be in the following format: <ip-addres|name>:<port>"
+          message: "VIP 标签必须使用如下格式: <ip-addres|name>:<port>"
         });
       }
 
@@ -29,7 +29,7 @@ function checkServiceEndpoints(ports, pathPrefix) {
       if (!NetworkValidatorUtil.isValidPort(vipPort)) {
         return errorsMemo.concat({
           path: pathPrefix.concat([index, "labels", label]),
-          message: "Port should be an integrer less than or equal to 65535"
+          message: "端口号必须为不大于 65535 的正整数"
         });
       }
 

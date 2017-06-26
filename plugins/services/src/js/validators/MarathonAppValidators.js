@@ -31,7 +31,7 @@ const MarathonAppValidators = {
 
     // Dont accept both `args` and `cmd`
     if (hasCmd && hasArgs) {
-      const notBothMessage = "Please specify only one of `cmd` or `args`";
+      const notBothMessage = "无法同时指定 `cmd` 或者 `args`，请选择其中的一个";
       const type = PROP_CONFLICT;
       const variables = {
         feature1: "cmd",
@@ -66,7 +66,7 @@ const MarathonAppValidators = {
           return [
             {
               path: ["container", "appc", "id"],
-              message: "AppContainer id should start with 'sha512-'",
+              message: "应用容器的 id 必须以 'sha512-' 开始",
               type: "STRING_PATTERN",
               variables: {
                 pattern: "^sha512-"
@@ -81,7 +81,7 @@ const MarathonAppValidators = {
 
     // Create one error for every field, instead of showing the error
     // to the root.
-    const message = "You must specify a command, an argument or a container";
+    const message = "你必须指定一个命令, 一个参数 或者 一个容器";
     const type = PROP_MISSING_ONE;
     const variables = {
       names: "cmd, args, container.docker.image"
@@ -111,8 +111,8 @@ const MarathonAppValidators = {
 
     if (hasAppResidency !== hasPersistentVolumes) {
       const message =
-        "AppDefinition must contain persistent volumes and " +
-        "define residency";
+        "应用定义必须包含 持久化的卷 和 " +
+        "定义居留权";
       const type = PROP_MISSING_ALL;
       const variables = {
         names: "residency, container.volumes"
@@ -151,8 +151,7 @@ const MarathonAppValidators = {
     // (AppDefinition.scala#L539)
     if (/^(BRIDGE|USER)$/.exec(app.container.docker.network)) {
       const message =
-        "ipAddress/discovery is not allowed for Docker " +
-        "containers using BRIDGE or USER networks";
+        "ip地址/掩码 的方式 在 Docker 容器使用桥接或用户网络时 不允许使用";
       const type = PROP_CONFLICT;
       const variables = {
         feature1: "ipAddress or discoveryInfo",
@@ -182,7 +181,7 @@ const MarathonAppValidators = {
       return [
         {
           path: ["container", "docker", "image"],
-          message: 'Must be specified when using the Docker Engine runtime. You can change runtimes under "Advanced Settings"',
+          message: '使用 Docker 引擎时必须指定运行时环境. 你可以在 "高级设置" 下更改运行时环境',
           type: "PROP_IS_MISSING",
           variables: {}
         }
@@ -201,7 +200,7 @@ const MarathonAppValidators = {
       ValidatorUtil.isDefined(app.uris) &&
       ValidatorUtil.isDefined(app.fetch)
     ) {
-      const message = "`uris` are deprecated. Please use `fetch` instead";
+      const message = "`uris` 已过时. 请使用 `fetch` 代替";
       const type = PROP_DEPRECATED;
       const variables = {
         name: "uris"
@@ -220,25 +219,25 @@ const MarathonAppValidators = {
       return [
         {
           path: ["constraints"],
-          message: "constrains needs to be an array of 2 or 3 element arrays",
+          message: "约束 需要定义为一个长度为2或3的数组",
           type: "TYPE_NOT_ARRAY"
         }
       ];
     }
 
     const isRequiredMessage =
-      "You must specify a value for operator {{operator}}";
+      "你必须为操作符 {{operator}} 指定一个值";
     const isRequiredEmptyMessage =
-      "Value must be empty for operator {{operator}}";
+      "{{operator}} 的值必须为空";
     const isStringNumberMessage =
-      "Must only contain characters between 0-9 for operator {{operator}}";
+      "{{operator}} 只能包含字符 0-9";
     const variables = { name: "value" };
 
     return constraints.reduce((errors, constraint, index) => {
       if (!Array.isArray(constraint)) {
         errors.push({
           path: ["constraints", index],
-          message: "Must be an array",
+          message: "必须是数组",
           type: "TYPE_NOT_ARRAY"
         });
 
