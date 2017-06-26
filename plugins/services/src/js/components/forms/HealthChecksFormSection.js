@@ -475,8 +475,7 @@ class HealthChecksFormSection extends Component {
           </FormGroupHeading>
         </h2>
         <p>
-          Health checks may be specified per application to be run against
-          the application{"'"}s instances.
+          可以针对应用程序的实例运行每个应用程序指定运行状况检查。
         </p>
         {this.getHealthChecksLines(data.healthChecks)}
         <FormRow>
@@ -487,7 +486,7 @@ class HealthChecksFormSection extends Component {
                 path: "healthChecks"
               })}
             >
-              Add Health Check
+              添加健康度检查
             </AddButton>
           </FormGroup>
         </FormRow>

@@ -29,7 +29,7 @@ const ErrorsAlert = function(props) {
 
   return (
     <Alert>
-      <strong>There is an error with your configuration</strong>
+      <strong>您的配置出现了一个错误</strong>
       <div className="pod pod-narrower-left pod-shorter-top flush-bottom">
         <ul className="short flush-bottom">
           {errorItems}

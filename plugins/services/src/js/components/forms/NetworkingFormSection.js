@@ -739,7 +739,7 @@ class NetworkingFormSection extends mixin(StoreMixin) {
     return (
       <div>
         <h2 className="flush-top short-bottom">
-          Networking
+          网络
         </h2>
         <p>
           Configure the networking for your service.
