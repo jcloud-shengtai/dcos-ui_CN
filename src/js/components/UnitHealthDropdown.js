@@ -6,8 +6,8 @@ import UnitHealthStatus from "../constants/UnitHealthStatus";
 
 const DEFAULT_ITEM = {
   id: "all",
-  html: "All Health Checks",
-  selectedHtml: "All Health Checks"
+  html: "全部",
+  selectedHtml: "全部"
 };
 
 class UnitHealthDropdown extends React.Component {
