@@ -136,7 +136,7 @@ class VirtualNetworksTabContent extends mixin(StoreMixin) {
       <div>
         <FilterHeadline
           onReset={this.resetFilter}
-          name="Network"
+          name="网络"
           currentLength={filteredOverlayList.getItems().length}
           totalLength={overlayList.getItems().length}
         />
