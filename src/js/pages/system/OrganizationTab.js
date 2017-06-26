@@ -48,7 +48,7 @@ const UsersBreadcrumbs = () => {
   const crumbs = [
     <Breadcrumb key={0} title="Users">
       <BreadcrumbTextContent>
-        <Link to="/organization/users">Users</Link>
+        <Link to="/organization/users">用户</Link>
       </BreadcrumbTextContent>
     </Breadcrumb>
   ];
@@ -289,7 +289,7 @@ class OrganizationTab extends mixin(StoreMixin, InternalStorageMixin) {
         ) {
           return item.get(prop);
         }),
-        heading: ResourceTableUtil.renderHeading({ uid: "USERNAME" })
+        heading: ResourceTableUtil.renderHeading({ uid: "用戶名" })
       }
     ];
   }

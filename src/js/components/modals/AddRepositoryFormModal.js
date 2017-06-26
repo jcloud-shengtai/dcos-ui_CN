@@ -66,7 +66,7 @@ class AddRepositoryFormModal extends mixin(StoreMixin) {
       {
         fieldType: "text",
         name: "name",
-        placeholder: "Repository Name",
+        placeholder: "库名称",
         required: true,
         showError: false,
         showLabel: false,
@@ -79,9 +79,9 @@ class AddRepositoryFormModal extends mixin(StoreMixin) {
       {
         fieldType: "text",
         name: "uri",
-        placeholder: "URL",
+        placeholder: "网址",
         required: true,
-        validationErrorText: "Must be a valid url with http:// or https://",
+        validationErrorText: "必须是包含http:// 或者 https:// 的合法网址。",
         showLabel: false,
         writeType: "input",
         validation: /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_+.~#?&//=]*)$/,
@@ -90,12 +90,12 @@ class AddRepositoryFormModal extends mixin(StoreMixin) {
       {
         fieldType: "number",
         name: "priority",
-        placeholder: "Priority",
+        placeholder: "优先级",
         required: false,
         min: "0",
         max: `${numberOfRepositories}`,
         step: "1",
-        validationErrorText: `Must be a positive integer between 0 and ${numberOfRepositories} representing its priority. 0 is the highest and ${numberOfRepositories} denotes the lowest priority.`,
+        validationErrorText: `必须是 0 到 ${numberOfRepositories} 之间的正整数, 表示其优先级。0 表示最高优先级， ${numberOfRepositories} 表示最低优先级。`,
         showLabel: false,
         writeType: "input",
         validation(value) {
@@ -112,12 +112,12 @@ class AddRepositoryFormModal extends mixin(StoreMixin) {
   getButtonDefinition() {
     return [
       {
-        text: "Close",
+        text: "关闭",
         className: "button button-medium",
         isClose: true
       },
       {
-        text: "Add",
+        text: "添加",
         className: "button button-success button-medium",
         isSubmit: true
       }
@@ -148,7 +148,7 @@ class AddRepositoryFormModal extends mixin(StoreMixin) {
         disabled={state.disableButtons}
         buttonDefinition={this.getButtonDefinition()}
         modalProps={{
-          header: <ModalHeading>Add Repository</ModalHeading>,
+          header: <ModalHeading>添加存储库</ModalHeading>,
           showHeader: true
         }}
         onChange={this.resetState}

@@ -21,7 +21,7 @@ const RepositoriesBreadcrumbs = addButton => {
   const crumbs = [
     <Breadcrumb key={-1} title="Repositories">
       <BreadcrumbTextContent>
-        <Link to="/settings/repositories">Package Repositories</Link>
+        <Link to="/settings/repositories">软件包存储库</Link>
       </BreadcrumbTextContent>
     </Breadcrumb>
   ];
@@ -123,7 +123,7 @@ class RepositoriesTab extends mixin(StoreMixin) {
         <FilterBar>
           <FilterInputText
             className="flush-bottom"
-            placeholder="Search"
+            placeholder="搜索"
             searchString={searchString}
             handleFilterChange={this.handleSearchStringChange}
           />
@@ -144,7 +144,7 @@ class RepositoriesTab extends mixin(StoreMixin) {
         <Page.Header
           addButton={{
             onItemSelect: this.handleOpenAddRepository,
-            label: "Add Repository"
+            label: "添加存储库"
           }}
           breadcrumbs={<RepositoriesBreadcrumbs />}
         />
@@ -155,7 +155,7 @@ class RepositoriesTab extends mixin(StoreMixin) {
 }
 
 RepositoriesTab.routeConfig = {
-  label: "Package Repositories",
+  label: "软件包存储库",
   matches: /^\/settings\/repositories/
 };
 

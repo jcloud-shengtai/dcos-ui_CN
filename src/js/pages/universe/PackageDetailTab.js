@@ -26,7 +26,7 @@ const PackageDetailBreadcrumbs = ({ cosmosPackage }) => {
   const crumbs = [
     <Breadcrumb key={0} title="Packages">
       <BreadcrumbTextContent>
-        <Link to="/universe/packages">Packages</Link>
+        <Link to="/universe/packages">包列表</Link>
       </BreadcrumbTextContent>
     </Breadcrumb>,
     <Breadcrumb key={1} title={name}>

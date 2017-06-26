@@ -303,7 +303,7 @@ class TaskDetail extends mixin(InternalStorageMixin, TabsMixin, StoreMixin) {
 
       // First breadcrumb is always 'Working Directory'.
       if (index === 0) {
-        textValue = "Working Directory";
+        textValue = "工作目录";
       } else {
         onClickPath += `/${directoryItem}`;
       }

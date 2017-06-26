@@ -9,7 +9,7 @@ class SettingsPage extends React.Component {
 }
 
 SettingsPage.routeConfig = {
-  label: "Settings",
+  label: "设置",
   icon: <Icon id="gear-inverse" size="small" family="product" />,
   matches: /^\/settings/
 };

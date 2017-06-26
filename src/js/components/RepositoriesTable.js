@@ -174,7 +174,7 @@ class RepositoriesTable extends mixin(StoreMixin) {
           className="button button-link button-danger table-display-on-row-hover"
           onClick={this.handleOpenConfirm.bind(this, repositoryToRemove)}
         >
-          Remove
+          删除
         </a>
       </div>
     );
@@ -196,7 +196,7 @@ class RepositoriesTable extends mixin(StoreMixin) {
     return (
       <div className="text-align-center">
         <p>
-          {`Repository (${repositoryLabel}) will be removed from ${Config.productName}. You will not be able to install any packages belonging to that repository anymore.`}
+          {`存储库 (${repositoryLabel}) 将从 ${Config.productName}中删除。 您将无法再安装属于该存储库的任何软件包。`}
         </p>
         {error}
       </div>
@@ -207,7 +207,7 @@ class RepositoriesTable extends mixin(StoreMixin) {
     const { props, state } = this;
     const heading = (
       <ModalHeading>
-        Are you sure?
+        您确定吗?
       </ModalHeading>
     );
 
@@ -229,7 +229,7 @@ class RepositoriesTable extends mixin(StoreMixin) {
           leftButtonCallback={this.handleDeleteCancel}
           rightButtonCallback={this.handleDeleteRepository}
           rightButtonClassName="button button-danger"
-          rightButtonText="Remove Repository"
+          rightButtonText="删除存储库"
           showHeader={true}
         >
           {this.getRemoveModalContent()}

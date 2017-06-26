@@ -30,7 +30,7 @@ const PackagesBreadcrumbs = () => {
   const crumbs = [
     <Breadcrumb key={0} title="Packages">
       <BreadcrumbTextContent>
-        <Link to="/universe/packages">Packages</Link>
+        <Link to="/universe/packages">包列表</Link>
       </BreadcrumbTextContent>
     </Breadcrumb>
   ];
@@ -206,7 +206,7 @@ class PackagesTab extends mixin(StoreMixin) {
   }
 
   getPackagesTable(packages) {
-    let title = "Community Packages";
+    let title = "社区包"; //Community Packages
 
     if (this.state.searchString) {
       const foundPackagesLength = packages.getItems().length;
@@ -287,7 +287,7 @@ PackagesTab.contextTypes = {
 };
 
 PackagesTab.routeConfig = {
-  label: "包列表", //Packages
+  label: "Packages",
   matches: /^\/universe\/packages/
 };
 

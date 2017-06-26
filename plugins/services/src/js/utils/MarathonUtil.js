@@ -6,8 +6,8 @@ function parseApp(app) {
 
   if (id == null || !id.startsWith("/") || id.endsWith("/")) {
     throw new Error(
-      `Id (${id}) must start with a leading slash ("/") ` +
-        "and should not end with a slash."
+      `Id (${id}) 必须以 ("/") 开始` +
+        "并且不能以其结束."
     );
   }
 
@@ -88,8 +88,8 @@ function parsePod(pod) {
 
   if (id == null || !id.startsWith("/") || id.endsWith("/")) {
     throw new Error(
-      `Id (${id}) must start with a leading slash ("/") ` +
-        "and should not end with a slash."
+      `Id (${id}) 必须以 ("/") 开始` +
+        "并且不能以其结束."
     );
   }
 
@@ -100,9 +100,8 @@ const MarathonUtil = {
   parseGroups({ id = "/", groups = [], apps = [], pods = [] }) {
     if (id !== "/" && (!id.startsWith("/") || id.endsWith("/"))) {
       throw new Error(
-        `Id (${id}) must start with a leading slash ("/") ` +
-          "and should not end with a slash, except for root id which is only " +
-          "a slash."
+        `Id (${id}) 必须以 ("/") 开始` +
+          "并且不能以其结束, 除非id只包含根字符."
       );
     }
 
