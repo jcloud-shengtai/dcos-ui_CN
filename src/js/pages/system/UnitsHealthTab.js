@@ -193,7 +193,7 @@ class UnitsHealthTab extends mixin(StoreMixin) {
               />
               <FilterButtons
                 renderButtonContent={this.getButtonContent}
-                filters={["all", "healthy", "unhealthy"]}
+                filters={["全部", "正常", "异常"]}
                 filterByKey="title"
                 onFilterChange={this.handleHealthFilterChange}
                 itemList={dataHealth}
