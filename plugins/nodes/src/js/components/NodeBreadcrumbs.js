@@ -13,9 +13,9 @@ const NodeBreadcrumbs = ({ nodeID, taskID, taskName, unitID }) => {
   const trimmedNodeID = decodeURIComponent(nodeID).replace(/^\//, "");
   const encodedNodeID = encodeURIComponent(trimmedNodeID);
   const crumbs = [
-    <Breadcrumb key={-1} title="Nodes">
+    <Breadcrumb key={-1} title="节点">
       <BreadcrumbTextContent>
-        <Link to="/nodes" key={-1}>Nodes</Link>
+        <Link to="/nodes" key={-1}>节点</Link>
       </BreadcrumbTextContent>
     </Breadcrumb>
   ];
