@@ -61,11 +61,11 @@ class FilterHeadline extends React.Component {
     return (
       <ul className={listClassSet}>
         <li className={filteredClassSet}>
-          Showing {currentLength} of {totalLength} {name}
+          {currentLength}个/共{totalLength}个{name}
         </li>
         <li className={anchorClassSet} onClick={this.handleReset}>
           <a className="small flush">
-            (Clear)
+            (清除)
           </a>
         </li>
         <li className={unfilteredClassSet}>
