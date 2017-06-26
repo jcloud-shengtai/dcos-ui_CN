@@ -23,7 +23,7 @@ class CreateServicePickerUniverseOption extends React.Component {
       >
         <CreateServiceModalServicePickerOptionImage src={packageServiceImage} />
         <CreateServiceModalServicePickerOptionContent>
-          Install a Package
+          安装一个应用包
         </CreateServiceModalServicePickerOptionContent>
       </CreateServiceModalServicePickerOption>
     );

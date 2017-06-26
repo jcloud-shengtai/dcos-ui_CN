@@ -8,10 +8,10 @@ const EmptyServiceTree = function({ onCreateGroup, onCreateService }) {
   const footer = (
     <div className="button-collection flush-bottom">
       <button className="button button-stroke" onClick={onCreateGroup}>
-        Create Group
+        创建一个分组
       </button>
       <button className="button button-success" onClick={onCreateService}>
-        Run a Service
+        运行一个服务
       </button>
     </div>
   );

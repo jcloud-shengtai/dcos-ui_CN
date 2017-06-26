@@ -30,10 +30,10 @@ import StringUtil from "../../../../../../src/js/utils/StringUtil";
 import TimeAgo from "../../../../../../src/js/components/TimeAgo";
 
 const columnHeading = ResourceTableUtil.renderHeading({
-  id: "AFFECTED SERVICES",
-  startTime: "STARTED",
-  location: "LOCATION",
-  status: "STATUS",
+  id: "受影响的服务",
+  startTime: "启动于",
+  location: "位置",
+  status: "状态",
   action: ""
 });
 const COLLAPSING_COLUMNS = ["location", "startTime", "action"];
@@ -64,7 +64,7 @@ function columnClassNameGetter(prop, sortBy, row) {
 
 const DeploymentsBreadcrumbs = () => {
   const crumbs = [
-    <Breadcrumb key={0} title="Deployments">
+    <Breadcrumb key={0} title="部署">
       <BreadcrumbTextContent>
         <Link to="/services/deployments">部署</Link>
       </BreadcrumbTextContent>
@@ -462,7 +462,7 @@ class DeploymentsTab extends mixin(StoreMixin) {
 }
 
 DeploymentsTab.routeConfig = {
-  label: "Deployments",
+  label: "部署",
   matches: /^\/services\/deployments/
 };
 
