@@ -5,7 +5,7 @@ const HealthBarStates = {
   },
   tasksHealthy: {
     className: "healthy",
-    label: "健康"
+    label: ""
   },
   tasksOverCapacity: {
     className: "over-capacity",
@@ -13,7 +13,7 @@ const HealthBarStates = {
   },
   tasksUnhealthy: {
     className: "unhealthy",
-    label: "不健康"
+    label: "异常"
   },
   tasksStaged: {
     className: "staged",

@@ -1,6 +1,6 @@
 const TaskHealthStates = {
-  HEALTHY: "健康",
-  UNHEALTHY: "非健康",
+  HEALTHY: "正常",
+  UNHEALTHY: "异常",
   UNKNOWN: "未知"
 };
 
