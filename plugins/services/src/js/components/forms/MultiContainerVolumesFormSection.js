@@ -35,7 +35,7 @@ class MultiContainerVolumesFormSection extends Component {
           <FieldLabel>
             <FormGroupHeading>
               <FormGroupHeadingContent primary={true}>
-                Containers
+                容器
               </FormGroupHeadingContent>
             </FormGroupHeading>
           </FieldLabel>
@@ -44,7 +44,7 @@ class MultiContainerVolumesFormSection extends Component {
           <FieldLabel>
             <FormGroupHeading>
               <FormGroupHeadingContent primary={true}>
-                Container Path
+                容器路径
               </FormGroupHeadingContent>
             </FormGroupHeading>
           </FieldLabel>
@@ -100,7 +100,7 @@ class MultiContainerVolumesFormSection extends Component {
               <FieldLabel>
                 <FormGroupHeading>
                   <FormGroupHeadingContent primary={true}>
-                    Name
+                    名称
                   </FormGroupHeadingContent>
                 </FormGroupHeading>
               </FieldLabel>
@@ -121,9 +121,9 @@ class MultiContainerVolumesFormSection extends Component {
   getHeadline() {
     const tooltipContent = (
       <span>
-        {"DC/OS offers several storage options. "}
+        {"DC/OS 提供了多个存储选项. "}
         <a href={MetadataStore.buildDocsURI("/usage/storage/")} target="_blank">
-          More information
+          更多信息
         </a>.
       </span>
     );
@@ -158,14 +158,14 @@ class MultiContainerVolumesFormSection extends Component {
         <div>
           {this.getHeadline()}
           <p>
-            {"Please "}
+            {"配置卷信息前，请 "}
             <a
               onClick={handleTabChange.bind(null, "services")}
               className="clickable"
             >
-              add a container
+              添加容器
             </a>
-            {" before configuring Volumes."}
+            {"."}
           </p>
         </div>
       );
@@ -175,13 +175,13 @@ class MultiContainerVolumesFormSection extends Component {
       <div>
         {this.getHeadline()}
         <p>
-          Create a stateful service by configuring a persistent volume. Persistent volumes enable instances to be restarted without data loss.
+          通过配置首选卷以创建一个状态服务.首选卷你能够确保实例在重启时不丢失数据.
         </p>
         <h3 className="short-bottom">
-          Ephemeral Volumes
+          临时卷
         </h3>
         <p>
-          Choose a place in your container as the destination.
+          在您的容器中选择一个位置.
         </p>
         {this.getVolumesMountLines(data.volumeMounts, data.volumeMounts)}
         <div>
@@ -191,7 +191,7 @@ class MultiContainerVolumesFormSection extends Component {
               path: "volumeMounts"
             })}
           >
-            Add Ephemeral Volume
+            增加临时卷
           </AddButton>
         </div>
       </div>

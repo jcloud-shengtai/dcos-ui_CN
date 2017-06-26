@@ -351,10 +351,10 @@ class NewCreateServiceModalForm extends Component {
             hideTopLevelErrors={!showAllErrors}
           />
           <h2 className="flush-top short-bottom">
-            Container
+            容器
           </h2>
           <p>
-            Configure your container below. Enter a container image or command you want to run.
+            配置您的下列容器. 输入一个您想运行的容器镜像或者命令.
           </p>
           <ContainerServiceFormSection
             data={data}
@@ -367,13 +367,13 @@ class NewCreateServiceModalForm extends Component {
 
           <AdvancedSection>
             <AdvancedSectionLabel>
-              More Settings
+              更多设置
             </AdvancedSectionLabel>
             <AdvancedSectionContent>
               <h3 className="short-top short-bottom">
-                Advanced Settings
+                高级设置
               </h3>
-              <p>Advanced settings of the container</p>
+              <p>容器高级设置</p>
               <ArtifactsSection
                 data={artifacts}
                 path={artifactsPath}
