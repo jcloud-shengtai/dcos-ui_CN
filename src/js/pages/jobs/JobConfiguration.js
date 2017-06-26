@@ -24,7 +24,7 @@ class JobConfiguration extends React.Component {
     return (
       <ConfigurationMapSection>
         <ConfigurationMapHeading>
-          General
+          基础信息
         </ConfigurationMapHeading>
         <ConfigurationMapRow>
           <ConfigurationMapLabel>
@@ -36,7 +36,7 @@ class JobConfiguration extends React.Component {
         </ConfigurationMapRow>
         <ConfigurationMapRow>
           <ConfigurationMapLabel>
-            Description
+            描述
           </ConfigurationMapLabel>
           <ConfigurationMapValue>
             {job.getDescription()}
@@ -44,7 +44,7 @@ class JobConfiguration extends React.Component {
         </ConfigurationMapRow>
         <ConfigurationMapRow>
           <ConfigurationMapLabel>
-            CPUs
+            CPU数量
           </ConfigurationMapLabel>
           <ConfigurationMapValue>
             {job.getCpus()}
@@ -52,7 +52,7 @@ class JobConfiguration extends React.Component {
         </ConfigurationMapRow>
         <ConfigurationMapRow>
           <ConfigurationMapLabel>
-            Memory (MiB)
+            内存(MiB)
           </ConfigurationMapLabel>
           <ConfigurationMapValue>
             {job.getMem()}
@@ -60,7 +60,7 @@ class JobConfiguration extends React.Component {
         </ConfigurationMapRow>
         <ConfigurationMapRow>
           <ConfigurationMapLabel>
-            Disk Space (Mib)
+            磁盘空间(Mib)
           </ConfigurationMapLabel>
           <ConfigurationMapValue>
             {job.getDisk()}
@@ -68,7 +68,7 @@ class JobConfiguration extends React.Component {
         </ConfigurationMapRow>
         <ConfigurationMapRow>
           <ConfigurationMapLabel>
-            Command
+            指令
           </ConfigurationMapLabel>
           <ConfigurationMapValue>
             <pre className="flush transparent wrap">
