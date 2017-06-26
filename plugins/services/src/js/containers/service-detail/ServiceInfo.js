@@ -19,25 +19,25 @@ class ServiceInfo extends React.Component {
         className: "hidden",
         id: ServiceActionItem.MORE,
         html: "",
-        selectedHtml: "More"
+        selectedHtml: "更多"
       },
       {
         className: classNames({
           hidden: service.getInstancesCount() === 0
         }),
         id: ServiceActionItem.RESTART,
-        html: "Restart"
+        html: "重启"
       },
       {
         className: classNames({
           hidden: service.getInstancesCount() === 0
         }),
         id: ServiceActionItem.SUSPEND,
-        html: "Suspend"
+        html: "暂停"
       },
       {
         id: ServiceActionItem.DESTROY,
-        html: <span className="text-danger">Destroy</span>
+        html: <span className="text-danger">销毁</span>
       }
     ];
 
@@ -84,7 +84,7 @@ class ServiceInfo extends React.Component {
           key="service-link"
           href={webURL}
           target="_blank"
-          title="Open in a new window"
+          title="在新窗口打开"
         >
           Open Service
         </a>
@@ -109,7 +109,7 @@ class ServiceInfo extends React.Component {
     const isDeploying = serviceStatus === "Deploying";
 
     if (tasksSummary.tasksOverCapacity > 0) {
-      overCapacity = ` (over capacity by ${tasksSummary.tasksOverCapacity} tasks)`;
+      overCapacity = ` (${tasksSummary.tasksOverCapacity} 个任务超过容量)`;
     }
 
     const subHeaderItems = [

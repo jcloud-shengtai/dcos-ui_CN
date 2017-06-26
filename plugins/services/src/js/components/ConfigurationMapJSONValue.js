@@ -28,7 +28,7 @@ class ConfigurationMapJSONValue extends React.Component {
 }
 
 ConfigurationMapJSONValue.defaultProps = {
-  defaultValue: <em>Not Configured</em>,
+  defaultValue: <em>未配置</em>,
   value: false
 };
 

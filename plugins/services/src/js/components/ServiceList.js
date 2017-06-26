@@ -118,8 +118,8 @@ const ServiceList = React.createClass({
         <h3 className="flush-top text-align-center">没有服务运行</h3>
         <p className="flush text-align-center">
           {"点击 "}
-          <Link to="/services">服务标签</Link>
-          {" 安装服务."}
+          <Link to="/services">服务 选项卡</Link>
+          {" 来安装服务."}
         </p>
       </div>
     );

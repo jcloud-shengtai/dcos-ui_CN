@@ -396,15 +396,15 @@ class JobFormModal extends mixin(StoreMixin) {
   }
 
   getModalFooter() {
-    let submitLabel = "Create Job";
+    let submitLabel = "创建";
     if (this.props.isEdit) {
-      submitLabel = "Save Job";
+      submitLabel = "保存";
     }
 
     return (
       <div className="button-collection flush-bottom">
         <button className="button" onClick={this.handleCancel}>
-          Cancel
+          取消
         </button>
         <button className="button button-success" onClick={this.handleSubmit}>
           {submitLabel}
@@ -414,7 +414,7 @@ class JobFormModal extends mixin(StoreMixin) {
   }
 
   getModalTitle() {
-    let heading = " New Job";
+    let heading = " 创建任务";
     if (this.props.isEdit) {
       heading = `Edit Job (${this.props.job.getName()})`;
     }
@@ -434,7 +434,7 @@ class JobFormModal extends mixin(StoreMixin) {
               checked={this.state.jsonMode}
               onChange={this.handleInputModeToggle}
             >
-              JSON mode
+              JSON 模式
             </ToggleButton>
           </div>
         </div>

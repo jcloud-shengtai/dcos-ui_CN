@@ -7,8 +7,8 @@ import MetadataStore from "../../stores/MetadataStore";
 import ValidatorUtil from "../../utils/ValidatorUtil";
 
 const Schedule = {
-  title: "Schedule",
-  description: "Set time and date for the job to run",
+  title: "执行计划",
+  description: "设置任务执行时间",
   type: "object",
   properties: {
     runOnSchedule: {
@@ -23,15 +23,15 @@ const Schedule = {
       }
     },
     cron: {
-      title: "CRON Schedule",
+      title: "CRON表达式",
       helpBlock: (
         <span>
-          Use cron format to set your schedule, e.g. <i>0 0 20 * *</i>{". "}
+          使用cron表达式设置任务计划, e.g. <i>0 0 20 * *</i>{". "}
           <a
             href={MetadataStore.buildDocsURI("/usage/jobs/getting-started")}
             target="_blank"
           >
-            View documentation
+            帮助文档
           </a>.
         </span>
       ),
@@ -58,16 +58,16 @@ const Schedule = {
       }
     },
     timezone: {
-      title: "Time Zone",
+      title: "时区",
       description: (
         <span>
-          {"Enter time zone in "}
+          {"输入 "}
           <a
             href="http://www.timezoneconverter.com/cgi-bin/zonehelp"
             target="_blank"
           >
-            TZ format
-          </a>, e.g. America/New_York.
+            TZ格式
+          </a>的时区, e.g. America/New_York.
         </span>
       ),
       type: "string",
@@ -78,10 +78,8 @@ const Schedule = {
       }
     },
     startingDeadlineSeconds: {
-      title: "Starting Deadline",
-      description: "Time in seconds to start the job if it misses " +
-        "scheduled time for any reason. Missed jobs executions will be " +
-        "counted as failed ones.",
+      title: "最迟开始时间",
+      description: "不论什么原因错过预定时间，则将以秒为单位启动任务. 错失的任务将按失败统计.",
       type: "number",
       getter(job) {
         const [schedule = {}] = job.getSchedules();

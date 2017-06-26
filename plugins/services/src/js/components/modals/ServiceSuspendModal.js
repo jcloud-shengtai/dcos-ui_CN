@@ -83,7 +83,7 @@ class ServiceSuspendModal extends React.Component {
   render() {
     const { isPending, onClose, open, service, suspendItem } = this.props;
 
-    let itemText = "Service";
+    let itemText = "服务";
     let serviceName = "";
 
     if (service instanceof Pod) {
@@ -91,7 +91,7 @@ class ServiceSuspendModal extends React.Component {
     }
 
     if (service instanceof ServiceTree) {
-      itemText = "Group";
+      itemText = "分组";
     }
 
     if (service) {
@@ -100,7 +100,7 @@ class ServiceSuspendModal extends React.Component {
 
     const heading = (
       <ModalHeading>
-        Suspend {itemText}
+        暂停 {itemText}
       </ModalHeading>
     );
 
@@ -116,11 +116,11 @@ class ServiceSuspendModal extends React.Component {
         showHeader={true}
       >
         <p>
-          Are you sure you want to suspend
+          确定通过扩展到 0 个实例的方式暂停服务
           {" "}
           <span className="emphasize">{serviceName}</span>
           {" "}
-          by scaling to 0 instances?
+          ?
         </p>
         {this.getErrorMessage()}
       </Confirm>

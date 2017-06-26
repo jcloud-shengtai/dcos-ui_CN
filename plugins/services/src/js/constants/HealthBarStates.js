@@ -1,19 +1,19 @@
 const HealthBarStates = {
   tasksUnknown: {
     className: "unknown",
-    label: "Unknown"
+    label: "未知"
   },
   tasksHealthy: {
     className: "healthy",
-    label: "Healthy"
+    label: "健康"
   },
   tasksOverCapacity: {
     className: "over-capacity",
-    label: "Over Capacity"
+    label: "过载"
   },
   tasksUnhealthy: {
     className: "unhealthy",
-    label: "Unhealthy"
+    label: "不健康"
   },
   tasksStaged: {
     className: "staged",

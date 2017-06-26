@@ -75,7 +75,7 @@ class VolumeDetail extends React.Component {
           <ConfigurationMapSection>
             <ConfigurationMapRow>
               <ConfigurationMapLabel>
-                Container Path
+                容器路径
               </ConfigurationMapLabel>
               <ConfigurationMapValue>
                 {volume.getContainerPath()}
@@ -83,7 +83,7 @@ class VolumeDetail extends React.Component {
             </ConfigurationMapRow>
             <ConfigurationMapRow>
               <ConfigurationMapLabel>
-                Mode
+                模式
               </ConfigurationMapLabel>
               <ConfigurationMapValue>
                 {volume.getMode()}
@@ -99,7 +99,7 @@ class VolumeDetail extends React.Component {
             </ConfigurationMapRow>
             <ConfigurationMapRow>
               <ConfigurationMapLabel>
-                Application
+                应用
               </ConfigurationMapLabel>
               <ConfigurationMapValue>
                 {serviceID}
@@ -107,7 +107,7 @@ class VolumeDetail extends React.Component {
             </ConfigurationMapRow>
             <ConfigurationMapRow>
               <ConfigurationMapLabel>
-                Task ID
+                任务ID
               </ConfigurationMapLabel>
               <ConfigurationMapValue>
                 {volume.getTaskID()}
@@ -115,7 +115,7 @@ class VolumeDetail extends React.Component {
             </ConfigurationMapRow>
             <ConfigurationMapRow>
               <ConfigurationMapLabel>
-                Host
+                主机
               </ConfigurationMapLabel>
               <ConfigurationMapValue>
                 {volume.getHost()}
