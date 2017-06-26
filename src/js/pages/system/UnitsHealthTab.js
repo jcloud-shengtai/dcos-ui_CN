@@ -22,7 +22,7 @@ import UnitHealthUtil from "../../utils/UnitHealthUtil";
 
 const UnitHealthBreadcrumbs = () => {
   const crumbs = [
-    <Breadcrumb key={0} title="Components">
+    <Breadcrumb key={0} title="组件">
       <BreadcrumbTextContent>
         <Link to="/components">组件列表</Link>
       </BreadcrumbTextContent>
@@ -227,7 +227,7 @@ class UnitsHealthTab extends mixin(StoreMixin) {
 }
 
 UnitsHealthTab.routeConfig = {
-  label: "Components",
+  label: "组件列表",
   matches: /^\/components\/overview/
 };
 

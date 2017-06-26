@@ -9,7 +9,7 @@ import UnitHealthStore from "../../stores/UnitHealthStore";
 
 const UnitHealthNodeDetailBreadcrumbs = ({ node, unit }) => {
   const crumbs = [
-    <Breadcrumb key={0} title="Components">
+    <Breadcrumb key={0} title="组件">
       <BreadcrumbTextContent>
         <Link to="/components">组件列表</Link>
       </BreadcrumbTextContent>

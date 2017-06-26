@@ -46,7 +46,7 @@ const nodesRoutes = {
       getCrumbs() {
         return [
           {
-            label: "Nodes",
+            label: "节点",
             route: { to: "/nodes" }
           }
         ];
