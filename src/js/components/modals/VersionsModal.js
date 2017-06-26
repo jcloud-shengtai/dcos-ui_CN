@@ -26,7 +26,7 @@ var VersionsModal = React.createClass({
   render() {
     const header = (
       <ModalHeading>
-        {Config.productName} Info
+        {Config.productName} 信息
       </ModalHeading>
     );
 

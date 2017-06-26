@@ -34,7 +34,7 @@ const SystemOverviewBreadcrumbs = () => {
   const crumbs = [
     <Breadcrumb key={0} title="Cluster">
       <BreadcrumbTextContent>
-        <Link to="/system-overview">System Overview</Link>
+        <Link to="/system-overview">系统总览</Link>
       </BreadcrumbTextContent>
     </Breadcrumb>
   ];
@@ -113,7 +113,7 @@ class OverviewDetailTab extends mixin(StoreMixin) {
       <ConfigurationMapSection>
         <ConfigurationMapRow key="version">
           <ConfigurationMapLabel>
-            {Config.productName} Version
+            {Config.productName} 版本
           </ConfigurationMapLabel>
           <ConfigurationMapValue>
             {productVersion}
@@ -121,7 +121,7 @@ class OverviewDetailTab extends mixin(StoreMixin) {
         </ConfigurationMapRow>
         <ConfigurationMapRow key="ccid">
           <ConfigurationMapLabel>
-            Cryptographic Cluster ID
+            加密集群ID
           </ConfigurationMapLabel>
           <ConfigurationMapValue>
             {ccid}
@@ -129,7 +129,7 @@ class OverviewDetailTab extends mixin(StoreMixin) {
         </ConfigurationMapRow>
         <ConfigurationMapRow key="publicIP">
           <ConfigurationMapLabel>
-            Public IP
+            公共IP
           </ConfigurationMapLabel>
           <ConfigurationMapValue>
             {publicIP}
@@ -147,12 +147,12 @@ class OverviewDetailTab extends mixin(StoreMixin) {
     }
 
     return {
-      "Marathon Details": {
-        Version: marathonDetails.version,
-        "Framework ID": marathonDetails.frameworkId,
+      "Marathon 详情": {
+        "版本": marathonDetails.version,
+        "框架ID": marathonDetails.frameworkId,
         Leader: marathonDetails.leader,
-        "Marathon Config": marathonDetails.marathon_config,
-        "ZooKeeper Config": marathonDetails.zookeeper_config
+        "Marathon 配置": marathonDetails.marathon_config,
+        "ZooKeeper 配置": marathonDetails.zookeeper_config
       }
     };
   }
@@ -160,7 +160,7 @@ class OverviewDetailTab extends mixin(StoreMixin) {
   getPageHeaderActions() {
     return [
       {
-        label: "View Cluster Configuration",
+        label: "查看集群配置",
         onItemSelect: this.handleClusterConfigModalOpen
       }
     ];
@@ -208,10 +208,10 @@ class OverviewDetailTab extends mixin(StoreMixin) {
         <div className="container">
           <ConfigurationMap>
             <ConfigurationMapHeading className="flush-top">
-              Cluster Details
+              集群详细地址
             </ConfigurationMapHeading>
             <ConfigurationMapHeading level={2}>
-              General
+              通用
             </ConfigurationMapHeading>
             {this.getClusterDetails()}
             {marathonDetails}
