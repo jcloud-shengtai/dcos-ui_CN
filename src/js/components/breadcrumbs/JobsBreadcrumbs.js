@@ -50,9 +50,9 @@ const JobsBreadcrumbs = props => {
   const { jobID, taskID, taskName, jobSchedules, jobStatus } = props;
   let aggregateIDs = "";
   const crumbs = [
-    <Breadcrumb key={0} title="Jobs">
+    <Breadcrumb key={0} title="任务">
       <BreadcrumbTextContent>
-        <Link to="/jobs">Jobs</Link>
+        <Link to="/jobs">任务</Link>
       </BreadcrumbTextContent>
     </Breadcrumb>
   ];

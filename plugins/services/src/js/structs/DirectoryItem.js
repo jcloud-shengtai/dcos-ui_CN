@@ -2,8 +2,8 @@ import Item from "../../../../../src/js/structs/Item";
 import StringUtil from "../../../../../src/js/utils/StringUtil";
 
 const DISPLAY_NAMES = {
-  stdout: "Output (stdout)",
-  stderr: "Error (stderr)"
+  stdout: "输出 (stdout)",
+  stderr: "错误 (stderr)"
 };
 
 class DirectoryItem extends Item {
