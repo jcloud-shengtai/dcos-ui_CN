@@ -515,8 +515,7 @@ class MultiContainerHealthChecksFormSection extends Component {
           {heading}
         </h2>
         <p>
-          Health checks may be specified per application to be run against
-          the application{"'"}s instances.
+          可以针对应用程序的实例为每个应用程序指定运行状况检查。
         </p>
         {this.getContainerHealthChecks(data.containers)}
       </div>

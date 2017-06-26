@@ -1,10 +1,10 @@
 var NodesTableHeaderLabels = {
-  health: "HEALTH",
+  health: "健康状况",
   cpus: "CPU",
-  disk: "DISK",
-  hostname: "HOSTNAME",
-  mem: "MEM",
-  TASK_RUNNING: "TASKS"
+  disk: "磁盘",
+  hostname: "主机名称",
+  mem: "内存",
+  TASK_RUNNING: "任务"
 };
 
 module.exports = NodesTableHeaderLabels;
