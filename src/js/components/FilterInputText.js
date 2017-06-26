@@ -86,7 +86,7 @@ class FilterInputText extends React.Component {
     let color = "white";
 
     if (!inverseStyle) {
-      color = "purple";
+      color = "#2f81f7";
     }
 
     const iconClassNames = classNames("clickable", {
@@ -118,7 +118,7 @@ class FilterInputText extends React.Component {
     });
 
     if (!inverseStyle && focus) {
-      iconColor = "purple";
+      iconColor = "#2f81f7";
     }
 
     const inputContainerClasses = classNames(
@@ -157,7 +157,7 @@ class FilterInputText extends React.Component {
 
 FilterInputText.defaultProps = {
   inverseStyle: false,
-  placeholder: "搜索",
+  placeholder: "Filter",
   searchString: "",
   sideText: null
 };
