@@ -157,7 +157,7 @@ class FilterInputText extends React.Component {
 
 FilterInputText.defaultProps = {
   inverseStyle: false,
-  placeholder: "Filter",
+  placeholder: "搜索",
   searchString: "",
   sideText: null
 };
