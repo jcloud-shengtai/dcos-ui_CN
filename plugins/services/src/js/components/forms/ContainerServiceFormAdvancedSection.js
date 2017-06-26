@@ -27,14 +27,14 @@ const { DOCKER } = ContainerConstants.type;
 
 const containerSettings = {
   privileged: {
-    label: "Grant Runtime Privileges",
-    helpText: "By default, containers are “unprivileged” and cannot, for example, run a Docker daemon inside a Docker container.",
-    dockerOnly: "Grant runtime privileges is only supported in Docker Runtime."
+    label: "授予容器特权",
+    helpText: "默认容器都是非授权的，并且没有特殊权限。比如在一个docker内运行另一个docker.",
+    dockerOnly: "只有在Docker容器中才支持授予特权操作."
   },
   forcePullImage: {
-    label: "Force Pull Image On Launch",
-    helpText: "Force Docker to pull the image before launching each instance.",
-    dockerOnly: "Force pull image on launch is only supported in Docker Runtime."
+    label: "启动时强制拉取镜像",
+    helpText: "在启动每个实例前强制拉取镜像.",
+    dockerOnly: "启动前强制拉取镜像只在docker容器下才支持."
   }
 };
 
@@ -106,7 +106,7 @@ class ContainerServiceFormAdvancedSection extends Component {
     if (gpusDisabled) {
       inputNode = (
         <Tooltip
-          content="Docker Engine does not support GPU resources, please select Universal Container Runtime if you want to use GPU resources."
+          content="Docker 引擎不支持GPU 资源, 如果想使用GPU资源，请选择 Universal 容器环境."
           interactive={true}
           maxWidth={300}
           scrollContainer=".gm-scroll-view"
@@ -211,16 +211,16 @@ class ContainerServiceFormAdvancedSection extends Component {
     return (
       <div>
         <h3 className="short-bottom">
-          Advanced Settings
+          高级设置
         </h3>
-        <p>Advanced settings related to the runtime you have selected above.</p>
+        <p>高级设置与您选择的运行时环境有关.</p>
         {this.getContainerSettings()}
         <FormRow>
           {this.getGPUSField()}
           <FormGroup className="column-4" showError={Boolean(diskErrors)}>
             <FieldLabel className="text-no-transform">
               <FormGroupHeadingContent primary={true}>
-                Disk (MiB)
+                磁盘 (MiB)
               </FormGroupHeadingContent>
             </FieldLabel>
             <FieldInput

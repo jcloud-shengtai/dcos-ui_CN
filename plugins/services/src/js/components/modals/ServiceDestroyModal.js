@@ -161,7 +161,7 @@ class ServiceDestroyModal extends React.Component {
         onClose={onClose}
         leftButtonText="取消"
         leftButtonCallback={onClose}
-        rightButtonText={`Destroy ${itemText}`}
+        rightButtonText={`销毁 ${itemText}`}
         rightButtonClassName="button button-danger"
         rightButtonCallback={this.handleRightButtonClick}
         showHeader={true}

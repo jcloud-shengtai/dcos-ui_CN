@@ -1,9 +1,9 @@
 var ServiceTableHeaderLabels = {
   cpus: "CPU",
-  disk: "DISK",
-  mem: "MEM",
-  name: "NAME",
-  status: "STATUS"
+  disk: "磁盘",
+  mem: "内存",
+  name: "名称",
+  status: "状态"
 };
 
 module.exports = ServiceTableHeaderLabels;

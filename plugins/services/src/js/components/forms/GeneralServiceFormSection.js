@@ -53,15 +53,15 @@ const METHODS_TO_BIND = [
 const containerRuntimes = {
   [DOCKER]: {
     label: <span>{labelMap[DOCKER]}</span>,
-    helpText: "Docker’s container runtime. No support for multiple containers (Pods) or GPU resources."
+    helpText: "Docker’s container runtime. 不支持多容器(Pods) 或 GPU 资源."
   },
   [NONE]: {
     label: <span>{labelMap[NONE]}</span>,
-    helpText: "The default Mesos containerizer"
+    helpText: "默认的 Mesos 容器"
   },
   [MESOS]: {
     label: <span>{labelMap[MESOS]}</span>,
-    helpText: "Native container engine in Mesos using standard Linux features. Supports Docker file format, multiple containers (Pods) and GPU resources."
+    helpText: "Mesos 的原生容器引擎，具备标准版Linux特征. 支持 Docker 文件格式,多实例 (Pods) 和 GPU 资源."
   }
 };
 
@@ -174,9 +174,9 @@ class GeneralServiceFormSection extends Component {
     return (
       <div className="pod pod-short flush-horizontal flush-bottom">
         <em>
-          {"Need to run a service with multiple containers? "}
+          {"需要启动多容器服务? "}
           <a className="clickable" onClick={this.handleOpenConvertToPodModal}>
-            Add another container
+            添加另一个容器
           </a>.
         </em>
       </div>
@@ -207,7 +207,7 @@ class GeneralServiceFormSection extends Component {
     return (
       <div>
         <h3 className="short-bottom">
-          Containers
+          容器
         </h3>
         {containerElements}
         <AddButton
@@ -216,7 +216,7 @@ class GeneralServiceFormSection extends Component {
             path: "containers"
           })}
         >
-          Add Container
+          添加容器
         </AddButton>
       </div>
     );
@@ -238,13 +238,13 @@ class GeneralServiceFormSection extends Component {
     const placementTooltipContent = (
       <span>
         {
-          "Constraints have three parts: a field name, an operator, and an optional parameter. The field can be the hostname of the agent node or any attribute of the agent node. "
+          "约束有三部分: a field name, an operator, and an optional parameter. The field can be the hostname of the agent node or any attribute of the agent node. "
         }
         <a
           href="https://mesosphere.github.io/marathon/docs/constraints.html"
           target="_blank"
         >
-          More information
+          更多信息
         </a>.
       </span>
     );
@@ -635,7 +635,7 @@ class GeneralServiceFormSection extends Component {
 
         <AdvancedSection initialIsExpanded={initialIsExpanded}>
           <AdvancedSectionLabel>
-            More Settings
+            更多设置
           </AdvancedSectionLabel>
           <AdvancedSectionContent>
             {this.getRuntimeSection()}

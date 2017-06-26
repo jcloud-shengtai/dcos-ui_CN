@@ -230,7 +230,7 @@ class JobFormModal extends mixin(StoreMixin) {
     if (!isValidated) {
       this.setState({
         errorMessage: {
-          message: "Please fix all the errors first",
+          message: "请按提示填写必要信息",
           details: null
         }
       });
@@ -416,7 +416,7 @@ class JobFormModal extends mixin(StoreMixin) {
   getModalTitle() {
     let heading = " 创建任务";
     if (this.props.isEdit) {
-      heading = `Edit Job (${this.props.job.getName()})`;
+      heading = `编辑任务 (${this.props.job.getName()})`;
     }
 
     return (

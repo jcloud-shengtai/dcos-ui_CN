@@ -19,13 +19,13 @@ class ArtifactsSection extends Component {
     const tooltipContent = (
       <span>
         {
-          "If your service requires additional files and/or archives of files, enter their URIs to download and, if necessary, extract these resources. "
+          "如果你的服务依赖于额外的文件, 输入它们的 URIs 去下载它们, 如果有必要，提取这些资源. "
         }
         <a
           href="https://mesosphere.github.io/marathon/docs/application-basics.html"
           target="_blank"
         >
-          More information
+          更多信息
         </a>.
       </span>
     );
@@ -104,7 +104,7 @@ class ArtifactsSection extends Component {
                 value: data.length
               })}
             >
-              Add Artifact
+              增加Artifact
             </AddButton>
           </FormGroup>
         </FormRow>

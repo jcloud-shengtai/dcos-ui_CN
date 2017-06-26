@@ -9,8 +9,8 @@ import Pod from "../../structs/Pod";
 import StringUtil from "../../../../../../src/js/utils/StringUtil";
 
 const ACTION_DISPLAY_NAMES = {
-  restart: "Restart",
-  stop: "Stop"
+  restart: "重启",
+  stop: "停止"
 };
 
 class KillPodInstanceModal extends React.Component {
@@ -90,9 +90,9 @@ class KillPodInstanceModal extends React.Component {
     return (
       <div className="text-align-center">
         <p>
-          You are about to {action.toLowerCase()} {instanceCountContent}.
+          您将要 {action.toLowerCase()} {instanceCountContent}.
           <br />
-          Are you sure you want to continue?
+          确定继续?
         </p>
         {this.getErrorMessage()}
       </div>

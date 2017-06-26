@@ -96,11 +96,11 @@ class JobRunHistoryTable extends React.Component {
     });
 
     const headingStrings = {
-      jobID: "Job ID",
-      status: "Status",
-      startedAt: "Started",
-      finishedAt: "Finished",
-      runTime: "Run Time"
+      jobID: "任务ID",
+      status: "状态",
+      startedAt: "开始时间",
+      finishedAt: "结束时间",
+      runTime: "执行时长"
     };
 
     return (

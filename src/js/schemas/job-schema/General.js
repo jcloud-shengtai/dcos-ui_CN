@@ -59,7 +59,7 @@ const General = {
               })
             ) {
               definition.showError =
-                "CPUs must be a number at least equal to " +
+                "CPU数量必须≥" +
                 MesosConstants.MIN_CPUS;
 
               return false;
@@ -82,7 +82,7 @@ const General = {
               })
             ) {
               definition.showError =
-                "Mem must be a number and at least " +
+                "内存必须≥" +
                 MesosConstants.MIN_MEM +
                 " MiB";
 

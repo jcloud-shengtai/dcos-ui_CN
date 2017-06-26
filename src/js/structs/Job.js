@@ -85,10 +85,10 @@ module.exports = class Job extends Item {
 
     if (lastFailureAt !== null || lastSuccessAt !== null) {
       if (lastFailureAt > lastSuccessAt) {
-        status = "Failed";
+        status = "失败";
         time = lastFailureAt;
       } else {
-        status = "Success";
+        status = "成功";
         time = lastSuccessAt;
       }
     }
