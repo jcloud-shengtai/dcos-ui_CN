@@ -288,7 +288,7 @@ class VirtualNetworkTaskTab extends mixin(StoreMixin) {
       <div>
         <FilterHeadline
           onReset={this.resetFilter}
-          name="Task"
+          name="任务"
           currentLength={filteredTasks.length}
           totalLength={tasks.length}
         />

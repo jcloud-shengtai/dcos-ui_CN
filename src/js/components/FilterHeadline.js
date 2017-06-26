@@ -65,7 +65,7 @@ class FilterHeadline extends React.Component {
         </li>
         <li className={anchorClassSet} onClick={this.handleReset}>
           <a className="small flush">
-            (清除)
+            (重置)
           </a>
         </li>
         <li className={unfilteredClassSet}>
