@@ -71,12 +71,12 @@ class UserFormModal extends mixin(StoreMixin) {
   getButtonDefinition() {
     return Hooks.applyFilter("userFormModalButtonDefinition", [
       {
-        text: "Cancel",
+        text: "取消",
         className: "button button-medium",
         isClose: true
       },
       {
-        text: "Add User",
+        text: "确认",
         className: "button button-success button-medium",
         isSubmit: true
       }
