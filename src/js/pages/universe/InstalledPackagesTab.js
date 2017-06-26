@@ -18,7 +18,7 @@ const InstalledPackagesBreadcrumbs = () => {
   const crumbs = [
     <Breadcrumb key={0} title="Installed">
       <BreadcrumbTextContent>
-        <Link to="/universe/installed-packages">Installed</Link>
+        <Link to="/universe/installed-packages">已安装列表</Link>
       </BreadcrumbTextContent>
     </Breadcrumb>
   ];
