@@ -1,7 +1,7 @@
 var HEALTH_LABELS = {
   ALL: "All",
-  HEALTHY: "健康",
-  UNHEALTHY: "非健康",
+  HEALTHY: "正常",
+  UNHEALTHY: "异常",
   IDLE: "Idle",
   NA: "N/A"
 };
