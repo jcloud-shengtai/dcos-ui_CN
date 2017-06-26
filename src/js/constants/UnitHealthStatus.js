@@ -1,21 +1,21 @@
 const UnitHealthStatus = {
   HEALTHY: {
-    title: "Healthy",
+    title: "正常",
     value: 0,
     classNames: "text-success"
   },
   UNHEALTHY: {
-    title: "Unhealthy",
+    title: "异常",
     value: 1,
     classNames: "text-danger"
   },
   WARN: {
-    title: "Warning",
+    title: "警告",
     value: 2,
     classNames: "text-warning"
   },
   NA: {
-    title: "N/A",
+    title: "未知",
     value: 3,
     classNames: "text-mute"
   }

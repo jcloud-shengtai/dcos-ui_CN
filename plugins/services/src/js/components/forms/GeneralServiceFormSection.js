@@ -635,7 +635,7 @@ class GeneralServiceFormSection extends Component {
 
         <AdvancedSection initialIsExpanded={initialIsExpanded}>
           <AdvancedSectionLabel>
-            More Settings
+            更多设置
           </AdvancedSectionLabel>
           <AdvancedSectionContent>
             {this.getRuntimeSection()}

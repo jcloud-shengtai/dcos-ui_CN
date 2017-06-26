@@ -14,7 +14,7 @@ const Schedule = {
     runOnSchedule: {
       label: "Run on a schedule",
       showLabel: true,
-      title: "Run on a schedule",
+      title: "按计划执行",
       type: "boolean",
       getter(job) {
         const [schedule] = job.getSchedules();
@@ -48,8 +48,7 @@ const Schedule = {
 
         if (!JobValidatorUtil.isValidCronSchedule(schedule.cron)) {
           definition.showError =
-            "CRON Schedule must not be empty and it must " +
-            "follow the correct CRON format specifications";
+            "CRON表达式不能为空，并且必须遵循正确的CRON格式规范";
 
           return false;
         }

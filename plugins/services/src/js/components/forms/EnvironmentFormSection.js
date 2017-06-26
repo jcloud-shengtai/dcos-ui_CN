@@ -156,26 +156,26 @@ class EnvironmentFormSection extends Component {
     const envTooltipContent = (
       <span>
         {
-          "DC/OS also exposes environment variables for host ports and metdata. "
+          "DC/OS 也可以暴露环境变量和元数据. "
         }
         <a
           href="https://mesosphere.github.io/marathon/docs/task-environment-vars.html"
           target="_blank"
         >
-          More information
+          更多信息
         </a>.
       </span>
     );
     const labelsTooltipContent = (
       <span>
         {
-          "For example, you could label services “staging” and “production” to mark them by their position in the pipeline. "
+          "例如, 您可以给服务打上 “staging” 和 “production” 的标签来进行标记. "
         }
         <a
           href={MetadataStore.buildDocsURI("/usage/tutorials/task-labels/")}
           target="_blank"
         >
-          More information
+          更多信息
         </a>.
       </span>
     );
@@ -185,17 +185,17 @@ class EnvironmentFormSection extends Component {
         <h2 className="flush-top short-bottom">
           <FormGroupHeading>
             <FormGroupHeadingContent primary={true}>
-              Environment
+              环境
             </FormGroupHeadingContent>
           </FormGroupHeading>
         </h2>
         <p>
-          Configure any environment values to be attached to each instance that is launched.
+          为每个已启动的实例配置环境变量信息
         </p>
         <h3 className="short-bottom">
           <FormGroupHeading>
             <FormGroupHeadingContent primary={true}>
-              Environment Variables
+              环境变量
             </FormGroupHeadingContent>
             <FormGroupHeadingContent>
               <Tooltip
@@ -211,7 +211,7 @@ class EnvironmentFormSection extends Component {
           </FormGroupHeading>
         </h3>
         <p>
-          Set up environment variables for each instance your service launches.
+          为你的服务的每个实例设置环境变量
         </p>
         {this.getEnvironmentLines(data.env)}
         <FormRow>
@@ -222,7 +222,7 @@ class EnvironmentFormSection extends Component {
                 path: "env"
               })}
             >
-              Add Environment Variable
+              增加环境变量
             </AddButton>
           </FormGroup>
         </FormRow>
@@ -256,7 +256,7 @@ class EnvironmentFormSection extends Component {
                 path: "labels"
               })}
             >
-              Add Label
+              增加标签
             </AddButton>
           </FormGroup>
         </FormRow>

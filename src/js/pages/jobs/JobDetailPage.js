@@ -64,8 +64,8 @@ class JobDetailPage extends mixin(StoreMixin, TabsMixin) {
     ];
 
     this.tabs_tabs = {
-      runHistory: "Run History",
-      configuration: "Configuration"
+      runHistory: "执行记录",
+      configuration: "设置信息"
     };
 
     this.state = {
@@ -175,10 +175,10 @@ class JobDetailPage extends mixin(StoreMixin, TabsMixin) {
     const { id } = this.props.params;
     const { disabledDialog, jobActionDialog, errorMsg } = this.state;
     let stopCurrentJobRuns = false;
-    let actionButtonLabel = "Destroy Job";
+    let actionButtonLabel = "取消任务";
     let message =
-      `Are you sure you want to destroy ${id}? ` +
-      "This action is irreversible.";
+      `确定要取消${id}? ` +
+      "取消后不能再恢复.";
 
     if (/stopCurrentJobRuns=true/.test(errorMsg)) {
       actionButtonLabel = "Stop Current Runs and Destroy Job";
@@ -191,7 +191,7 @@ class JobDetailPage extends mixin(StoreMixin, TabsMixin) {
     const content = (
       <div>
         <h2 className="text-danger text-align-center flush-top">
-          Destroy Job
+          取消任务
         </h2>
         <p>{message}</p>
       </div>
@@ -356,32 +356,32 @@ class JobDetailPage extends mixin(StoreMixin, TabsMixin) {
     const actions = [];
 
     actions.push({
-      label: "Edit",
+      label: "编辑",
       onItemSelect: this.handleEditButtonClick
     });
 
     actions.push({
-      label: "Run Now",
+      label: "立即执行",
       onItemSelect: this.handleRunNowButtonClick
     });
 
     if (schedule != null && schedule.enabled) {
       actions.push({
-        label: "Disable Schedule",
+        label: "作废任务计划",
         onItemSelect: this.handleDisableScheduleButtonClick
       });
     }
 
     if (schedule != null && !schedule.enabled) {
       actions.push({
-        label: "Enable Schedule",
+        label: "恢复任务计划",
         onItemSelect: this.handleEnableScheduleButtonClick
       });
     }
 
     actions.push({
       className: "text-danger",
-      label: "Destroy",
+      label: "取消",
       onItemSelect: this.handleDestroyButtonClick
     });
 
@@ -393,14 +393,14 @@ class JobDetailPage extends mixin(StoreMixin, TabsMixin) {
 
     return [
       {
-        label: "Run History",
+        label: "执行记录",
         callback: () => {
           this.setState({ currentTab: "runHistory" });
         },
         isActive: activeTab === "runHistory"
       },
       {
-        label: "Configuration",
+        label: "设置信息",
         callback: () => {
           this.setState({ currentTab: "configuration" });
         },
