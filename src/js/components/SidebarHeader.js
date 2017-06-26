@@ -123,7 +123,7 @@ class SidebarHeader extends mixin(StoreMixin) {
         selectable: false
       },
       {
-        html: "Documentation",
+        html: "文档",
         id: "documentation",
         onClick() {
           SidebarActions.close();
