@@ -156,7 +156,7 @@ class SearchLog extends React.Component {
           <FilterInputText
             ref="filterInput"
             className="flex-grow flex-box flush-bottom"
-            placeholder="Search"
+            placeholder="搜索"
             searchString={this.state.searchString}
             sideText={this.getSearchCount()}
             handleFilterChange={this.handleSearchStringChange}

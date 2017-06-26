@@ -161,7 +161,7 @@ module.exports = Object.assign({}, StoreMixin, {
           getCrumbs() {
             return [
               {
-                label: "Users",
+                label: "用户",
                 route: { to: "/organization/users" }
               }
             ];

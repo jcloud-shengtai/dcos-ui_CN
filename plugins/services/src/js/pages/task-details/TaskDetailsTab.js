@@ -31,7 +31,7 @@ class TaskDetailsTab extends React.Component {
     return (
       <ConfigurationMapSection>
         <ConfigurationMapHeading>
-          Container Configuration
+          容器配置
         </ConfigurationMapHeading>
         <ConfigurationMapRow>
           <pre className="flex-item-grow-1 mute prettyprint flush-bottom">
@@ -83,7 +83,7 @@ class TaskDetailsTab extends React.Component {
       serviceRow = (
         <ConfigurationMapRow>
           <ConfigurationMapLabel>
-            Service
+            服务
           </ConfigurationMapLabel>
           <ConfigurationMapValue>
             {service.name} ({service.id})
@@ -96,7 +96,7 @@ class TaskDetailsTab extends React.Component {
       nodeRow = (
         <ConfigurationMapRow>
           <ConfigurationMapLabel>
-            Node
+            节点
           </ConfigurationMapLabel>
           <ConfigurationMapValue>
             {node.getHostName()} ({node.getID()})
@@ -109,7 +109,7 @@ class TaskDetailsTab extends React.Component {
       sandBoxRow = (
         <ConfigurationMapRow>
           <ConfigurationMapLabel>
-            Sandbox Path
+            沙箱路径
           </ConfigurationMapLabel>
           <ConfigurationMapValue>
             {sandBoxPath}
@@ -121,11 +121,11 @@ class TaskDetailsTab extends React.Component {
     return (
       <ConfigurationMapSection>
         <ConfigurationMapHeading>
-          Configuration
+          配置
         </ConfigurationMapHeading>
         <ConfigurationMapRow>
           <ConfigurationMapLabel>
-            Task ID
+            任务ID
           </ConfigurationMapLabel>
           <ConfigurationMapValue>
             {mesosTask.id}
@@ -136,7 +136,7 @@ class TaskDetailsTab extends React.Component {
         {sandBoxRow}
         <ConfigurationMapRow>
           <ConfigurationMapLabel>
-            Endpoints
+            端点
           </ConfigurationMapLabel>
           <ConfigurationMapValue>
             <TaskEndpointsList task={mesosTask} node={node} />
@@ -172,7 +172,7 @@ class TaskDetailsTab extends React.Component {
     return (
       <ConfigurationMapSection>
         <ConfigurationMapHeading>
-          Labels
+          标签
         </ConfigurationMapHeading>
         {labelRows}
       </ConfigurationMapSection>

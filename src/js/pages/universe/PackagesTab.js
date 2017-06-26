@@ -287,7 +287,7 @@ PackagesTab.contextTypes = {
 };
 
 PackagesTab.routeConfig = {
-  label: "包列表", //Packages
+  label: "Packages",
   matches: /^\/universe\/packages/
 };
 

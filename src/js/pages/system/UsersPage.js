@@ -20,7 +20,7 @@ const UsersBreadcrumbs = () => {
   const crumbs = [
     <Breadcrumb key={0} title="Users">
       <BreadcrumbTextContent>
-        <Link to="/organization/users">Users</Link>
+        <Link to="/organization/users">用戶</Link>
       </BreadcrumbTextContent>
     </Breadcrumb>
   ];
@@ -117,7 +117,7 @@ UsersPage.propTypes = {
 };
 
 UsersPage.routeConfig = {
-  label: "Users",
+  label: "用戶",
   matches: /^\/organization\/users/
 };
 

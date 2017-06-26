@@ -54,6 +54,6 @@ describe("Installed Packages Tab", function() {
       .click({ force: true });
     cy
       .get(".modal .modal-footer .button.button-danger")
-      .should("contain", "Remove Repository");
+      .should("contain", "删除存储库");
   });
 });

@@ -66,7 +66,7 @@ const DeploymentsBreadcrumbs = () => {
   const crumbs = [
     <Breadcrumb key={0} title="Deployments">
       <BreadcrumbTextContent>
-        <Link to="/services/deployments">Deployments</Link>
+        <Link to="/services/deployments">部署</Link>
       </BreadcrumbTextContent>
     </Breadcrumb>
   ];
@@ -341,8 +341,8 @@ class DeploymentsTab extends mixin(StoreMixin) {
       <Page>
         <Page.Header breadcrumbs={<DeploymentsBreadcrumbs />} />
         <AlertPanel>
-          <AlertPanelHeader>No active deployments</AlertPanelHeader>
-          <p className="flush">Active deployments will be shown here.</p>
+          <AlertPanelHeader>没有有效的部署信息</AlertPanelHeader>
+          <p className="flush">有效的部署信息将会在此展示</p>
         </AlertPanel>
       </Page>
     );
