@@ -70,7 +70,7 @@ class HostsPageContent extends React.Component {
         <FilterHeadline
           currentLength={filteredNodeCount}
           isFiltering={isFiltering}
-          name="Node"
+          name="节点"
           onReset={this.onResetFilter}
           totalLength={totalNodeCount}
         />
