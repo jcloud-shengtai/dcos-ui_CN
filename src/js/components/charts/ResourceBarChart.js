@@ -113,7 +113,7 @@ const ResourceBarChart = React.createClass({
           {headline}
         </h4>
         <p className="flush">
-          {this.props.itemCount + " Total " + this.props.resourceType}
+          {"总共" + this.props.itemCount + "个" + this.props.resourceType}
         </p>
       </div>
     );

@@ -141,7 +141,7 @@ class DSLInputField extends React.Component {
 
     const { expression } = this.state;
     const { inverseStyle } = this.props;
-    let color = "purple";
+    let color = "#2f81f7";
 
     if (inverseStyle) {
       color = "white";
@@ -188,7 +188,7 @@ class DSLInputField extends React.Component {
     }
 
     if (dropdownVisible) {
-      color = "purple";
+      color = "#2f81f7";
     }
 
     return (
@@ -241,7 +241,7 @@ class DSLInputField extends React.Component {
     });
 
     if (!inverseStyle && (focus || expression.defined)) {
-      iconColor = "purple";
+      iconColor = "#2f81f7";
     }
 
     if (expression.hasErrors) {

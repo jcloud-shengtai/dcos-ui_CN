@@ -10,7 +10,7 @@ function getStateIndicator(isExpanded) {
     iconID = "triangle-down";
   }
 
-  return <Icon id={iconID} color="purple" family="tiny" size="tiny" />;
+  return <Icon id={iconID} color="#2f81f7" family="tiny" size="tiny" />;
 }
 
 const AdvancedSectionLabel = ({ className, children, isExpanded, onClick }) => {
