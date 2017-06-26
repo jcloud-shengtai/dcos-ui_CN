@@ -541,7 +541,7 @@ class NewCreateServiceModal extends Component {
             type="secondary"
           />
           <FullScreenModalHeaderTitle>
-            Review & Run Service
+            检查 & 运行服务
           </FullScreenModalHeaderTitle>
           <FullScreenModalHeaderActions
             actions={this.getPrimaryActions()}
@@ -753,7 +753,7 @@ class NewCreateServiceModal extends Component {
               onChange={this.handleJSONToggle}
               key="json-editor"
             >
-              JSON Editor
+              JSON 编辑器
             </ToggleButton>
           )
         },
@@ -770,7 +770,7 @@ class NewCreateServiceModal extends Component {
         {
           className: "button-primary flush-vertical",
           clickHandler: this.handleServiceReview,
-          label: "Review & Run"
+          label: "检查 & 运行"
         }
       ];
     }
@@ -823,7 +823,7 @@ class NewCreateServiceModal extends Component {
   getSecondaryActions() {
     const { location } = this.props;
     const { servicePickerActive, serviceReviewActive } = this.state;
-    let label = "Back";
+    let label = "后退";
 
     if (
       servicePickerActive ||
@@ -875,13 +875,13 @@ class NewCreateServiceModal extends Component {
           onClose={this.handleCloseConfirmModal}
           leftButtonText="取消"
           leftButtonCallback={this.handleCloseConfirmModal}
-          rightButtonText="Discard"
+          rightButtonText="丢弃"
           rightButtonClassName="button button-danger"
           rightButtonCallback={this.handleConfirmGoBack}
           showHeader={true}
         >
           <p>
-            Are you sure you want to leave this page? Any data you entered will be lost.
+            确定离开该页面吗? 任何未被保存的修改将会丢失.
           </p>
         </Confirm>
       </FullScreenModal>

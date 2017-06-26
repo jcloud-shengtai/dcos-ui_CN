@@ -44,7 +44,7 @@ class VolumesFormSection extends Component {
     const tooltipContent = (
       <span>
         {
-          "The path where your application will read and write data. This must be a single-level path relative to the container. "
+          "您的应用将从此目录进行数据的读写. 该目录必须是容器的一级目录. "
         }
         <a
           href={MetadataStore.buildDocsURI("/usage/storage/persistent-volume/")}
@@ -61,7 +61,7 @@ class VolumesFormSection extends Component {
           <FieldLabel className="text-no-transform">
             <FormGroupHeading>
               <FormGroupHeadingContent primary={true}>
-                SIZE (MiB)
+                空间 (MiB)
               </FormGroupHeadingContent>
             </FormGroupHeading>
           </FieldLabel>
@@ -76,7 +76,7 @@ class VolumesFormSection extends Component {
           <FieldLabel>
             <FormGroupHeading>
               <FormGroupHeadingContent primary={true}>
-                Container Path
+                容器路径
               </FormGroupHeadingContent>
               <FormGroupHeadingContent>
                 <Tooltip
@@ -114,7 +114,7 @@ class VolumesFormSection extends Component {
     const tooltipContent = (
       <span>
         {
-          "If you are using the Mesos containerizer, this must be a single-level path relative to the container. "
+          "如果您正在使用 Mesos 容器, 请确保使用容器的一级目录. "
         }
         <a
           href={MetadataStore.buildDocsURI("/usage/storage/external-storage/")}
@@ -131,7 +131,7 @@ class VolumesFormSection extends Component {
           <FieldLabel>
             <FormGroupHeading>
               <FormGroupHeadingContent primary={true}>
-                Host Path
+                主机路径
               </FormGroupHeadingContent>
             </FormGroupHeading>
           </FieldLabel>
@@ -145,7 +145,7 @@ class VolumesFormSection extends Component {
           <FieldLabel>
             <FormGroupHeading>
               <FormGroupHeadingContent primary={true}>
-                Container Path
+                容器路径
               </FormGroupHeadingContent>
               <FormGroupHeadingContent>
                 <Tooltip
@@ -171,7 +171,7 @@ class VolumesFormSection extends Component {
           <FieldLabel>
             <FormGroupHeading>
               <FormGroupHeadingContent primary={true}>
-                Mode
+                模式
               </FormGroupHeadingContent>
             </FormGroupHeading>
           </FieldLabel>
@@ -226,7 +226,7 @@ class VolumesFormSection extends Component {
               <FieldLabel>
                 <FormGroupHeading>
                   <FormGroupHeadingContent primary={true}>
-                    Volume Type
+                    卷类型
                   </FormGroupHeadingContent>
                 </FormGroupHeading>
               </FieldLabel>
@@ -234,9 +234,9 @@ class VolumesFormSection extends Component {
                 name={`localVolumes.${key}.type`}
                 value={volume.type}
               >
-                <option>Select...</option>
+                <option>请选择...</option>
                 {this.getHostOption(dockerImage)}
-                <option value="PERSISTENT">Persistent Volume</option>
+                <option value="PERSISTENT">默认卷</option>
               </FieldSelect>
             </FormGroup>
           </FormRow>
@@ -278,7 +278,7 @@ class VolumesFormSection extends Component {
 
       let sizeField = (
         <Tooltip
-          content="Docker Runtime only supports the default size for implicit volumes, please select Mesos Runtime if you want to modify the size."
+          content="Docker Runtime 只支持默认尺寸的隐藏卷, 如果您想修改大小， 请选择 Mesos Runtime."
           width={300}
           scrollContainer=".gm-scroll-view"
           wrapperClassName="tooltip-wrapper tooltip-block-wrapper text-align-center"
@@ -316,7 +316,7 @@ class VolumesFormSection extends Component {
               <FieldLabel>
                 <FormGroupHeading>
                   <FormGroupHeadingContent primary={true}>
-                    Name
+                    名称
                   </FormGroupHeadingContent>
                 </FormGroupHeading>
               </FieldLabel>
@@ -333,7 +333,7 @@ class VolumesFormSection extends Component {
               <FieldLabel className="text-no-transform">
                 <FormGroupHeading>
                   <FormGroupHeadingContent primary={true}>
-                    SIZE (GiB)
+                    空间 (GiB)
                   </FormGroupHeadingContent>
                 </FormGroupHeading>
               </FieldLabel>
@@ -347,7 +347,7 @@ class VolumesFormSection extends Component {
               <FieldLabel>
                 <FormGroupHeading>
                   <FormGroupHeadingContent primary={true}>
-                    Container Path
+                    容器路径
                   </FormGroupHeadingContent>
                 </FormGroupHeading>
               </FieldLabel>
@@ -371,7 +371,7 @@ class VolumesFormSection extends Component {
       <span>
         {"DC/OS offers several storage options. "}
         <a href={MetadataStore.buildDocsURI("/usage/storage/")} target="_blank">
-          More information
+          更多信息
         </a>.
       </span>
     );
@@ -381,7 +381,7 @@ class VolumesFormSection extends Component {
         <h2 className="flush-top short-bottom">
           <FormGroupHeading>
             <FormGroupHeadingContent primary={true}>
-              Volumes
+              卷
             </FormGroupHeadingContent>
             <FormGroupHeadingContent>
               <Tooltip
@@ -397,12 +397,12 @@ class VolumesFormSection extends Component {
           </FormGroupHeading>
         </h2>
         <p>
-          Create a stateful service by configuring a persistent volume. Persistent volumes enable instances to be restarted without data loss.
+          配置首选卷以创建一个状态服务. 首选卷可以让实例重启时保留数据.
         </p>
         <h3 className="short-bottom">
           <FormGroupHeading>
             <FormGroupHeadingContent primary={true}>
-              Local Volumes
+              本地卷
             </FormGroupHeadingContent>
           </FormGroupHeading>
         </h3>
@@ -416,7 +416,7 @@ class VolumesFormSection extends Component {
             )}
             target="_blank"
           >
-            More information
+            更多信息
           </a>.
         </p>
         {this.getLocalVolumesLines(data.localVolumes)}
@@ -427,19 +427,19 @@ class VolumesFormSection extends Component {
               path: "localVolumes"
             })}
           >
-            Add Local Volume
+            添加本地卷
           </AddButton>
         </div>
         <h3 className="short-bottom">
           <FormGroupHeading>
             <FormGroupHeadingContent primary={true}>
-              External Volumes
+              外部卷
             </FormGroupHeadingContent>
           </FormGroupHeading>
         </h3>
         <p>
           {
-            "Choose an external persistent volume if fault-tolerance is crucial for your service. "
+            "如果您的服务对容错有要求，请选择一个外部卷. "
           }
           <a
             href={MetadataStore.buildDocsURI(
@@ -447,7 +447,7 @@ class VolumesFormSection extends Component {
             )}
             target="_blank"
           >
-            More information
+            更多信息
           </a>.
         </p>
         {this.getExternalVolumesLines(
@@ -462,7 +462,7 @@ class VolumesFormSection extends Component {
                 path: "externalVolumes"
               })}
             >
-              Add External Volume
+              增加外部卷
             </AddButton>
           </FormGroup>
         </FormRow>

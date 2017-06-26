@@ -129,7 +129,7 @@ class UnitsHealthTab extends mixin(StoreMixin) {
       {
         className: classNameFn,
         headerClassName: classNameFn,
-        heading: ResourceTableUtil.renderHeading({ name: "NAME" }),
+        heading: ResourceTableUtil.renderHeading({ name: "名称" }),
         prop: "name",
         render: this.renderUnit,
         sortable: true,
@@ -138,7 +138,7 @@ class UnitsHealthTab extends mixin(StoreMixin) {
       {
         className: classNameFn,
         headerClassName: classNameFn,
-        heading: ResourceTableUtil.renderHeading({ health: "HEALTH" }),
+        heading: ResourceTableUtil.renderHeading({ health: "状态" }),
         prop: "health",
         render: this.renderHealth,
         sortable: true,
@@ -181,7 +181,7 @@ class UnitsHealthTab extends mixin(StoreMixin) {
             <FilterHeadline
               currentLength={visibleData.length}
               isFiltering={healthFilter !== "all" || searchString !== ""}
-              name="Component"
+              name="组件"
               onReset={this.resetFilter}
               totalLength={dataItems.length}
             />
@@ -193,7 +193,7 @@ class UnitsHealthTab extends mixin(StoreMixin) {
               />
               <FilterButtons
                 renderButtonContent={this.getButtonContent}
-                filters={["all", "healthy", "unhealthy"]}
+                filters={["全部", "正常", "异常"]}
                 filterByKey="title"
                 onFilterChange={this.handleHealthFilterChange}
                 itemList={dataHealth}
