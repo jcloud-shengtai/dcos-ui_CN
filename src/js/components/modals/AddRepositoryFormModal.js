@@ -68,6 +68,7 @@ class AddRepositoryFormModal extends mixin(StoreMixin) {
         name: "name",
         placeholder: "库名称",
         required: true,
+        validationErrorText: "字段不能为空。",
         showError: false,
         showLabel: false,
         writeType: "input",
