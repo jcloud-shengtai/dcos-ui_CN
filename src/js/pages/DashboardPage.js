@@ -135,7 +135,6 @@ var DashboardPage = React.createClass({
 
     return (
       <Link to="/components" className="button button-rounded button-stroke">
-      //  {`View all ${componentCount} ${componentCountWord}`}
        {`显示全部 ${componentCount} 个组件`}
       </Link>
     );
