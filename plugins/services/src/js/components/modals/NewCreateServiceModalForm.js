@@ -395,7 +395,7 @@ class NewCreateServiceModalForm extends Component {
         <TabButton id="volumes" label="Volumes" key="multivolumes" />,
         <TabButton
           id="healthChecks"
-          label="健康度检查"
+          label="节点状态检查"
           key="multihealthChecks"
         />,
         <TabButton
@@ -409,7 +409,7 @@ class NewCreateServiceModalForm extends Component {
     return [
       <TabButton id="networking" label="网络" key="networking" />,
       <TabButton id="volumes" label="Volumes" key="volumes" />,
-      <TabButton id="healthChecks" label="健康度检查" key="healthChecks" />,
+      <TabButton id="healthChecks" label="节点状态监控" key="healthChecks" />,
       <TabButton id="environment" label="环境" key="environment" />
     ];
   }
