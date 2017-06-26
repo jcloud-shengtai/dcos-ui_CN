@@ -391,7 +391,7 @@ class InstallPackageModal
       return this.getInstallErrorScreen();
     }
 
-    let buttonText = "Install Package";
+    let buttonText = "安装包";
 
     if (pendingRequest) {
       buttonText = "Installing...";

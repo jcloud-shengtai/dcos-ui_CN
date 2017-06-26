@@ -1,10 +1,10 @@
 module.exports = {
-  name: "NAME",
-  address: "HOST/PORT",
-  status: "STATUS",
-  health: "HEALTH",
+  name: "名称",
+  address: "主机/端口",
+  status: "状态",
+  health: "健康度",
   cpus: "CPU",
-  mem: "MEM",
-  updated: "UPDATED",
-  version: "VERSION"
+  mem: "磁盘",
+  updated: "更新于",
+  version: "版本"
 };
