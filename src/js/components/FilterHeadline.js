@@ -69,7 +69,7 @@ class FilterHeadline extends React.Component {
           </a>
         </li>
         <li className={unfilteredClassSet}>
-          {totalLength} {name}
+          {totalLength}个{name}
         </li>
       </ul>
     );
