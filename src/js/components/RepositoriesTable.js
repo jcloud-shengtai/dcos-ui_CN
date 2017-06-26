@@ -174,7 +174,7 @@ class RepositoriesTable extends mixin(StoreMixin) {
           className="button button-link button-danger table-display-on-row-hover"
           onClick={this.handleOpenConfirm.bind(this, repositoryToRemove)}
         >
-          Remove
+          删除
         </a>
       </div>
     );
