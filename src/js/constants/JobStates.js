@@ -25,11 +25,11 @@ const JobStates = {
   },
   SCHEDULED: {
     stateTypes: [],
-    displayName: "已调度"
+    displayName: "已加入计划"
   },
   UNSCHEDULED: {
     stateTypes: [],
-    displayName: "未调度"
+    displayName: "未加入计划"
   }
 };
 

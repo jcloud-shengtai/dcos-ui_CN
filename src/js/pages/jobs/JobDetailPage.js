@@ -203,7 +203,7 @@ class JobDetailPage extends mixin(StoreMixin, TabsMixin) {
         disabled={disabledDialog === DIALOGS.DESTROY}
         open={jobActionDialog === DIALOGS.DESTROY}
         onClose={this.closeDialog}
-        leftButtonText="鍙栨秷"
+        leftButtonText="取消"
         leftButtonCallback={this.closeDialog}
         rightButtonText={actionButtonLabel}
         rightButtonClassName="button button-danger"
@@ -393,14 +393,14 @@ class JobDetailPage extends mixin(StoreMixin, TabsMixin) {
 
     return [
       {
-        label: "执行记录",
+        label: "Run History",
         callback: () => {
           this.setState({ currentTab: "runHistory" });
         },
         isActive: activeTab === "runHistory"
       },
       {
-        label: "设置信息",
+        label: "Configuration",
         callback: () => {
           this.setState({ currentTab: "configuration" });
         },
