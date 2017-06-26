@@ -551,7 +551,7 @@ class NewCreateServiceModal extends Component {
       );
     }
 
-    let title = "Run a Service";
+    let title = "运行一个服务";
     const { location } = this.props;
     const { service } = this.state;
     const serviceName = service ? `"${service.getName()}"` : "Service";
@@ -760,7 +760,7 @@ class NewCreateServiceModal extends Component {
         {
           className: "button-primary flush-vertical",
           clickHandler: this.handleServiceReview,
-          label: "Review & Run"
+          label: "检查 & 运行"
         }
       ];
     }

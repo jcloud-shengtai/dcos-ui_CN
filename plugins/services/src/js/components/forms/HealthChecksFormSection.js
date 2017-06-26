@@ -81,7 +81,7 @@ class HealthChecksFormSection extends Component {
     return (
       <AdvancedSection>
         <AdvancedSectionLabel>
-          健康度检查高级设置
+          节点状态检查高级设置
         </AdvancedSectionLabel>
         <AdvancedSectionContent>
           <FormRow>
@@ -443,7 +443,7 @@ class HealthChecksFormSection extends Component {
     const { data } = this.props;
     const tooltipContent = (
       <span>
-        {`健康度检查在满足以下条件时通过 (1) 响应码在 200 到 399 之间, (2) 在超时前返回全部响应内容. `}
+        {`节点状态检查在满足以下条件时通过 (1) 响应码在 200 到 399 之间, (2) 在超时前返回全部响应内容. `}
         <a
           href="https://mesosphere.github.io/marathon/docs/health-checks.html"
           target="_blank"
@@ -458,7 +458,7 @@ class HealthChecksFormSection extends Component {
         <h2 className="flush-top short-bottom">
           <FormGroupHeading>
             <FormGroupHeadingContent primary={true}>
-              健康度检查
+              节点状态检查
             </FormGroupHeadingContent>
             <FormGroupHeadingContent>
               <Tooltip
@@ -475,8 +475,7 @@ class HealthChecksFormSection extends Component {
           </FormGroupHeading>
         </h2>
         <p>
-          Health checks may be specified per application to be run against
-          the application{"'"}s instances.
+          可以针对应用程序的实例运行每个应用程序指定运行状况检查。
         </p>
         {this.getHealthChecksLines(data.healthChecks)}
         <FormRow>
@@ -487,7 +486,7 @@ class HealthChecksFormSection extends Component {
                 path: "healthChecks"
               })}
             >
-              Add Health Check
+              添加节点状态检查
             </AddButton>
           </FormGroup>
         </FormRow>
