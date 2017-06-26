@@ -11,7 +11,7 @@ describe("Add Repository Form Modal", function() {
   });
 
   it("displays modal for adding repository", function() {
-    cy.get(".modal h2").should("contain", "Add Repository");
+    cy.get(".modal h2").should("contain", "添加存储库");
   });
 
   it("displays three fields", function() {
@@ -73,7 +73,7 @@ describe("Add Repository Form Modal", function() {
         .click({ force: true });
       cy
         .get(".modal .modal-footer .button.button-danger")
-        .contains("Remove Repository")
+        .contains("删除存储库")
         .click();
     });
   });

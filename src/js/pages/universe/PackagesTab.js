@@ -255,7 +255,7 @@ class PackagesTab extends mixin(StoreMixin) {
           <div className="control-group form-group flex-no-shrink flex-align-right flush-bottom">
             <FilterInputText
               className="flex-grow"
-              placeholder="Search"
+              placeholder="搜索"
               searchString={state.searchString}
               handleFilterChange={this.handleSearchStringChange}
             />

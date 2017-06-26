@@ -22,7 +22,7 @@ class ServiceSearchFilter extends React.Component {
         handleFilterChange={value => {
           this.setSearchString(value);
         }}
-        placeholder="Search"
+        placeholder="搜索"
         searchString={searchString}
       />
     );
