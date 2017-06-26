@@ -27,12 +27,12 @@ describe("Add Repository Form Modal", function() {
     cy
       .get(".modal .form-control-feedback")
       .eq(0)
-      .should("contain", "Field cannot be empty.");
+      .should("contain", "字段不能为空。");
 
     cy
       .get(".modal .form-control-feedback")
       .eq(1)
-      .should("contain", "Must be a valid url with http:// or https://");
+      .should("contain", "必须是包含http:// 或者 https:// 的合法网址。");
   });
 
   it("should display error if not a valid url", function() {
@@ -43,7 +43,7 @@ describe("Add Repository Form Modal", function() {
 
     cy
       .get(".modal .form-control-feedback")
-      .should("contain", "Must be a valid url with http:// or https://");
+      .should("contain", "必须是包含http:// 或者 https:// 的合法网址。");
   });
 
   it("closes modal after add is successful", function() {
@@ -131,6 +131,6 @@ describe("Add Repository Form Modal", function() {
       .contains("Add")
       .click();
 
-    cy.get(".modal h4.text-danger").should("contain", "An error has occurred");
+    cy.get(".modal h4.text-danger").should("contain", "出现错误");
   });
 });
