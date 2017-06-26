@@ -42,7 +42,7 @@ var HostTimeSeriesChart = React.createClass({
   getData(props) {
     return [
       {
-        name: "Nodes",
+        name: "节点",
         colorIndex: 4,
         values: props.data
       }
