@@ -14,9 +14,9 @@ class ServiceTaskDetailPage extends React.Component {
 
     const routePrefix = `/services/overview/${encodeURIComponent(id)}/tasks/${encodeURIComponent(taskID)}`;
     const tabs = [
-      { label: "Details", routePath: routePrefix + "/details" },
-      { label: "Files", routePath: routePrefix + "/files" },
-      { label: "Logs", routePath: routePrefix + "/logs" }
+      { label: "详情", routePath: routePrefix + "/details" },
+      { label: "文件列表", routePath: routePrefix + "/files" },
+      { label: "日志", routePath: routePrefix + "/logs" }
     ];
 
     const task = MesosStateStore.getTaskFromTaskID(taskID);

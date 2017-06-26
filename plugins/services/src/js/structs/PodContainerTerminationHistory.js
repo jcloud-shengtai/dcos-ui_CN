@@ -6,7 +6,7 @@ module.exports = class PodContainerTerminationHistory extends Item {
   }
 
   getLastKnownState() {
-    return this.get("lastKnownState") || "unknown";
+    return this.get("lastKnownState") || "未知";
   }
 
   getTermination() {

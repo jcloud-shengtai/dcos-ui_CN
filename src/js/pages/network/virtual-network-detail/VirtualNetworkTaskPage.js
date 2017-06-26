@@ -20,7 +20,7 @@ const NetworksDetailTaskBreadcrumbs = ({
   const crumbs = [
     <Breadcrumb key={0} title="Networks">
       <BreadcrumbTextContent>
-        <Link to="/networking/networks">Networks</Link>
+        <Link to="/networking/networks">网络</Link>
       </BreadcrumbTextContent>
     </Breadcrumb>
   ];

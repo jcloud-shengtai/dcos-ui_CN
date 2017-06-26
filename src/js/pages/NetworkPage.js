@@ -17,7 +17,7 @@ const NetworkingBreadcrumbs = () => {
   const crumbs = [
     <Breadcrumb key={0} title="Networks">
       <BreadcrumbTextContent>
-        <Link to="/networking">Networks</Link>
+        <Link to="/networking">网络</Link>
       </BreadcrumbTextContent>
     </Breadcrumb>
   ];
@@ -68,7 +68,7 @@ NetworkPage.contextTypes = {
 };
 
 NetworkPage.routeConfig = {
-  label: "Networking",
+  label: "网络",
   icon: <Icon id="network-inverse" size="small" family="product" />,
   matches: /^\/networking/
 };
