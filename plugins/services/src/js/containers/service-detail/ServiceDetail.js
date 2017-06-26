@@ -22,9 +22,9 @@ class ServiceDetail extends mixin(TabsMixin) {
     super(...arguments);
 
     this.tabs_tabs = {
-      tasks: "Instances",
-      configuration: "Configuration",
-      debug: "Debug"
+      tasks: "实例",
+      configuration: "配置",
+      debug: "调试"
     };
 
     this.state = {
@@ -146,34 +146,34 @@ class ServiceDetail extends mixin(TabsMixin) {
 
     if (instanceCount > 0) {
       actions.push({
-        label: "Restart",
+        label: "重启",
         onItemSelect: modalHandlers.restartService
       });
     }
     if (!service.getLabels().MARATHON_SINGLE_INSTANCE_APP) {
       actions.push({
-        label: "Scale",
+        label: "扩展",
         onItemSelect: modalHandlers.scaleService
       });
     }
 
     if (instanceCount > 0) {
       actions.push({
-        label: "Suspend",
+        label: "暂停",
         onItemSelect: modalHandlers.suspendService
       });
     }
 
     if (instanceCount === 0) {
       actions.push({
-        label: "Resume",
+        label: "恢复",
         onItemSelect: modalHandlers.resumeService
       });
     }
 
     actions.push({
       className: "text-danger",
-      label: "Destroy",
+      label: "销毁",
       onItemSelect: modalHandlers.deleteService
     });
 
@@ -188,7 +188,7 @@ class ServiceDetail extends mixin(TabsMixin) {
     const activeTab = this.state.currentTab;
 
     tabs.push({
-      label: "Instances",
+      label: "实例",
       callback: () => {
         this.setState({ currentTab: "tasks" });
       },
@@ -196,7 +196,7 @@ class ServiceDetail extends mixin(TabsMixin) {
     });
 
     tabs.push({
-      label: "Configuration",
+      label: "配置",
       callback: () => {
         this.setState({ currentTab: "configuration" });
       },
@@ -204,7 +204,7 @@ class ServiceDetail extends mixin(TabsMixin) {
     });
 
     tabs.push({
-      label: "Debug",
+      label: "调试",
       callback: () => {
         this.setState({ currentTab: "debug" });
       },
@@ -213,7 +213,7 @@ class ServiceDetail extends mixin(TabsMixin) {
 
     if (this.hasVolumes()) {
       tabs.push({
-        label: "Volumes",
+        label: "卷",
         routePath: routePrefix + "/volumes",
         callback: () => {
           this.setState({ currentTab: "volumes" });

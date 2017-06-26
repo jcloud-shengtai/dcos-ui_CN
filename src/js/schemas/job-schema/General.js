@@ -8,14 +8,14 @@ import MesosConstants
 import JobResources from "../../constants/JobResources";
 
 const General = {
-  title: "General",
-  description: "Configure your job settings",
+  title: "基础信息",
+  description: "配置任务信息",
   type: "object",
   properties: {
     id: {
       focused: true,
       title: "ID",
-      description: "The job ID",
+      description: "任务ID",
       type: "string",
       getter(job) {
         return job.getId();
@@ -34,8 +34,8 @@ const General = {
       }
     },
     description: {
-      title: "Description",
-      description: "Job description",
+      title: "描述",
+      description: "任务描述",
       type: "string",
       getter(job) {
         return job.getDescription();
@@ -47,7 +47,7 @@ const General = {
         cpus: {
           title: "CPUs",
           default: JobResources.DEFAULT_CPUS,
-          description: "The amount of CPUs the job requires",
+          description: "任务所需CPU数量",
           type: "number",
           getter(job) {
             return `${job.getCpus()}`;
@@ -69,7 +69,7 @@ const General = {
           }
         },
         mem: {
-          title: "Mem (MiB)",
+          title: "内存 (MiB)",
           default: JobResources.DEFAULT_MEM,
           type: "number",
           getter(job) {
@@ -93,7 +93,7 @@ const General = {
           }
         },
         disk: {
-          title: "Disk (MiB)",
+          title: "磁盘 (MiB)",
           default: JobResources.DEFAULT_DISK,
           type: "number",
           getter(job) {
@@ -115,8 +115,8 @@ const General = {
       }
     },
     cmd: {
-      title: "Command",
-      description: "The command executed by the service",
+      title: "指令",
+      description: "由服务执行的命令",
       type: "string",
       multiLine: true,
       getter(job) {

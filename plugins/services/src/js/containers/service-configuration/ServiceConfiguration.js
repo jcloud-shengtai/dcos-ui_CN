@@ -179,7 +179,7 @@ class ServiceConfiguration extends mixin(StoreMixin) {
 
     return (
       <Tooltip
-        content="Configuration version"
+        content="配置信息版本"
         wrapperClassName="button button-transparent button-flush"
       >
         <Dropdown

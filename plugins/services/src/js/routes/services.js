@@ -59,7 +59,7 @@ const serviceRoutes = [
             getCrumbs() {
               return [
                 {
-                  label: "Services",
+                  label: "服务",
                   route: { to: "/services" }
                 }
               ];
@@ -168,7 +168,7 @@ const serviceRoutes = [
                         hideHeaderNavigation: true,
                         isTab: true,
                         path: "details",
-                        title: "Details",
+                        title: "详情",
                         buildBreadCrumb() {
                           return {
                             parentCrumb: "/services/overview/:id/tasks/:taskID",
@@ -221,7 +221,7 @@ const serviceRoutes = [
                         hideHeaderNavigation: true,
                         isTab: true,
                         path: "logs",
-                        title: "Logs",
+                        title: "日志",
                         type: Route,
                         buildBreadCrumb() {
                           return {
@@ -243,7 +243,7 @@ const serviceRoutes = [
                         hideHeaderNavigation: true,
                         isTab: true,
                         path: "volumes",
-                        title: "Volumes",
+                        title: "卷",
                         type: Route,
                         buildBreadCrumb() {
                           return {

@@ -62,7 +62,7 @@ class HostsPageContent extends React.Component {
           itemCount={nodeCount}
           onResourceSelectionChange={onResourceSelectionChange}
           refreshRate={refreshRate}
-          resourceType="Nodes"
+          resourceType="节点"
           resources={totalHostsResources}
           selectedResource={selectedResource}
           totalResources={totalResources}

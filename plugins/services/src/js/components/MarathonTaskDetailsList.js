@@ -31,7 +31,7 @@ class MarathonTaskDetailsList extends React.Component {
   }
 
   getTimeField(time) {
-    let timeString = "Never";
+    let timeString = "从不";
 
     if (time != null) {
       timeString = new Date(time).toLocaleString();
@@ -52,11 +52,11 @@ class MarathonTaskDetailsList extends React.Component {
     return (
       <ConfigurationMapSection>
         <ConfigurationMapHeading>
-          Marathon Task Configuration
+          Marathon 任务配置
         </ConfigurationMapHeading>
         <ConfigurationMapRow>
           <ConfigurationMapLabel>
-            Host
+            主机
           </ConfigurationMapLabel>
           <ConfigurationMapValue>
             {task.host}
@@ -64,7 +64,7 @@ class MarathonTaskDetailsList extends React.Component {
         </ConfigurationMapRow>
         <ConfigurationMapRow>
           <ConfigurationMapLabel>
-            Ports
+            端口
           </ConfigurationMapLabel>
           <ConfigurationMapValue>
             {this.getTaskPorts(task)}
@@ -72,7 +72,7 @@ class MarathonTaskDetailsList extends React.Component {
         </ConfigurationMapRow>
         <ConfigurationMapRow>
           <ConfigurationMapLabel>
-            Status
+            状态
           </ConfigurationMapLabel>
           <ConfigurationMapValue>
             {this.getTaskStatus(task)}
@@ -80,7 +80,7 @@ class MarathonTaskDetailsList extends React.Component {
         </ConfigurationMapRow>
         <ConfigurationMapRow>
           <ConfigurationMapLabel>
-            Staged at
+            创建时间
           </ConfigurationMapLabel>
           <ConfigurationMapValue>
             {this.getTimeField(task.stagedAt)}
@@ -88,7 +88,7 @@ class MarathonTaskDetailsList extends React.Component {
         </ConfigurationMapRow>
         <ConfigurationMapRow>
           <ConfigurationMapLabel>
-            Started at
+            启动时间
           </ConfigurationMapLabel>
           <ConfigurationMapValue>
             {this.getTimeField(task.startedAt)}
@@ -96,7 +96,7 @@ class MarathonTaskDetailsList extends React.Component {
         </ConfigurationMapRow>
         <ConfigurationMapRow>
           <ConfigurationMapLabel>
-            Version
+            版本
           </ConfigurationMapLabel>
           <ConfigurationMapValue>
             {task.version}
@@ -113,24 +113,24 @@ class MarathonTaskDetailsList extends React.Component {
 
     return task.healthCheckResults.map((result, i) => {
       let consecutiveFailures = result.consecutiveFailures;
-      let alive = "Yes";
+      let alive = "是";
 
       if (consecutiveFailures == null) {
-        consecutiveFailures = "None";
+        consecutiveFailures = "无";
       }
 
       if (!result.alive) {
-        alive = "No";
+        alive = "否";
       }
 
       return (
         <ConfigurationMapSection key={i}>
           <ConfigurationMapHeading>
-            Health Check Result {i + 1}
+            健康度检查结果 {i + 1}
           </ConfigurationMapHeading>
           <ConfigurationMapRow>
             <ConfigurationMapLabel>
-              First success
+              首次成功
             </ConfigurationMapLabel>
             <ConfigurationMapValue>
               {this.getTimeField(result.firstSuccess)}
@@ -138,7 +138,7 @@ class MarathonTaskDetailsList extends React.Component {
           </ConfigurationMapRow>
           <ConfigurationMapRow>
             <ConfigurationMapLabel>
-              Last success
+              最近成功
             </ConfigurationMapLabel>
             <ConfigurationMapValue>
               {this.getTimeField(result.lastSuccess)}
@@ -146,7 +146,7 @@ class MarathonTaskDetailsList extends React.Component {
           </ConfigurationMapRow>
           <ConfigurationMapRow>
             <ConfigurationMapLabel>
-              Last failure
+              最近失败
             </ConfigurationMapLabel>
             <ConfigurationMapValue>
               {this.getTimeField(result.lastFailure)}
@@ -154,7 +154,7 @@ class MarathonTaskDetailsList extends React.Component {
           </ConfigurationMapRow>
           <ConfigurationMapRow>
             <ConfigurationMapLabel>
-              Consecutive failures
+              连续失败次数
             </ConfigurationMapLabel>
             <ConfigurationMapValue>
               {consecutiveFailures}
@@ -162,7 +162,7 @@ class MarathonTaskDetailsList extends React.Component {
           </ConfigurationMapRow>
           <ConfigurationMapRow>
             <ConfigurationMapLabel>
-              Alive
+              存活
             </ConfigurationMapLabel>
             <ConfigurationMapValue>
               {alive}

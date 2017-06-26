@@ -1,12 +1,12 @@
 const Labels = {
   type: "object",
-  title: "Labels",
-  description: "Attach metadata to jobs to expose additional information to other jobs.",
+  title: "标签",
+  description: "给任务设置标签，将信息暴露给其它任务.",
   properties: {
     items: {
       type: "array",
       duplicable: true,
-      addLabel: "Add Label",
+      addLabel: "添加标签",
       getter(job) {
         const labels = job.getLabels() || {};
 
@@ -20,11 +20,11 @@ const Labels = {
       itemShape: {
         properties: {
           key: {
-            title: "Label Name",
+            title: "标签名",
             type: "string"
           },
           value: {
-            title: "Label Value",
+            title: "值",
             type: "string"
           }
         }

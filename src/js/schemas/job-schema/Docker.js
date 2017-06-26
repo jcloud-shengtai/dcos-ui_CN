@@ -3,13 +3,13 @@ import React from "react";
 /* eslint-enable no-unused-vars */
 
 const General = {
-  title: "Docker Container",
-  description: "Configure your job settings",
+  title: "Docker容器",
+  description: "配置任务信息",
   type: "object",
   properties: {
     image: {
-      title: "Image",
-      description: "Name of your Docker image",
+      title: "镜像",
+      description: "镜像名称",
       type: "string",
       getter(job) {
         return job.getDocker().image;
