@@ -136,7 +136,7 @@ var DashboardPage = React.createClass({
     return (
       <Link to="/components" className="button button-rounded button-stroke">
       //  {`View all ${componentCount} ${componentCountWord}`}
-       {`显示共 ${componentCount} 个组件`}
+       {`显示全部 ${componentCount} 个组件`}
       </Link>
     );
   },
@@ -146,11 +146,11 @@ var DashboardPage = React.createClass({
     if (!servicesCount) {
       return null;
     }
-    var textContent = "View all ";
+    var textContent = "显示全部 ";
     if (servicesCount > this.props.servicesListLength) {
       textContent += servicesCount + " ";
     }
-    textContent += "Services";
+    textContent += "个服务";
 
     return (
       <Link to="/services" className="button button-rounded button-stroke">
