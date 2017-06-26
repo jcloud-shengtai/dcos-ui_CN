@@ -88,7 +88,7 @@ describe("DeploymentsTab", function() {
   describe("#render", function() {
     it("should render the deployments count", function() {
       const h4 = this.container.querySelector("h4");
-      expect(h4.textContent).toEqual("1 Active Deployment");
+      expect(h4.textContent).toEqual("1 个激活的部署");
     });
 
     it("should render one row per deployment", function() {

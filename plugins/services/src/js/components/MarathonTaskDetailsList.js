@@ -126,7 +126,7 @@ class MarathonTaskDetailsList extends React.Component {
       return (
         <ConfigurationMapSection key={i}>
           <ConfigurationMapHeading>
-            健康度检查结果 {i + 1}
+            节点状态检查结果 {i + 1}
           </ConfigurationMapHeading>
           <ConfigurationMapRow>
             <ConfigurationMapLabel>
