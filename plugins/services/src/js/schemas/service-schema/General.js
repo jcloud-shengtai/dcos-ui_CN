@@ -28,9 +28,7 @@ const General = {
       externalValidator({ general }, definition) {
         if (!ServiceValidatorUtil.isValidServiceID(general.id)) {
           definition.showError =
-            "ID must not be empty, must not contain " +
-            "whitespace, and should not contain any other characters than " +
-            'lowercase letters, digits, hyphens, ".", and ".."';
+            "ID不能为空, 不得包含空格，只能是小写字母，数字，连字符，“...”和“..”";
 
           return false;
         }

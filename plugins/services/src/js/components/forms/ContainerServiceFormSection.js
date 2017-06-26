@@ -66,7 +66,7 @@ class ContainerServiceFormSection extends Component {
           href="https://mesosphere.github.io/marathon/docs/application-basics.html"
           target="_blank"
         >
-          More information
+          更多信息
         </a>.
       </span>
     );
@@ -96,12 +96,12 @@ class ContainerServiceFormSection extends Component {
   getImageLabel() {
     const tooltipContent = (
       <span>
-        {"Enter a Docker image or browse "}
+        {"导入一个 Docker 镜像 或 浏览 "}
         <a href="https://hub.docker.com/explore/" target="_blank">
           Docker Hub
         </a>
         {
-          " to find more. You can also enter an image from your private registry. "
+          " 查找更多. 您也可以从您的私有镜像仓库导入. "
         }
         <a
           href={MetadataStore.buildDocsURI(
@@ -109,7 +109,7 @@ class ContainerServiceFormSection extends Component {
           )}
           target="_blank"
         >
-          More information
+          更多信息
         </a>.
       </span>
     );
@@ -118,7 +118,7 @@ class ContainerServiceFormSection extends Component {
       <FieldLabel>
         <FormGroupHeading>
           <FormGroupHeadingContent primary={true}>
-            Container Image
+            容器镜像
           </FormGroupHeadingContent>
           <FormGroupHeadingContent>
             <Tooltip
@@ -187,7 +187,7 @@ class ContainerServiceFormSection extends Component {
     if (imageDisabled) {
       inputNode = (
         <Tooltip
-          content="Mesos Runtime does not support container images, please select Docker Runtime or Universal Container Runtime if you want to use container images."
+          content="Mesos Runtime 不支持容器镜像, 如果您想使用容器镜像，请选择Docker或Universal."
           width={300}
           scrollContainer=".gm-scroll-view"
           wrapperClassName="tooltip-wrapper tooltip-block-wrapper text-align-center"
@@ -209,7 +209,7 @@ class ContainerServiceFormSection extends Component {
             {this.getImageLabel()}
             {inputNode}
             <FieldHelp>
-              Enter a Docker image you want to run, e.g. nginx.
+              输入一个您想运行的docker镜像, 例如 nginx.
             </FieldHelp>
             <FieldError>{imageErrors}</FieldError>
           </FormGroup>
@@ -236,7 +236,7 @@ class ContainerServiceFormSection extends Component {
             <FieldLabel className="text-no-transform">
               <FormGroupHeading required={true}>
                 <FormGroupHeadingContent primary={true}>
-                  Memory (MiB)
+                  内存 (MiB)
                 </FormGroupHeadingContent>
               </FormGroupHeading>
             </FieldLabel>
@@ -259,7 +259,7 @@ class ContainerServiceFormSection extends Component {
               value={findNestedPropertyInObject(data, cmdPath)}
             />
             <FieldHelp>
-              A shell command for your container to execute.
+              由您的容器来执行的shell命令.
             </FieldHelp>
             <FieldError>{cmdErrors}</FieldError>
           </FormGroup>

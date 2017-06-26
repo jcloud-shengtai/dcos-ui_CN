@@ -118,7 +118,7 @@ class SidebarHeader extends mixin(StoreMixin) {
       },
       {
         className: "dropdown-menu-section-header",
-        html: <label>Support</label>,
+        html: <label>支持</label>,
         id: "header-support",
         selectable: false
       },
@@ -131,7 +131,7 @@ class SidebarHeader extends mixin(StoreMixin) {
         }
       },
       {
-        html: "Install CLI",
+        html: "安装 CLI",
         id: "install-cli",
         onClick() {
           SidebarActions.close();
