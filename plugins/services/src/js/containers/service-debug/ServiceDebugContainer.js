@@ -70,7 +70,7 @@ class ServiceDebugContainer extends React.Component {
       <ConfigurationMapSection>
         <ConfigurationMapRow>
           <ConfigurationMapLabel>
-            Task ID
+            任务ID
           </ConfigurationMapLabel>
           <ConfigurationMapValue>
             {this.getValueText(taskId)}
@@ -78,7 +78,7 @@ class ServiceDebugContainer extends React.Component {
         </ConfigurationMapRow>
         <ConfigurationMapRow>
           <ConfigurationMapLabel>
-            State
+            状态
           </ConfigurationMapLabel>
           <ConfigurationMapValue>
             {this.getValueText(state)}
@@ -86,7 +86,7 @@ class ServiceDebugContainer extends React.Component {
         </ConfigurationMapRow>
         <ConfigurationMapRow>
           <ConfigurationMapLabel>
-            Message
+            消息
           </ConfigurationMapLabel>
           <ConfigurationMapValue>
             {this.getValueText(message)}
@@ -94,7 +94,7 @@ class ServiceDebugContainer extends React.Component {
         </ConfigurationMapRow>
         <ConfigurationMapRow>
           <ConfigurationMapLabel>
-            Host
+            主机
           </ConfigurationMapLabel>
           <ConfigurationMapValue>
             {this.getValueText(host)}
@@ -102,7 +102,7 @@ class ServiceDebugContainer extends React.Component {
         </ConfigurationMapRow>
         <ConfigurationMapRow>
           <ConfigurationMapLabel>
-            Timestamp
+            时间戳
           </ConfigurationMapLabel>
           <ConfigurationMapValue>
             {timestamp} (<TimeAgo time={new Date(timestamp)} />)
@@ -110,7 +110,7 @@ class ServiceDebugContainer extends React.Component {
         </ConfigurationMapRow>
         <ConfigurationMapRow>
           <ConfigurationMapLabel>
-            Version
+            版本
           </ConfigurationMapLabel>
           <ConfigurationMapValue>
             {version} (<TimeAgo time={new Date(version)} />)
@@ -140,7 +140,7 @@ class ServiceDebugContainer extends React.Component {
       <ConfigurationMapSection>
         <ConfigurationMapRow>
           <ConfigurationMapLabel>
-            Scale or Restart
+            扩展或重启
           </ConfigurationMapLabel>
           <ConfigurationMapValue>
             {lastScaling}
@@ -148,7 +148,7 @@ class ServiceDebugContainer extends React.Component {
         </ConfigurationMapRow>
         <ConfigurationMapRow>
           <ConfigurationMapLabel>
-            Configuration
+            配置
           </ConfigurationMapLabel>
           <ConfigurationMapValue>
             {`${lastConfigChangeAt} `}
@@ -171,16 +171,16 @@ class ServiceDebugContainer extends React.Component {
       const frameworkName = labels.DCOS_PACKAGE_FRAMEWORK_NAME;
 
       if (frameworkName != null) {
-        introText = `Rejected offer analysis is not currently supported for ${frameworkName}.`;
+        introText = `服务 ${frameworkName} 当前不支持拒绝服务分析.`;
       } else {
-        introText = "Rejected offer analysis is not currently supported.";
+        introText = "当前不支持拒绝服务分析.";
       }
     } else if (
       !DeclinedOffersUtil.shouldDisplayDeclinedOffersWarning(service) ||
       queue.declinedOffers.summary == null
     ) {
       introText =
-        "Offers will appear here when your service is deploying or waiting for resources.";
+        "当你的服务正在部署或等待资源时，Offers会出现在这里.";
     } else {
       const { declinedOffers: { summary } } = queue;
       const { roles: { offers = 0 } } = summary;
@@ -190,7 +190,7 @@ class ServiceDebugContainer extends React.Component {
       mainContent = (
         <div>
           <ConfigurationMapHeading level={2}>
-            Summary
+            概要
           </ConfigurationMapHeading>
           <RecentOffersSummary data={summary} />
         </div>
@@ -206,7 +206,7 @@ class ServiceDebugContainer extends React.Component {
         }}
       >
         <ConfigurationMapHeading>
-          Recent Resource Offers{offerCount}
+          最近的资源 Offers{offerCount}
         </ConfigurationMapHeading>
         <p>{introText}</p>
         {mainContent}
@@ -233,7 +233,7 @@ class ServiceDebugContainer extends React.Component {
     return (
       <div>
         <ConfigurationMapHeading level={2}>
-          Details
+          细节
         </ConfigurationMapHeading>
         <DeclinedOffersTable
           offers={queue.declinedOffers.offers}
@@ -248,7 +248,7 @@ class ServiceDebugContainer extends React.Component {
     const taskStats = this.props.service.getTaskStats();
 
     if (taskStats.getList().getItems().length === 0) {
-      return <p>This app does not have task statistics</p>;
+      return <p>该应用没有任务统计</p>;
     }
 
     return <TaskStatsTable taskStats={taskStats} />;
@@ -279,11 +279,11 @@ class ServiceDebugContainer extends React.Component {
     return (
       <Alert>
         {
-          "DC/OS has been waiting for resources and is unable to complete this deployment for "
+          "DC/OS 正在等待资源，无法完成这次 "
         }
-        {DateUtil.getDuration(timeWaiting, null)}{". "}
+        {DateUtil.getDuration(timeWaiting, null)}{"部署. "}
         <a className="clickable" onClick={this.handleJumpToRecentOffersClick}>
-          See recent resource offers
+          查看最近的资源offers
         </a>.
       </Alert>
     );
@@ -311,19 +311,19 @@ class ServiceDebugContainer extends React.Component {
         <ConfigurationMap>
           <ConfigurationMapSection>
             <ConfigurationMapHeading>
-              Last Changes
+              最近修改
             </ConfigurationMapHeading>
             {this.getLastVersionChange()}
           </ConfigurationMapSection>
           <ConfigurationMapSection>
             <ConfigurationMapHeading>
-              Last Task Failure
+              最近失败的任务
             </ConfigurationMapHeading>
             {this.getLastTaskFailureInfo()}
           </ConfigurationMapSection>
           <ConfigurationMapSection>
             <ConfigurationMapHeading>
-              Task Statistics
+              任务统计
             </ConfigurationMapHeading>
             {this.getTaskStats()}
           </ConfigurationMapSection>

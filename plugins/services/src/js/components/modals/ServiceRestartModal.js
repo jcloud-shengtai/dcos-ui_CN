@@ -84,7 +84,7 @@ class ServiceRestartModal extends React.Component {
 
     const heading = (
       <ModalHeading>
-        Restart Service
+        重启服务
       </ModalHeading>
     );
     let serviceName = "";
@@ -100,14 +100,14 @@ class ServiceRestartModal extends React.Component {
         open={open}
         onClose={onClose}
         leftButtonCallback={onClose}
-        rightButtonText="Restart Service"
+        rightButtonText="重启服务"
         rightButtonClassName="button button-danger"
         rightButtonCallback={() =>
           restartService(service, this.shouldForceUpdate())}
         showHeader={true}
       >
         <p>
-          Are you sure you want to restart
+          您是否确定重启服务
           {" "}
           <span className="emphasize">{serviceName}</span>
           ?

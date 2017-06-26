@@ -58,7 +58,7 @@ class TaskVolumeContainer extends React.Component {
     if (!service) {
       return (
         <ServiceItemNotFound
-          message={`The service with the ID of "${taskID}" could not be found.`}
+          message={`无法找到 ID 为 "${taskID}" 的服务.`}
         />
       );
     }
@@ -69,7 +69,7 @@ class TaskVolumeContainer extends React.Component {
 
     if (!volume) {
       return (
-        <ServiceItemNotFound message={`Volume '${volumeId}' was not found.`} />
+        <ServiceItemNotFound message={`无法找到 卷 '${volumeId}'.`} />
       );
     }
 

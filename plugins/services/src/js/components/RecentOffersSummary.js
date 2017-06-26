@@ -102,42 +102,42 @@ function getResourceTooltipContent(resource, data) {
   let explanatoryText = null;
 
   if (matched === 0) {
-    explanatoryText = "did not match";
+    explanatoryText = "未匹配到";
   } else if (matched >= offers) {
-    explanatoryText = "matched";
+    explanatoryText = "匹配到了";
   } else {
-    explanatoryText = "partially matched";
+    explanatoryText = "部分匹配了";
   }
 
   if (resource === "roles") {
     docsURI = `${Config.mesosDocsURI}roles/`;
-    explanatoryText = `The resource offer ${explanatoryText} your service's role (${requestedValue}).`;
+    explanatoryText = `资源提供者 ${explanatoryText} 你的服务角色 (${requestedValue}).`;
   }
 
   if (resource === "constraints") {
     docsURI = `${Config.marathonDocsURI}constraints.html`;
-    explanatoryText = `The resource offer ${explanatoryText} your service's requirements (${requestedValue}).`;
+    explanatoryText = `资源提供者 ${explanatoryText} 你的服务所需 (${requestedValue}).`;
   }
 
   if (resource === "cpus") {
     docsURI = `${Config.mesosDocsURI}attributes-resources/`;
-    explanatoryText = `The CPUs offered ${explanatoryText} your service's requirements (${requestedValue}).`;
+    explanatoryText = `CPU 已分配 ${explanatoryText} 你的服务所需 (${requestedValue}).`;
   }
 
   if (resource === "mem") {
     requestedValue = Units.formatResource(resource, requestedValue);
     docsURI = `${Config.mesosDocsURI}attributes-resources/`;
-    explanatoryText = `The memory offered ${explanatoryText} your service's requirements (${requestedValue}).`;
+    explanatoryText = `内存已分配 ${explanatoryText} 你的服务所需 (${requestedValue}).`;
   }
 
   if (resource === "disk") {
     requestedValue = Units.formatResource(resource, requestedValue);
-    explanatoryText = `The disk space offered ${explanatoryText} your service's requirements (${requestedValue}).`;
+    explanatoryText = `磁盘空间已分配 ${explanatoryText} 你的服务所需 (${requestedValue}).`;
     docsURI = `${Config.mesosDocsURI}attributes-resources/`;
   }
 
   if (resource === "ports") {
-    explanatoryText = `The port offered ${explanatoryText} your service's requirements (${requestedValue}).`;
+    explanatoryText = `端口已分配 ${explanatoryText} 你的服务所需 (${requestedValue}).`;
     docsURI = `${Config.mesosDocsURI}attributes-resources/`;
   }
 

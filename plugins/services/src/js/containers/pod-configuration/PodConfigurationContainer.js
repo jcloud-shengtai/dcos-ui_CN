@@ -12,7 +12,7 @@ class PodConfigurationTabView extends React.Component {
     return (
       <div className="container">
         <h3 className="flush-top">
-          Current Version ({localeVersion})
+          当前版本 ({localeVersion})
         </h3>
         <ServiceConfigDisplay appConfig={spec} />
       </div>
