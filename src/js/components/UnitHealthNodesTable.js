@@ -31,9 +31,9 @@ class UnitHealthNodesTable extends React.Component {
   getColumns() {
     const classNameFn = ResourceTableUtil.getClassName;
     const headings = ResourceTableUtil.renderHeading({
-      health: "HEALTH",
-      host_ip: "NODE",
-      role: "ROLE"
+      health: "状态",
+      host_ip: "结点ip",
+      role: "角色"
     });
 
     const sortFunction = TableUtil.getSortFunction("host_ip", function(
