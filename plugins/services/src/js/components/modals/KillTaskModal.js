@@ -8,8 +8,8 @@ import ModalHeading
 import StringUtil from "../../../../../../src/js/utils/StringUtil";
 
 const ACTION_DISPLAY_NAMES = {
-  restart: "Restart",
-  stop: "Stop"
+  restart: "重启",
+  stop: "停止"
 };
 
 class KillTaskModal extends React.Component {
@@ -89,9 +89,9 @@ class KillTaskModal extends React.Component {
     return (
       <div className="text-align-center">
         <p>
-          You are about to {action.toLowerCase()} {taskCountContent}.
+          您正在 {action.toLowerCase()} {taskCountContent}.
           <br />
-          Are you sure you want to continue?
+          确定继续?
         </p>
         {this.getErrorMessage()}
       </div>
@@ -111,7 +111,7 @@ class KillTaskModal extends React.Component {
     let buttonText = ACTION_DISPLAY_NAMES[action];
 
     if (this.shouldForceUpdate()) {
-      buttonText = "Force " + buttonText;
+      buttonText = "强制 " + buttonText;
     }
 
     const killTasksAction = () =>

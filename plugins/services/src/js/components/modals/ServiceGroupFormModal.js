@@ -58,10 +58,9 @@ class ServiceGroupFormModal extends React.Component {
         showLabel: false,
         writeType: "input",
         validation: ServiceValidatorUtil.isValidServiceID,
-        validationErrorText: "Group name must be at least 1 character and " +
-          "may only contain digits (0-9), dashes (-), dots (.), " +
-          "and lowercase letters (a-z). The name may not begin or end " +
-          "with a dash."
+        validationErrorText: "分组名称必须至少包含一个字符，并且 " +
+          "只允许包含数字 (0-9), 破折号 (-), 点 (.), " +
+          "以及小写字母 (a-z). 名称不能以破折号开始或结尾."
       }
     ];
   }
@@ -76,7 +75,7 @@ class ServiceGroupFormModal extends React.Component {
         isClose: true
       },
       {
-        text: "Create Group",
+        text: "创建分组",
         className: "button button-success button-medium",
         isSubmit: true
       }
