@@ -1,9 +1,9 @@
 var HEALTH_LABELS = {
-  ALL: "All",
-  HEALTHY: "Healthy",
-  UNHEALTHY: "Unhealthy",
-  IDLE: "Idle",
-  NA: "N/A"
+  ALL: "全部",
+  HEALTHY: "正常",
+  UNHEALTHY: "异常",
+  IDLE: "空闲",
+  NA: "未知"
 };
 
 module.exports = HEALTH_LABELS;

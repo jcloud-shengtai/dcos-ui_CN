@@ -78,12 +78,12 @@ describe("Tasks Table", function() {
       });
 
       it("correctly shows status", function() {
-        cy.get("@tds").eq(4).contains("Running");
+        cy.get("@tds").eq(4).contains("运行中");
       });
 
       it("correctly shows health", function() {
         cy.get("@tds").eq(5).find(".dot").triggerHover();
-        cy.get(".tooltip").contains("Healthy");
+        cy.get(".tooltip").contains("健康");
       });
     });
   });
