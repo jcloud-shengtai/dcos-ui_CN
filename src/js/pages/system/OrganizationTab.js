@@ -473,7 +473,7 @@ class OrganizationTab extends mixin(StoreMixin, InternalStorageMixin) {
           breadcrumbs={<UsersBreadcrumbs />}
           addButton={{
             onItemSelect: this.handleNewUserClick,
-            label: `New ${capitalizedItemName}`
+            label: `新建 ${capitalizedItemName}`
           }}
         />
         <div className="flex-container-col">

@@ -78,7 +78,8 @@ const StringUtil = {
     arity = parseInt(arity, 10);
 
     if (arity !== 1) {
-      string = string.replace(/y$/, "ie") + "s";
+      // 中文没有复数s
+      // string = string.replace(/y$/, "ie") + "s";
     }
 
     return string;
