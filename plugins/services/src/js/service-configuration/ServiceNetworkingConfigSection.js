@@ -56,12 +56,12 @@ class ServiceNetworkingConfigSection extends ServiceConfigBaseSectionDisplay {
         },
         {
           key: "container.docker.network",
-          label: "Network Type",
+          label: "网络类型",
           transformValue: getNetworkType
         },
         {
           key: "ipAddress.networkName",
-          label: "Network Name"
+          label: "网络名称"
         },
         {
           key: "portDefinitions",

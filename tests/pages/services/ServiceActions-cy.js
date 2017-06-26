@@ -45,20 +45,20 @@ describe("Service Actions", function() {
     });
 
     it("closes modal on secondary button click", function() {
-      cy.get(".modal .modal-header .button").contains("Cancel").click();
+      cy.get(".modal .modal-header .button").contains("取消").click();
       cy.get(".modal").should("to.have.length", 0);
     });
 
     it("opens confirm after edits", function() {
       cy.get('.modal .menu-tabbed-view input[name="cpus"]').type("5"); // Edit the cpus field
-      cy.get(".modal .modal-header .button").contains("Cancel").click();
+      cy.get(".modal .modal-header .button").contains("取消").click();
 
       cy.get(".confirm-modal").should("to.have.length", 1);
     });
 
     it("closes both confirm and edit modal after confirmation", function() {
       cy.get('.modal .menu-tabbed-view input[name="cpus"]').type("5"); // Edit the cpus field
-      cy.get(".modal .modal-header .button").contains("Cancel").click();
+      cy.get(".modal .modal-header .button").contains("取消").click();
       cy.get(".confirm-modal .button").contains("Discard").click();
 
       cy.get(".confirm-modal").should("to.have.length", 0);
@@ -67,8 +67,8 @@ describe("Service Actions", function() {
 
     it("it stays in the edit modal after cancelling confirmation", function() {
       cy.get('.modal .menu-tabbed-view input[name="cpus"]').type("5"); // Edit the cpus field
-      cy.get(".modal .modal-header .button").contains("Cancel").click();
-      cy.get(".confirm-modal .button").contains("Cancel").click();
+      cy.get(".modal .modal-header .button").contains("取消").click();
+      cy.get(".confirm-modal .button").contains("取消").click();
 
       cy.get(".confirm-modal").should("to.have.length", 0);
       cy.get(".modal").should("to.have.length", 1);
@@ -163,7 +163,7 @@ describe("Service Actions", function() {
       it("closes dialog on secondary button click", function() {
         cy
           .get(".confirm-modal .button-collection .button")
-          .contains("Cancel")
+          .contains("取消")
           .click();
         cy.get(".confirm-modal").should("to.have.length", 0);
       });
@@ -252,7 +252,7 @@ describe("Service Actions", function() {
     it("closes dialog on secondary button click", function() {
       cy
         .get(".modal-footer .button-collection .button")
-        .contains("Cancel")
+        .contains("取消")
         .click();
       cy.get(".modal-body").should("to.have.length", 0);
     });
@@ -340,7 +340,7 @@ describe("Service Actions", function() {
     it("closes dialog on secondary button click", function() {
       cy
         .get(".confirm-modal .button-collection .button")
-        .contains("Cancel")
+        .contains("取消")
         .click();
       cy.get(".confirm-modal").should("to.have.length", 0);
     });
@@ -527,7 +527,7 @@ describe("Service Actions", function() {
 
       cy
         .get(".modal-footer .button-collection .button")
-        .contains("Cancel")
+        .contains("取消")
         .click();
       cy.get(".modal-body").should("to.have.length", 0);
     });

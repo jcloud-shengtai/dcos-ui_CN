@@ -115,11 +115,11 @@ const ServiceList = React.createClass({
   getNoServicesMessage() {
     return (
       <div>
-        <h3 className="flush-top text-align-center">No Services Running</h3>
+        <h3 className="flush-top text-align-center">没有服务运行</h3>
         <p className="flush text-align-center">
-          {"Click the "}
-          <Link to="/services">Services tab</Link>
-          {" to install services."}
+          {"点击 "}
+          <Link to="/services">服务标签</Link>
+          {" 安装服务."}
         </p>
       </div>
     );

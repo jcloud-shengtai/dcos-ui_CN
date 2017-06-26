@@ -1,6 +1,6 @@
 const PackagesTableHeaderLabels = {
-  appId: "PACKAGE NAME",
-  version: "VERSION"
+  appId: "包名",  //PACKAGE NAME
+  version: "版本" //VERSION
 };
 
 module.exports = PackagesTableHeaderLabels;

@@ -33,7 +33,7 @@ describe("Job Actions", function() {
     });
 
     it("closes modal on secondary button click", function() {
-      cy.get(".modal .button-collection .button").contains("Cancel").click();
+      cy.get(".modal .button-collection .button").contains("取消").click();
       cy.get(".modal").should("to.have.length", 0);
     });
   });
