@@ -63,7 +63,7 @@ class MultiContainerHealthChecksFormSection extends Component {
     return (
       <AdvancedSection>
         <AdvancedSectionLabel>
-          Advanced Health Check Settings
+          高级健康度检查设置
         </AdvancedSectionLabel>
         <AdvancedSectionContent>
           <FormRow>
@@ -74,7 +74,7 @@ class MultiContainerHealthChecksFormSection extends Component {
               <FieldLabel>
                 <FormGroupHeading>
                   <FormGroupHeadingContent primary={true}>
-                    Grace Period (s)
+                    周期 (s)
                   </FormGroupHeadingContent>
                   <FormGroupHeadingContent>
                     <Tooltip
@@ -105,7 +105,7 @@ class MultiContainerHealthChecksFormSection extends Component {
               <FieldLabel>
                 <FormGroupHeading>
                   <FormGroupHeadingContent primary={true}>
-                    Interval (s)
+                    间隔 (s)
                   </FormGroupHeadingContent>
                   <FormGroupHeadingContent>
                     <Tooltip
@@ -136,7 +136,7 @@ class MultiContainerHealthChecksFormSection extends Component {
               <FieldLabel>
                 <FormGroupHeading>
                   <FormGroupHeadingContent primary={true}>
-                    Timeout (s)
+                    超时 (s)
                   </FormGroupHeadingContent>
                   <FormGroupHeadingContent>
                     <Tooltip
@@ -167,7 +167,7 @@ class MultiContainerHealthChecksFormSection extends Component {
               <FieldLabel>
                 <FormGroupHeading>
                   <FormGroupHeadingContent primary={true}>
-                    Max Failures
+                    最大失败次数
                   </FormGroupHeadingContent>
                   <FormGroupHeadingContent>
                     <Tooltip
@@ -217,7 +217,7 @@ class MultiContainerHealthChecksFormSection extends Component {
           <FieldLabel>
             <FormGroupHeading>
               <FormGroupHeadingContent primary={true}>
-                Command
+                命令
               </FormGroupHeadingContent>
             </FormGroupHeading>
           </FieldLabel>
@@ -254,12 +254,11 @@ class MultiContainerHealthChecksFormSection extends Component {
     const errors = errorsLens.at("http", {}).get(this.props.errors);
 
     const endpointHelpText = (
-      <span>Select a service endpoint that you configured in Networking.</span>
+      <span>选择一个您在网络中配置好的服务端点.</span>
     );
     const pathHelpText = (
       <span>
-        Enter a path that is reachable in your service and where you expect
-        a response code between 200 and 399.
+        输入一个可以访问到你的服务的地址以及期望的响应代码（200-399）.
       </span>
     );
 
@@ -289,7 +288,7 @@ class MultiContainerHealthChecksFormSection extends Component {
             name={`${path}.http.endpoint`}
             value={String(healthCheck.http.endpoint)}
           >
-            <option value="">Select Endpoint</option>
+            <option value="">选择端点</option>
             {this.getEndpoints(container)}
           </FieldSelect>
         </FormGroup>
@@ -297,7 +296,7 @@ class MultiContainerHealthChecksFormSection extends Component {
           <FieldLabel>
             <FormGroupHeading>
               <FormGroupHeadingContent primary={true}>
-                Path
+                路径
               </FormGroupHeadingContent>
               <FormGroupHeadingContent>
                 <Tooltip
@@ -328,7 +327,7 @@ class MultiContainerHealthChecksFormSection extends Component {
               name={`${path}.http.https`}
               type="checkbox"
             />
-            Make HTTPS
+            使用https
           </FieldLabel>
           <FieldError>{errors.protocol}</FieldError>
         </FormGroup>
@@ -347,7 +346,7 @@ class MultiContainerHealthChecksFormSection extends Component {
           <FieldLabel>
             <FormGroupHeading>
               <FormGroupHeadingContent primary={true}>
-                Service Endpoint
+                服务端点
               </FormGroupHeadingContent>
             </FormGroupHeading>
           </FieldLabel>
@@ -384,12 +383,12 @@ class MultiContainerHealthChecksFormSection extends Component {
 
     const tooltipContent = (
       <span>
-        {"You have several protocol options. "}
+        {"您可以从多个协议选项中选择. "}
         <a
           href="https://mesosphere.github.io/marathon/docs/health-checks.html"
           target="_blank"
         >
-          More Information
+          更多信息
         </a>.
       </span>
     );
@@ -403,7 +402,7 @@ class MultiContainerHealthChecksFormSection extends Component {
             <FieldLabel>
               <FormGroupHeading>
                 <FormGroupHeadingContent primary={true}>
-                  Protocol
+                  协议
                 </FormGroupHeadingContent>
                 <FormGroupHeadingContent>
                   <Tooltip
@@ -461,21 +460,19 @@ class MultiContainerHealthChecksFormSection extends Component {
     const { data, handleTabChange } = this.props;
     const tooltipContent = (
       <span>
-        {`A health check passes if (1) its HTTP response code is between 200
-        and 399 inclusive, and (2) its response is received within the
-        timeoutSeconds period. `}
+        {`健康度检查在满足以下条件时通过 (1) 响应码在 200 到 399 之间, (2) 在超时前返回全部响应内容. `}
         <a
           href="https://mesosphere.github.io/marathon/docs/health-checks.html"
           target="_blank"
         >
-          More Information
+          更多信息
         </a>.
       </span>
     );
     const heading = (
       <FormGroupHeading>
         <FormGroupHeadingContent primary={true}>
-          Health Checks
+          健康度检查
         </FormGroupHeadingContent>
         <FormGroupHeadingContent>
           <Tooltip
@@ -499,14 +496,14 @@ class MultiContainerHealthChecksFormSection extends Component {
             {heading}
           </h2>
           <p>
-            {"Please "}
+            {"请在配置健康度检查前先 "}
             <a
               onClick={handleTabChange.bind(null, "services")}
               className="clickable"
             >
-              add a container
+              添加一个容器
             </a>
-            {" before configuring health checks."}
+            {"."}
           </p>
         </div>
       );
