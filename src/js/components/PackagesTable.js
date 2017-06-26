@@ -49,7 +49,7 @@ class PackagesTable extends React.Component {
     return classNames({
       active: prop === sortBy.prop,
       clickable: prop === "appId" && row == null, // this is a header
-      "text-align-right": prop === "卸载"  //uninstall
+      "text-align-right": prop === "uninstall"
     });
   }
 
