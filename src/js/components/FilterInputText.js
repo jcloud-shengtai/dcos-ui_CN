@@ -118,7 +118,7 @@ class FilterInputText extends React.Component {
     });
 
     if (!inverseStyle && focus) {
-      iconColor = "#2f81f7";
+      iconColor = "blue";
     }
 
     const inputContainerClasses = classNames(
