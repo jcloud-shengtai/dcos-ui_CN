@@ -101,7 +101,6 @@ class ExpandingTable extends React.Component {
         className={classes}
         {...Util.omit(props, ["alignCells", "className", "childRowClassName"])}
         columns={this.getColumns(props.columns)}
-        emptyMessage="无数据"
       />
     );
   }
