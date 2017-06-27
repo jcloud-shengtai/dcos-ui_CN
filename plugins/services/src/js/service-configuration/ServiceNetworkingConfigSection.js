@@ -51,7 +51,7 @@ class ServiceNetworkingConfigSection extends ServiceConfigBaseSectionDisplay {
       tabViewID: "networking",
       values: [
         {
-          heading: "Network",
+          heading: "网络",
           headingLevel: 1
         },
         {
@@ -144,7 +144,7 @@ class ServiceNetworkingConfigSection extends ServiceConfigBaseSectionDisplay {
                     );
                   }
 
-                  return <em>Not Enabled</em>;
+                  return <em>未启用</em>;
                 },
                 sortable: true
               }
