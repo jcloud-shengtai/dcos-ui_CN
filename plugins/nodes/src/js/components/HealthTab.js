@@ -56,7 +56,7 @@ class HealthTab extends React.Component {
   getColumns() {
     const classNameFn = ResourceTableUtil.getClassName;
     const headings = ResourceTableUtil.renderHeading({
-      health: "健康状况",
+      health: "健康",
       id: "HEALTH CHECK NAME",
       role: "ROLE"
     });
