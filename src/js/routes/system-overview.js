@@ -7,7 +7,7 @@ const systemOverviewRoutes = {
   type: Route,
   path: "system-overview",
   component: SystemOverviewPage,
-  category: "system",
+  category: "系统管理",
   isInSidebar: true,
   children: [
     {

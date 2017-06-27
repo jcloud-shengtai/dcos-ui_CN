@@ -39,7 +39,7 @@ const nodesRoutes = {
   type: Route,
   path: "nodes",
   component: NodesPage,
-  category: "resources",
+  category: "资源管理",
   isInSidebar: true,
   buildBreadCrumb() {
     return {
