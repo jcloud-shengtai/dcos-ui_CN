@@ -8,7 +8,7 @@ import DialChart from "./DialChart";
 const TASKS_PER_ROW = 3;
 const TASK_INFO = {
   TASK_RUNNING: { label: "任务运行", colorIndex: 4 },
-  TASK_STAGING: { label: "任务暂存", colorIndex: 1 }
+  TASK_STAGING: { label: "任务暂停", colorIndex: 1 }
 };
 const DISPLAYED_TASK_KEYS = Object.keys(TASK_INFO);
 
