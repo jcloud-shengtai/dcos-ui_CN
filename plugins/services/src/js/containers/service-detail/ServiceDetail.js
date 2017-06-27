@@ -188,7 +188,7 @@ class ServiceDetail extends mixin(TabsMixin) {
     const activeTab = this.state.currentTab;
 
     tabs.push({
-      label: "Instances",
+      label: "实例",
       callback: () => {
         this.setState({ currentTab: "tasks" });
       },
@@ -196,7 +196,7 @@ class ServiceDetail extends mixin(TabsMixin) {
     });
 
     tabs.push({
-      label: "Configuration",
+      label: "配置",
       callback: () => {
         this.setState({ currentTab: "configuration" });
       },
@@ -204,7 +204,7 @@ class ServiceDetail extends mixin(TabsMixin) {
     });
 
     tabs.push({
-      label: "Debug",
+      label: "调试",
       callback: () => {
         this.setState({ currentTab: "debug" });
       },
@@ -213,7 +213,7 @@ class ServiceDetail extends mixin(TabsMixin) {
 
     if (this.hasVolumes()) {
       tabs.push({
-        label: "Volumes",
+        label: "分区",
         routePath: routePrefix + "/volumes",
         callback: () => {
           this.setState({ currentTab: "volumes" });

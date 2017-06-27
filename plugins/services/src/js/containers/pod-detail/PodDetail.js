@@ -115,21 +115,21 @@ class PodDetail extends mixin(TabsMixin) {
 
     return [
       {
-        label: "Instances",
+        label: "实例",
         callback: () => {
           this.setState({ currentTab: "instances" });
         },
         isActive: activeTab === "instances"
       },
       {
-        label: "Configuration",
+        label: "配置",
         callback: () => {
           this.setState({ currentTab: "configuration" });
         },
         isActive: activeTab === "configuration"
       },
       {
-        label: "Debug",
+        label: "调试",
         callback: () => {
           this.setState({ currentTab: "debug" });
         },
