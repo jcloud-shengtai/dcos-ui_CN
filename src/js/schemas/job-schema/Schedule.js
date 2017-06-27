@@ -12,9 +12,9 @@ const Schedule = {
   type: "object",
   properties: {
     runOnSchedule: {
-      label: "Run on a schedule",
+      label: "按计划执行",
       showLabel: true,
-      title: "按计划执行",
+      title: "Run on a schedule",
       type: "boolean",
       getter(job) {
         const [schedule] = job.getSchedules();
