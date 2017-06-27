@@ -126,7 +126,7 @@ var NodesTable = React.createClass({
         render: this.renderHealth,
         sortable: true,
         sortFunction,
-        heading: ResourceTableUtil.renderHeading({ health: "健康状况" })
+        heading: ResourceTableUtil.renderHeading({ health: "健康" })
       },
       {
         className,
