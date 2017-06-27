@@ -29,14 +29,14 @@ class PodContainerTerminationTable extends React.Component {
       {
         className: getClassName,
         headerClassName: getClassName,
-        prop: "Container ID",
+        prop: "容器ID",
         heading: this.getColumnHeading,
         render: this.renderColumnID
       },
       {
         className: getClassName,
         headerClassName: getClassName,
-        prop: "Last State",
+        prop: "最新状态",
         heading: this.getColumnHeading,
         render: this.renderColumnState
       },
@@ -50,7 +50,7 @@ class PodContainerTerminationTable extends React.Component {
       {
         className: getClassName,
         headerClassName: getClassName,
-        prop: "Message",
+        prop: "消息",
         heading: this.getColumnHeading,
         render: this.renderColumnTerminationMessage
       }
