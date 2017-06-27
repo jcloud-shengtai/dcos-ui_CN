@@ -78,7 +78,7 @@ describe("Tasks Table", function() {
       });
 
       it("correctly shows status", function() {
-        cy.get("@tds").eq(4).contains("运行中");
+        cy.get("@tds").eq(4).contains("正在运行");
       });
 
       it("correctly shows health", function() {

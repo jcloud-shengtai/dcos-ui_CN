@@ -47,7 +47,7 @@ class ServiceStatusDSLSection extends React.Component {
                   name="is_running"
                   type="checkbox"
                 />
-                运行中
+                正在运行
               </FieldLabel>
               <FieldLabel>
                 <FieldInput
@@ -56,7 +56,7 @@ class ServiceStatusDSLSection extends React.Component {
                   name="is_deploying"
                   type="checkbox"
                 />
-                部署中
+                正在部署
               </FieldLabel>
               <FieldLabel>
                 <FieldInput

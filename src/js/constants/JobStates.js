@@ -9,7 +9,7 @@ const JobStates = {
   },
   ACTIVE: {
     stateTypes: ["active"],
-    displayName: "运行中"
+    displayName: "正在运行"
   },
   FAILED: {
     stateTypes: ["completed", "failure"],

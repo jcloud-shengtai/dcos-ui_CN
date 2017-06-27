@@ -220,7 +220,7 @@ class ContainerServiceFormAdvancedSection extends Component {
           <FormGroup className="column-4" showError={Boolean(diskErrors)}>
             <FieldLabel className="text-no-transform">
               <FormGroupHeadingContent primary={true}>
-                磁盘 (MiB)
+                硬盘 (MiB)
               </FormGroupHeadingContent>
             </FieldLabel>
             <FieldInput
