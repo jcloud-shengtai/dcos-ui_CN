@@ -89,7 +89,7 @@ class UnitsHealthTab extends mixin(StoreMixin) {
 
     return (
       <span className={health.classNames}>
-        {StringUtil.capitalize(health.titleView)}
+        {StringUtil.capitalize(health.title)}
       </span>
     );
   }
