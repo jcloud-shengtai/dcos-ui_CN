@@ -22,9 +22,9 @@ class ServiceDetail extends mixin(TabsMixin) {
     super(...arguments);
 
     this.tabs_tabs = {
-      tasks: "实例",
-      configuration: "配置",
-      debug: "调试"
+      tasks: "Instances",
+      configuration: "Configuration",
+      debug: "Debug"
     };
 
     this.state = {
@@ -86,7 +86,7 @@ class ServiceDetail extends mixin(TabsMixin) {
     // Add the Volumes tab if it isn't already there and the service has
     // at least one volume.
     if (this.tabs_tabs.volumes == null && this.hasVolumes()) {
-      this.tabs_tabs.volumes = "卷";
+      this.tabs_tabs.volumes = "Volumes";
       this.forceUpdate();
     }
   }
@@ -146,34 +146,34 @@ class ServiceDetail extends mixin(TabsMixin) {
 
     if (instanceCount > 0) {
       actions.push({
-        label: "重启",
+        label: "Restart",
         onItemSelect: modalHandlers.restartService
       });
     }
     if (!service.getLabels().MARATHON_SINGLE_INSTANCE_APP) {
       actions.push({
-        label: "扩展",
+        label: "Scale",
         onItemSelect: modalHandlers.scaleService
       });
     }
 
     if (instanceCount > 0) {
       actions.push({
-        label: "暂停",
+        label: "Suspend",
         onItemSelect: modalHandlers.suspendService
       });
     }
 
     if (instanceCount === 0) {
       actions.push({
-        label: "恢复",
+        label: "Resume",
         onItemSelect: modalHandlers.resumeService
       });
     }
 
     actions.push({
       className: "text-danger",
-      label: "销毁",
+      label: "Destroy",
       onItemSelect: modalHandlers.deleteService
     });
 
@@ -188,7 +188,7 @@ class ServiceDetail extends mixin(TabsMixin) {
     const activeTab = this.state.currentTab;
 
     tabs.push({
-      label: "实例",
+      label: "Instances",
       callback: () => {
         this.setState({ currentTab: "tasks" });
       },
@@ -196,7 +196,7 @@ class ServiceDetail extends mixin(TabsMixin) {
     });
 
     tabs.push({
-      label: "配置",
+      label: "Configuration",
       callback: () => {
         this.setState({ currentTab: "configuration" });
       },
@@ -204,7 +204,7 @@ class ServiceDetail extends mixin(TabsMixin) {
     });
 
     tabs.push({
-      label: "调试",
+      label: "Debug",
       callback: () => {
         this.setState({ currentTab: "debug" });
       },
@@ -213,7 +213,7 @@ class ServiceDetail extends mixin(TabsMixin) {
 
     if (this.hasVolumes()) {
       tabs.push({
-        label: "卷",
+        label: "Volumes",
         routePath: routePrefix + "/volumes",
         callback: () => {
           this.setState({ currentTab: "volumes" });

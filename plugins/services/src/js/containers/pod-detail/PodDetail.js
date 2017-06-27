@@ -24,9 +24,9 @@ class PodDetail extends mixin(TabsMixin) {
     super(...arguments);
 
     this.tabs_tabs = {
-      instances: "实例",
-      configuration: "配置",
-      debug: "调试"
+      instances: "Instances",
+      configuration: "Configuration",
+      debug: "Debug"
     };
 
     this.state = {
@@ -85,25 +85,25 @@ class PodDetail extends mixin(TabsMixin) {
     const actions = [];
 
     actions.push({
-      label: "编辑",
+      label: "Edit",
       onItemSelect: this.handleActionEdit
     });
 
     actions.push({
-      label: "扩展",
+      label: "Scale",
       onItemSelect: this.handleActionScale
     });
 
     if (instanceCount > 0) {
       actions.push({
-        label: "暂停",
+        label: "Suspend",
         onItemSelect: this.handleActionSuspend
       });
     }
 
     actions.push({
       className: "text-danger",
-      label: "销毁",
+      label: "Destroy",
       onItemSelect: this.handleActionDestroy
     });
 
@@ -115,21 +115,21 @@ class PodDetail extends mixin(TabsMixin) {
 
     return [
       {
-        label: "实例",
+        label: "Instances",
         callback: () => {
           this.setState({ currentTab: "instances" });
         },
         isActive: activeTab === "instances"
       },
       {
-        label: "配置",
+        label: "Configuration",
         callback: () => {
           this.setState({ currentTab: "configuration" });
         },
         isActive: activeTab === "configuration"
       },
       {
-        label: "调试",
+        label: "Debug",
         callback: () => {
           this.setState({ currentTab: "debug" });
         },

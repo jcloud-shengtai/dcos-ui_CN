@@ -60,7 +60,7 @@ class ContainerServiceFormSection extends Component {
     const tooltipContent = (
       <span>
         {
-          "The command value will be wrapped by the underlying Mesos executor via /bin/sh -c ${cmd}. "
+          "一个用于容器执行的shell命令 例如 /bin/sh -c ${cmd}. "
         }
         <a
           href="https://mesosphere.github.io/marathon/docs/application-basics.html"
@@ -75,7 +75,7 @@ class ContainerServiceFormSection extends Component {
       <FieldLabel>
         <FormGroupHeading>
           <FormGroupHeadingContent primary={true}>
-            Command
+            命令
           </FormGroupHeadingContent>
           <FormGroupHeadingContent>
             <Tooltip
@@ -155,7 +155,7 @@ class ContainerServiceFormSection extends Component {
           className="column-6"
           showError={Boolean(containerNameErrors)}
         >
-          <FieldLabel>Container Name</FieldLabel>
+          <FieldLabel>容器名称</FieldLabel>
           <FieldInput name={containerNamePath} value={containerName} />
           <FieldError>{containerNameErrors}</FieldError>
         </FormGroup>
