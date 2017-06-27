@@ -51,7 +51,7 @@ const RouteFactory = {
         type: Route,
         path: "organization",
         component: OrganizationPage,
-        category: "system",
+        category: "系统管理",
         isInSidebar: true,
         children: routes,
         buildBreadCrumb() {
