@@ -61,8 +61,8 @@ class VirtualNetworkDetail extends mixin(StoreMixin, TabsMixin) {
 
     // Virtual Network Detail Tabs
     this.tabs_tabs = {
-      "/networking/networks/:overlayName": "任务",
-      "/networking/networks/:overlayName/details": "详情"
+      "/networking/networks/:overlayName": "Tasks",
+      "/networking/networks/:overlayName/details": "Details"
     };
 
     this.store_listeners = [

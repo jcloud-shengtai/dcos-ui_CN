@@ -243,7 +243,7 @@ const serviceRoutes = [
                         hideHeaderNavigation: true,
                         isTab: true,
                         path: "volumes",
-                        title: "卷",
+                        title: "分区",
                         type: Route,
                         buildBreadCrumb() {
                           return {
