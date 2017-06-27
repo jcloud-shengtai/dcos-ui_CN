@@ -33,24 +33,24 @@ class PodNetworkConfigSection extends React.Component {
   getColumns() {
     return [
       {
-        heading: "Name",
+        heading: "名称",
         prop: "name"
       },
       {
-        heading: "Protocol",
+        heading: "协议",
         prop: "protocol"
       },
       {
-        heading: "Port",
+        heading: "端口",
         prop: "port"
       },
       {
-        heading: "Load Balanced Address",
+        heading: "负载均衡地址",
         prop: "lbAddress",
         placeholder: <em>未启用</em>
       },
       {
-        heading: "Container",
+        heading: "容器",
         prop: "container"
       }
     ];

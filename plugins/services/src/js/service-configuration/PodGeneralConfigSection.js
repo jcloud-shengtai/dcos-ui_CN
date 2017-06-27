@@ -101,7 +101,7 @@ const PodGeneralConfigSection = ({ appConfig, onEditClick }) => {
       <ConfigurationMapHeading level={1}>General</ConfigurationMapHeading>
       <ConfigurationMapSection key="pod-general-section">
         <ConfigurationMapRow>
-          <ConfigurationMapLabel>Service ID</ConfigurationMapLabel>
+          <ConfigurationMapLabel>服务ID</ConfigurationMapLabel>
           <ConfigurationMapValue value={appConfig.id} />
           <ConfigurationMapEditAction
             onEditClick={onEditClick}
@@ -109,7 +109,7 @@ const PodGeneralConfigSection = ({ appConfig, onEditClick }) => {
           />
         </ConfigurationMapRow>
         <ConfigurationMapRow>
-          <ConfigurationMapLabel>Instances</ConfigurationMapLabel>
+          <ConfigurationMapLabel>实例</ConfigurationMapLabel>
           <ConfigurationMapValueWithDefault value={fields.instances} />
           <ConfigurationMapEditAction
             onEditClick={onEditClick}
@@ -127,7 +127,7 @@ const PodGeneralConfigSection = ({ appConfig, onEditClick }) => {
           />
         </ConfigurationMapRow>
         <ConfigurationMapRow>
-          <ConfigurationMapLabel>Memory</ConfigurationMapLabel>
+          <ConfigurationMapLabel>内存</ConfigurationMapLabel>
           <ConfigurationMapValue>
             {getContainerResourceSummary("mem", appConfig)}
           </ConfigurationMapValue>
@@ -137,7 +137,7 @@ const PodGeneralConfigSection = ({ appConfig, onEditClick }) => {
           />
         </ConfigurationMapRow>
         <ConfigurationMapRow>
-          <ConfigurationMapLabel>Disk</ConfigurationMapLabel>
+          <ConfigurationMapLabel>磁盘</ConfigurationMapLabel>
           <ConfigurationMapValue>
             {getContainerResourceSummary("disk", appConfig)}
           </ConfigurationMapValue>

@@ -27,7 +27,7 @@ class ServiceLabelsConfigSection extends ServiceConfigBaseSectionDisplay {
       values: [
         {
           key: "labels",
-          heading: "Labels",
+          heading: "标签",
           headingLevel: 1
         },
         {
