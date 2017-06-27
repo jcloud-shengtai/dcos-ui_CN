@@ -11,7 +11,7 @@ import ModalHeading from "../modals/ModalHeading";
 import UserStore from "../../stores/UserStore";
 
 const TELEMETRY_NOTIFICATION =
-  "系统无法自动通知，请自行通知ACL的相关用户。";
+  "系统暂时无法自动通知，请自行通知ACL的相关用户。";
 
 const METHODS_TO_BIND = ["handleNewUserSubmit", "onUserStoreCreateSuccess"];
 
