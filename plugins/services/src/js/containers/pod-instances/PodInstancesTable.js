@@ -474,7 +474,6 @@ class PodInstancesTable extends React.Component {
         sortBy={{ prop: "name", order: "asc" }}
         tableComponent={CheckboxTable}
         uniqueProperty="id"
-        emptyMessage="无数据"
       />
     );
   }

@@ -127,7 +127,7 @@ class ServiceDebugContainer extends React.Component {
     }
 
     const { lastScalingAt, lastConfigChangeAt } = versionInfo;
-    let lastScaling = "No operation since last config change";
+    let lastScaling = "自从上次配置变更后无相关操作";
     if (lastScalingAt !== lastConfigChangeAt) {
       lastScaling = (
         <span>

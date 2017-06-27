@@ -110,10 +110,12 @@ ExpandingTable.defaultProps = {
   alignCells: "top",
   childRowClassName: "text-overflow",
   expandAll: false,
-  tableComponent: Table
+  tableComponent: Table,
+  emptyMessage: "无数据"
 };
 
 ExpandingTable.propTypes = {
+  emptyMessage: "无数据",
   alignCells: React.PropTypes.oneOf(["top", "middle", "bottom"]),
   childRowClassName: React.PropTypes.string,
   className: React.PropTypes.oneOfType([
