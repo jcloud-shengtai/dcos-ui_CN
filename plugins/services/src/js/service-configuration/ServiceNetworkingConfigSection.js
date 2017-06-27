@@ -196,7 +196,7 @@ class ServiceNetworkingConfigSection extends ServiceConfigBaseSectionDisplay {
                 level={2}
               >
 
-                Service Endpoints
+                服务端点
               </ConfigurationMapHeading>,
               <Table
                 key="service-endpoints"

@@ -193,7 +193,7 @@ class UnitsHealthTab extends mixin(StoreMixin) {
               />
               <FilterButtons
                 renderButtonContent={this.getButtonContent}
-                filters={["全部", "正常", "异常"]}
+                filters={["all", "healthy", "unhealthy"]}
                 filterByKey="title"
                 onFilterChange={this.handleHealthFilterChange}
                 itemList={dataHealth}
@@ -204,7 +204,7 @@ class UnitsHealthTab extends mixin(StoreMixin) {
                 className="button button-primary"
                 target="_blank"
               >
-                下载
+                下载快照
               </a>
             </FilterBar>
           </div>

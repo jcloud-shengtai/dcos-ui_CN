@@ -80,7 +80,7 @@ const DefaultErrorMessages = [
   {
     path: /.*/,
     type: "NUMBER_TYPE",
-    message: "Must be of type `{{type}}`"
+    message: "必须是 `{{type}}` 类型"
   },
   {
     path: /.*/,
@@ -100,7 +100,7 @@ const DefaultErrorMessages = [
   {
     path: /.*/,
     type: "PROP_IS_MISSING",
-    message: "Must be defined"
+    message: "必须被定义"
   },
   {
     path: /.*/,

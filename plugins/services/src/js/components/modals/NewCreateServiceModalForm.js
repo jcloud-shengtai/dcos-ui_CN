@@ -395,22 +395,22 @@ class NewCreateServiceModalForm extends Component {
         <TabButton id="volumes" label="Volumes" key="multivolumes" />,
         <TabButton
           id="healthChecks"
-          label="Health Checks"
+          label="节点状态检查"
           key="multihealthChecks"
         />,
         <TabButton
           id="environment"
-          label="Environment"
+          label="环境"
           key="multienvironment"
         />
       ];
     }
 
     return [
-      <TabButton id="networking" label="Networking" key="networking" />,
+      <TabButton id="networking" label="网络" key="networking" />,
       <TabButton id="volumes" label="Volumes" key="volumes" />,
-      <TabButton id="healthChecks" label="Health Checks" key="healthChecks" />,
-      <TabButton id="environment" label="Environment" key="environment" />
+      <TabButton id="healthChecks" label="节点状态监控" key="healthChecks" />,
+      <TabButton id="environment" label="环境" key="environment" />
     ];
   }
 

@@ -63,7 +63,7 @@ class MultiContainerHealthChecksFormSection extends Component {
     return (
       <AdvancedSection>
         <AdvancedSectionLabel>
-          高级健康度检查设置
+          高级节点状态检查设置
         </AdvancedSectionLabel>
         <AdvancedSectionContent>
           <FormRow>
@@ -460,7 +460,7 @@ class MultiContainerHealthChecksFormSection extends Component {
     const { data, handleTabChange } = this.props;
     const tooltipContent = (
       <span>
-        {`健康度检查在满足以下条件时通过 (1) 响应码在 200 到 399 之间, (2) 在超时前返回全部响应内容. `}
+        {`节点状态检查在满足以下条件时通过 (1) 响应码在 200 到 399 之间, (2) 在超时前返回全部响应内容. `}
         <a
           href="https://mesosphere.github.io/marathon/docs/health-checks.html"
           target="_blank"
@@ -472,7 +472,7 @@ class MultiContainerHealthChecksFormSection extends Component {
     const heading = (
       <FormGroupHeading>
         <FormGroupHeadingContent primary={true}>
-          健康度检查
+          节点状态检查
         </FormGroupHeadingContent>
         <FormGroupHeadingContent>
           <Tooltip
@@ -496,7 +496,7 @@ class MultiContainerHealthChecksFormSection extends Component {
             {heading}
           </h2>
           <p>
-            {"请在配置健康度检查前先 "}
+            {"请在配置节点状态检查前先 "}
             <a
               onClick={handleTabChange.bind(null, "services")}
               className="clickable"
@@ -515,8 +515,7 @@ class MultiContainerHealthChecksFormSection extends Component {
           {heading}
         </h2>
         <p>
-          Health checks may be specified per application to be run against
-          the application{"'"}s instances.
+          可以针对应用程序的实例为每个应用程序指定运行状况检查。
         </p>
         {this.getContainerHealthChecks(data.containers)}
       </div>

@@ -37,7 +37,7 @@ class EnvironmentFormSection extends Component {
             <FieldLabel>
               <FormGroupHeading>
                 <FormGroupHeadingContent primary={true}>
-                  Key
+                  键
                 </FormGroupHeadingContent>
               </FormGroupHeading>
             </FieldLabel>
@@ -46,7 +46,7 @@ class EnvironmentFormSection extends Component {
             <FieldLabel>
               <FormGroupHeading>
                 <FormGroupHeadingContent primary={true}>
-                  Value
+                  值
                 </FormGroupHeadingContent>
               </FormGroupHeading>
             </FieldLabel>
@@ -97,7 +97,7 @@ class EnvironmentFormSection extends Component {
           <FieldLabel>
             <FormGroupHeading>
               <FormGroupHeadingContent primary={true}>
-                Key
+                键
               </FormGroupHeadingContent>
             </FormGroupHeading>
           </FieldLabel>
@@ -106,7 +106,7 @@ class EnvironmentFormSection extends Component {
           <FieldLabel>
             <FormGroupHeading>
               <FormGroupHeadingContent primary={true}>
-                Value
+                值
               </FormGroupHeadingContent>
             </FormGroupHeading>
           </FieldLabel>
@@ -229,7 +229,7 @@ class EnvironmentFormSection extends Component {
         <h3 className="short-bottom">
           <FormGroupHeading>
             <FormGroupHeadingContent primary={true}>
-              Labels
+              标签
             </FormGroupHeadingContent>
             <FormGroupHeadingContent>
               <Tooltip
@@ -245,7 +245,7 @@ class EnvironmentFormSection extends Component {
           </FormGroupHeading>
         </h3>
         <p>
-          Attach metadata to expose additional information to other services.
+          附加元数据以向其他服务公开其他信息.
         </p>
         {this.getLabelsLines(data.labels)}
         <FormRow>
