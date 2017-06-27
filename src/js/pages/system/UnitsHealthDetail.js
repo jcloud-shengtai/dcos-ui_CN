@@ -181,7 +181,7 @@ class UnitsHealthDetail extends mixin(StoreMixin) {
         <FilterHeadline
           currentLength={visibleData.length}
           isFiltering={healthFilter !== "all" || searchString !== ""}
-          name="节点状态"
+          name="节点"
           onReset={this.resetFilter}
           totalLength={nodes.getItems().length}
         />

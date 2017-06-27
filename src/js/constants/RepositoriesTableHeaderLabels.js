@@ -1,5 +1,5 @@
 const RepositoriesTableHeaderLabels = {
-  name: "库名称",
+  name: "仓库名称",
   priority: "优先级",
   uri: "网址"
 };

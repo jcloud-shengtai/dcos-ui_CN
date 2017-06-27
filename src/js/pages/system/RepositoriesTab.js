@@ -21,7 +21,7 @@ const RepositoriesBreadcrumbs = addButton => {
   const crumbs = [
     <Breadcrumb key={-1} title="Repositories">
       <BreadcrumbTextContent>
-        <Link to="/settings/repositories">软件包存储库</Link>
+        <Link to="/settings/repositories">安装包存储库</Link>
       </BreadcrumbTextContent>
     </Breadcrumb>
   ];
@@ -155,7 +155,7 @@ class RepositoriesTab extends mixin(StoreMixin) {
 }
 
 RepositoriesTab.routeConfig = {
-  label: "软件包存储库",
+  label: "安装包存储库",
   matches: /^\/settings\/repositories/
 };
 

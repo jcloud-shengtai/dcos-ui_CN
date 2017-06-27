@@ -64,8 +64,8 @@ class JobDetailPage extends mixin(StoreMixin, TabsMixin) {
     ];
 
     this.tabs_tabs = {
-      runHistory: "执行记录",
-      configuration: "设置信息"
+      runHistory: "Run History",
+      configuration: "Configuration"
     };
 
     this.state = {
@@ -393,14 +393,14 @@ class JobDetailPage extends mixin(StoreMixin, TabsMixin) {
 
     return [
       {
-        label: "Run History",
+        label: "执行记录",
         callback: () => {
           this.setState({ currentTab: "runHistory" });
         },
         isActive: activeTab === "runHistory"
       },
       {
-        label: "Configuration",
+        label: "配置信息",
         callback: () => {
           this.setState({ currentTab: "configuration" });
         },

@@ -551,10 +551,10 @@ class NewCreateServiceModal extends Component {
       );
     }
 
-    let title = "运行一个服务";
+    let title = "运行服务";
     const { location } = this.props;
     const { service } = this.state;
-    const serviceName = service ? `"${service.getName()}"` : "Service";
+    const serviceName = service ? `"${service.getName()}"` : "服务";
 
     if (this.isLocationEdit(location)) {
       title = `Edit ${serviceName}`;

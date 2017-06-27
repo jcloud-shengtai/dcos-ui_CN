@@ -3,9 +3,9 @@ import Node from "../structs/Node";
 import StringUtil from "./StringUtil";
 
 const DefaultResourceTypes = {
-  cpus: { label: "CPU", colorID: 0 },
+  cpus: { label: "处理器", colorID: 0 },
   mem: { label: "内存", colorID: 6 },
-  disk: { label: "磁盘", colorID: 3 }
+  disk: { label: "硬盘", colorID: 3 }
 };
 
 // Let's create an instance of a Node with our default resources
