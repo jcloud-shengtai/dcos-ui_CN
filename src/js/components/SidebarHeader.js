@@ -109,7 +109,7 @@ class SidebarHeader extends mixin(StoreMixin) {
         onClick: this.handleItemSelect
       },
       {
-        html: "系统总览",
+        html: "系统概览",
         id: "system-overview",
         onClick: () => {
           SidebarActions.close();

@@ -397,7 +397,7 @@ class ServiceFormModal extends React.Component {
     return (
       <div className="button-collection flush-bottom">
         <button className="button button-large" onClick={onClose}>
-          Cancel
+          取消
         </button>
         <button className={deployButtonClassNames} onClick={this.handleSubmit}>
           {this.getSubmitText()}

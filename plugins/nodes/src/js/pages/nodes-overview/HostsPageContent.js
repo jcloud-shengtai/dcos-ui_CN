@@ -9,8 +9,7 @@ import FilterHeadline from "../../../../../../src/js/components/FilterHeadline";
 import ResourceBarChart
   from "../../../../../../src/js/components/charts/ResourceBarChart";
 
-//const HEALTH_FILTER_BUTTONS = ["all", "healthy", "unhealthy"];
-const HEALTH_FILTER_BUTTONS = ["全部", "健康", "非健康"];
+const HEALTH_FILTER_BUTTONS = ["all", "healthy", "unhealthy"];
 
 const METHODS_TO_BIND = ["onResetFilter"];
 

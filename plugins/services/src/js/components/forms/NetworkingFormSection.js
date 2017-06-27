@@ -742,7 +742,7 @@ class NetworkingFormSection extends mixin(StoreMixin) {
           网络
         </h2>
         <p>
-          Configure the networking for your service.
+          为您的服务配置网络信息.
         </p>
         <FormRow>
           <FormGroup className="column-6" showError={Boolean(networkError)}>

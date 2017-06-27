@@ -3,7 +3,7 @@ import React from "react";
 /* eslint-enable no-unused-vars */
 
 const Volumes = {
-  title: "Volumes",
+  title: "卷",
   type: "object",
   properties: {
     localVolumes: {
