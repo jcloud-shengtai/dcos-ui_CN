@@ -137,14 +137,14 @@ class ServiceDestroyModal extends React.Component {
   render() {
     const { isPending, onClose, open, service } = this.props;
 
-    let itemText = "Service";
+    let itemText = "服务";
 
     if (service instanceof Pod) {
       itemText = "Pod";
     }
 
     if (service instanceof ServiceTree) {
-      itemText = "Group";
+      itemText = "组";
     }
 
     const heading = (

@@ -1,6 +1,6 @@
 var TaskTableHeaderLabels = {
-  cpus: "CPU",
-  disk: "磁盘",
+  cpus: "处理器",
+  disk: "硬盘",
   host: "主机",
   mem: "内存",
   id: "ID",

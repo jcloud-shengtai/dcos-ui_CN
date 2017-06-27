@@ -11,7 +11,7 @@ const TaskStates = {
 
   TASK_STARTING: {
     stateTypes: ["active", "success"],
-    displayName: "启动中"
+    displayName: "正在启动"
   },
 
   TASK_STARTED: {
@@ -21,7 +21,7 @@ const TaskStates = {
 
   TASK_RUNNING: {
     stateTypes: ["active", "success"],
-    displayName: "运行中"
+    displayName: "正在运行"
   },
 
   TASK_KILLING: {

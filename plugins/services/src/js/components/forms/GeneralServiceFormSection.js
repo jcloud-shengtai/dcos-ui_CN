@@ -582,7 +582,7 @@ class GeneralServiceFormSection extends Component {
           {title}
         </h2>
         <p>
-          配置您的下列服务. 从指定一个ID开始.
+          在下面配置您的服务，首先给您的服务指定一个ID。
         </p>
 
         <FormRow>
