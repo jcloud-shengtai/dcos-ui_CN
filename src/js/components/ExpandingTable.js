@@ -101,6 +101,7 @@ class ExpandingTable extends React.Component {
         className={classes}
         {...Util.omit(props, ["alignCells", "className", "childRowClassName"])}
         columns={this.getColumns(props.columns)}
+        emptyMessage = "无数据"
       />
     );
   }
@@ -115,7 +116,6 @@ ExpandingTable.defaultProps = {
 };
 
 ExpandingTable.propTypes = {
-  emptyMessage: "无数据",
   alignCells: React.PropTypes.oneOf(["top", "middle", "bottom"]),
   childRowClassName: React.PropTypes.string,
   className: React.PropTypes.oneOfType([
