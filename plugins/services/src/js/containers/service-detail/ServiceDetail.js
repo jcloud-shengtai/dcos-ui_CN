@@ -136,7 +136,7 @@ class ServiceDetail extends mixin(TabsMixin) {
     const actions = [];
 
     actions.push({
-      label: "Edit",
+      label: "编辑",
       onItemSelect() {
         router.push(
           `/services/overview/${encodeURIComponent(service.getId())}/edit/`
