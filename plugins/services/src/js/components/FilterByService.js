@@ -48,7 +48,7 @@ var FilterByService = React.createClass({
     // service struct featuring frameworks and apps.
     const defaultItem = new Framework({
       id: defaultId,
-      name: "All Services",
+      name: "所有服务",
       // This is literally the worst way of doing this.
       slave_ids: new Array(this.props.totalHostsCount)
     });

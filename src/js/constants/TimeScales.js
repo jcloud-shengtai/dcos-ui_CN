@@ -1,7 +1,7 @@
 var TimeScales = {
-  MINUTE: "minute",
-  HOUR: "hour",
-  DAY: "day"
+  MINUTE: "分",
+  HOUR: "小时",
+  DAY: "天"
 };
 
 module.exports = TimeScales;

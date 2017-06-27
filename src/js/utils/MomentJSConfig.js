@@ -3,17 +3,17 @@ import moment from "moment";
 moment.updateLocale("en", {
   relativeTime: {
     future: "in %s",
-    past: "%s ago",
-    s: "%d seconds",
+    past: "%s 前",
+    s: "%d 秒",
     m: "a minute",
-    mm: "%d minutes",
+    mm: "%d 分",
     h: "an hour",
-    hh: "%d hours",
+    hh: "%d 小时",
     d: "a day",
-    dd: "%d days",
+    dd: "%d 天",
     M: "a month",
-    MM: "%d months",
+    MM: "%d 月",
     y: "a year",
-    yy: "%d years"
+    yy: "%d 年"
   }
 });
