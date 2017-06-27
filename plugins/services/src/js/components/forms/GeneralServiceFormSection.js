@@ -670,7 +670,7 @@ class GeneralServiceFormSection extends Component {
             </a>.
           </p>
           <p>
-            确定继续创建Pod? 任何您已输入但未保存的信息将会丢失.
+            确定继续创建Pod?
           </p>
         </Confirm>
       </div>
