@@ -71,7 +71,7 @@ var HostTimeSeriesChart = React.createClass({
         <TimeSeriesLabel
           colorIndex={4}
           currentValue={props.currentValue}
-          subHeading={"已连接节点"}
+          subHeading={"连接节点"}
           y="slavesCount"
         />
         {this.getChart(props)}

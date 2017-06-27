@@ -7,8 +7,8 @@ import DialChart from "./DialChart";
 
 const TASKS_PER_ROW = 3;
 const TASK_INFO = {
-  TASK_RUNNING: { label: "运行任务", colorIndex: 4 },
-  TASK_STAGING: { label: "暂存任务", colorIndex: 1 }
+  TASK_RUNNING: { label: "任务运行", colorIndex: 4 },
+  TASK_STAGING: { label: "任务暂存", colorIndex: 1 }
 };
 const DISPLAYED_TASK_KEYS = Object.keys(TASK_INFO);
 
@@ -115,7 +115,7 @@ var TasksChart = React.createClass({
     return (
       <div className="description">
         <span className="unit unit-primary">{total}</span>
-        <span className="unit-label h4 flush text-muted">总任务数</span>
+        <span className="unit-label h4 flush text-muted">总任务</span>
       </div>
     );
   },

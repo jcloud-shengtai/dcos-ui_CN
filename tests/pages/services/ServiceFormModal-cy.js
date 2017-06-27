@@ -5,13 +5,13 @@ describe("Service Form Modal", function() {
     }
 
     function clickRunService() {
-      cy.get(".panel .button").contains("运行一个服务").click();
+      cy.get(".panel .button").contains("运行服务").click();
     }
 
     function openServiceForm() {
       cy
         .get(".create-service-modal-service-picker-option")
-        .contains("单个容器")
+        .contains("单容器")
         .click();
     }
 

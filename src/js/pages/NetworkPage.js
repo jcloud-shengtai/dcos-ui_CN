@@ -68,7 +68,7 @@ NetworkPage.contextTypes = {
 };
 
 NetworkPage.routeConfig = {
-  label: "网络",
+  label: "网络设置",
   icon: <Icon id="network-inverse" size="small" family="product" />,
   matches: /^\/networking/
 };

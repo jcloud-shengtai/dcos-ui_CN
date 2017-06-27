@@ -11,7 +11,7 @@ import ModalHeading from "../modals/ModalHeading";
 import UserStore from "../../stores/UserStore";
 
 const TELEMETRY_NOTIFICATION =
-  "系统无法自动通知，请人工通知相关ACL用户。";
+  "系统暂时无法自动通知，请自行通知ACL的相关用户。";
 
 const METHODS_TO_BIND = ["handleNewUserSubmit", "onUserStoreCreateSuccess"];
 
@@ -76,7 +76,7 @@ class UserFormModal extends mixin(StoreMixin) {
         isClose: true
       },
       {
-        text: "确认",
+        text: "添加",
         className: "button button-success button-medium",
         isSubmit: true
       }

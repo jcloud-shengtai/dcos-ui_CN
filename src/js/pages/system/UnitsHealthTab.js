@@ -204,7 +204,7 @@ class UnitsHealthTab extends mixin(StoreMixin) {
                 className="button button-primary"
                 target="_blank"
               >
-                下载
+                下载快照
               </a>
             </FilterBar>
           </div>
