@@ -45,7 +45,7 @@ class ServiceDebugContainer extends React.Component {
 
   getValueText(value) {
     if (value == null || value === "") {
-      return <p>Unspecified</p>;
+      return <p>未指定</p>;
     }
 
     return <span>{value}</span>;
@@ -54,7 +54,7 @@ class ServiceDebugContainer extends React.Component {
   getLastTaskFailureInfo() {
     const lastTaskFailure = this.props.service.getLastTaskFailure();
     if (lastTaskFailure == null) {
-      return <p>This app does not have failed tasks</p>;
+      return <p>该应用没有失败的任务</p>;
     }
 
     const {
@@ -123,7 +123,7 @@ class ServiceDebugContainer extends React.Component {
   getLastVersionChange() {
     const versionInfo = this.props.service.getVersionInfo();
     if (versionInfo == null) {
-      return <p>This app does not have version change information</p>;
+      return <p>该应用没有版本变更信息</p>;
     }
 
     const { lastScalingAt, lastConfigChangeAt } = versionInfo;
