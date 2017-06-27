@@ -64,7 +64,7 @@ function columnClassNameGetter(prop, sortBy, row) {
 
 const DeploymentsBreadcrumbs = () => {
   const crumbs = [
-    <Breadcrumb key={0} title="部署">
+    <Breadcrumb key={0} title="Deployments">
       <BreadcrumbTextContent>
         <Link to="/services/deployments">部署</Link>
       </BreadcrumbTextContent>
