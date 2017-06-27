@@ -23,7 +23,7 @@ function SingleContainerOption({ columnClasses, onOptionSelect }) {
     >
       <CreateServiceModalServicePickerOptionImage src={defaultServiceImage} />
       <CreateServiceModalServicePickerOptionContent>
-        单个容器
+        单容器
       </CreateServiceModalServicePickerOptionContent>
     </CreateServiceModalServicePickerOption>
   );
@@ -37,7 +37,7 @@ function MultiContainerOption({ columnClasses, onOptionSelect }) {
     >
       <CreateServiceModalServicePickerOptionImage src={defaultServiceImage} />
       <CreateServiceModalServicePickerOptionContent>
-        多个容器 (Pod)
+        多容器 (Pod)
       </CreateServiceModalServicePickerOptionContent>
     </CreateServiceModalServicePickerOption>
   );
@@ -51,7 +51,7 @@ function JSONOption({ columnClasses, onOptionSelect }) {
     >
       <CreateServiceModalServicePickerOptionImage src={jsonServiceImage} />
       <CreateServiceModalServicePickerOptionContent>
-        JSON 配置
+        JSON配置
       </CreateServiceModalServicePickerOptionContent>
     </CreateServiceModalServicePickerOption>
   );

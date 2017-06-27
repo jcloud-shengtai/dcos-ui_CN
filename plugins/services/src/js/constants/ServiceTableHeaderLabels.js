@@ -1,6 +1,6 @@
 var ServiceTableHeaderLabels = {
-  cpus: "CPU",
-  disk: "磁盘",
+  cpus: "处理器",
+  disk: "硬盘",
   mem: "内存",
   name: "名称",
   status: "状态"

@@ -1,10 +1,10 @@
 var ServiceStatusLabels = {
-  RUNNING: "运行中",
-  DEPLOYING: "部署中",
+  RUNNING: "正在运行",
+  DEPLOYING: "正在部署",
   SUSPENDED: "已暂停",
   NA: "N/A",
   DELAYED: "已推迟",
-  WAITING: "等待中"
+  WAITING: "正在等待"
 };
 
 module.exports = ServiceStatusLabels;

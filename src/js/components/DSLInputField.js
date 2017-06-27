@@ -299,7 +299,7 @@ DSLInputField.defaultProps = {
   onBlur() {},
   onDropdownClick() {},
   onFocus() {},
-  placeholder: "过滤"
+  placeholder: ""
 };
 
 DSLInputField.propTypes = {
