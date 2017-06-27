@@ -475,7 +475,7 @@ class NetworkingFormSection extends mixin(StoreMixin) {
               <FieldLabel>
                 <FormGroupHeading>
                   <FormGroupHeadingContent primary={true}>
-                    Service Endpoint Name
+                    服务端点名称
                   </FormGroupHeadingContent>
                   <FormGroupHeadingContent>
                     <Tooltip
@@ -612,7 +612,7 @@ class NetworkingFormSection extends mixin(StoreMixin) {
     const heading = (
       <FormGroupHeading>
         <FormGroupHeadingContent primary={true}>
-          Service Endpoints
+          服务端点
         </FormGroupHeadingContent>
         <FormGroupHeadingContent>
           <Tooltip

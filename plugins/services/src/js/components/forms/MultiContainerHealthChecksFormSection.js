@@ -375,7 +375,7 @@ class MultiContainerHealthChecksFormSection extends Component {
           <AddButton
             onClick={this.props.onAddItem.bind(this, { path, value: index })}
           >
-            Add Health Check
+            增加健康检查
           </AddButton>
         </div>
       );
