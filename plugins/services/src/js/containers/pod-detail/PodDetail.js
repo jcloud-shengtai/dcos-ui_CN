@@ -85,25 +85,25 @@ class PodDetail extends mixin(TabsMixin) {
     const actions = [];
 
     actions.push({
-      label: "Edit",
+      label: "编辑",
       onItemSelect: this.handleActionEdit
     });
 
     actions.push({
-      label: "Scale",
+      label: "扩展",
       onItemSelect: this.handleActionScale
     });
 
     if (instanceCount > 0) {
       actions.push({
-        label: "Suspend",
+        label: "暂停",
         onItemSelect: this.handleActionSuspend
       });
     }
 
     actions.push({
       className: "text-danger",
-      label: "Destroy",
+      label: "销毁",
       onItemSelect: this.handleActionDestroy
     });
 

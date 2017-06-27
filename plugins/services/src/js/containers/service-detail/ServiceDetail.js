@@ -146,34 +146,34 @@ class ServiceDetail extends mixin(TabsMixin) {
 
     if (instanceCount > 0) {
       actions.push({
-        label: "Restart",
+        label: "重启",
         onItemSelect: modalHandlers.restartService
       });
     }
     if (!service.getLabels().MARATHON_SINGLE_INSTANCE_APP) {
       actions.push({
-        label: "Scale",
+        label: "扩展",
         onItemSelect: modalHandlers.scaleService
       });
     }
 
     if (instanceCount > 0) {
       actions.push({
-        label: "Suspend",
+        label: "暂停",
         onItemSelect: modalHandlers.suspendService
       });
     }
 
     if (instanceCount === 0) {
       actions.push({
-        label: "Resume",
+        label: "恢复",
         onItemSelect: modalHandlers.resumeService
       });
     }
 
     actions.push({
       className: "text-danger",
-      label: "Destroy",
+      label: "销毁",
       onItemSelect: modalHandlers.deleteService
     });
 
@@ -213,7 +213,7 @@ class ServiceDetail extends mixin(TabsMixin) {
 
     if (this.hasVolumes()) {
       tabs.push({
-        label: "分区",
+        label: "卷",
         routePath: routePrefix + "/volumes",
         callback: () => {
           this.setState({ currentTab: "volumes" });
