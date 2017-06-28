@@ -97,7 +97,7 @@ class ServiceTreeView extends React.Component {
           actions={[
             { onItemSelect: modalHandlers.createGroup, label: "创建分组" }
           ]}
-          addButton={{ onItemSelect: createService, label: "运行一个服务" }}
+          addButton={{ onItemSelect: createService, label: "运行服务" }}
         />
         <div>
           {this.getFilterBar()}

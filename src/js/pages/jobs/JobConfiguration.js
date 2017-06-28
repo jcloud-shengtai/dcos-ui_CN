@@ -89,7 +89,7 @@ class JobConfiguration extends React.Component {
     return (
       <ConfigurationMapSection>
         <ConfigurationMapHeading>
-          Schedule
+          执行计划
         </ConfigurationMapHeading>
         <ConfigurationMapRow>
           <ConfigurationMapLabel>
@@ -101,7 +101,7 @@ class JobConfiguration extends React.Component {
         </ConfigurationMapRow>
         <ConfigurationMapRow>
           <ConfigurationMapLabel>
-            Enabled
+            有效的
           </ConfigurationMapLabel>
           <ConfigurationMapValue>
             {schedule.enabled}
@@ -109,7 +109,7 @@ class JobConfiguration extends React.Component {
         </ConfigurationMapRow>
         <ConfigurationMapRow>
           <ConfigurationMapLabel>
-            CRON Schedule
+            CRON表达式
           </ConfigurationMapLabel>
           <ConfigurationMapValue>
             {schedule.cron}
@@ -117,7 +117,7 @@ class JobConfiguration extends React.Component {
         </ConfigurationMapRow>
         <ConfigurationMapRow>
           <ConfigurationMapLabel>
-            Time Zone
+            时区
           </ConfigurationMapLabel>
           <ConfigurationMapValue>
             {schedule.timezone}
@@ -125,7 +125,7 @@ class JobConfiguration extends React.Component {
         </ConfigurationMapRow>
         <ConfigurationMapRow>
           <ConfigurationMapLabel>
-            Starting Deadline
+            最迟执行时间
           </ConfigurationMapLabel>
           <ConfigurationMapValue>
             {schedule.startingDeadlineSeconds}
@@ -144,11 +144,11 @@ class JobConfiguration extends React.Component {
     return (
       <ConfigurationMapSection>
         <ConfigurationMapHeading>
-          Docker Container
+          Docker容器
         </ConfigurationMapHeading>
         <ConfigurationMapRow>
           <ConfigurationMapLabel>
-            Image
+            镜像
           </ConfigurationMapLabel>
           <ConfigurationMapValue>
             {docker.image}

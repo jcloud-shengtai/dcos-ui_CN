@@ -17,7 +17,7 @@ var ServicesPage = React.createClass({
 
   statics: {
     routeConfig: {
-      label: "服务",
+      label: "服务管理",
       icon: <Icon id="services-inverse" size="small" family="product" />,
       matches: /^\/services/
     }
@@ -34,8 +34,8 @@ var ServicesPage = React.createClass({
       { name: "notification", events: ["change"], suppressUpdate: false }
     ];
     this.tabs_tabs = {
-      "/services/overview": "服务",
-      "/services/deployments": "部署"
+      "/services/overview": "Services",
+      "/services/deployments": "Deployments"
     };
     this.updateCurrentTab();
   },

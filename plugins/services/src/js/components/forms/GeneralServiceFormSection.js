@@ -582,7 +582,7 @@ class GeneralServiceFormSection extends Component {
           {title}
         </h2>
         <p>
-          配置您的下列服务. 从指定一个ID开始.
+          在下面配置您的服务，首先给您的服务指定一个ID。
         </p>
 
         <FormRow>
@@ -670,7 +670,7 @@ class GeneralServiceFormSection extends Component {
             </a>.
           </p>
           <p>
-            确定继续创建Pod? 任何您已输入但未保存的信息将会丢失.
+            确定继续创建Pod?
           </p>
         </Confirm>
       </div>

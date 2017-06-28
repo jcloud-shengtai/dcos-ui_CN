@@ -13,7 +13,7 @@ const settingsRoutes = [
     type: Route,
     path: "settings",
     component: SettingsPage,
-    category: "system",
+    category: "系统管理",
     isInSidebar: true,
     children: [
       {

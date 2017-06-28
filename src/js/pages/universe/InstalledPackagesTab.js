@@ -18,7 +18,7 @@ const InstalledPackagesBreadcrumbs = () => {
   const crumbs = [
     <Breadcrumb key={0} title="Installed">
       <BreadcrumbTextContent>
-        <Link to="/universe/installed-packages">已安装应用</Link>
+        <Link to="/universe/installed-packages">我的服务</Link>
       </BreadcrumbTextContent>
     </Breadcrumb>
   ];
@@ -114,7 +114,7 @@ class InstalledPackagesTab extends mixin(StoreMixin) {
 }
 
 InstalledPackagesTab.routeConfig = {
-  label: "已安装应用",  //Installed
+  label: "我的服务",  //Installed
   matches: /^\/universe\/installed-packages/
 };
 

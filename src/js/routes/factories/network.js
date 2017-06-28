@@ -221,7 +221,7 @@ const RouteFactory = {
         type: Route,
         path: "networking",
         component: NetworkPage,
-        category: "resources",
+        category: "资源管理",
         isInSidebar: true,
         children: routes
       }

@@ -36,7 +36,7 @@ class ServiceStorageConfigSection extends ServiceConfigBaseSectionDisplay {
       values: [
         {
           key: "container.volumes",
-          heading: "Storage",
+          heading: "存储",
           headingLevel: 1
         },
         {

@@ -17,7 +17,7 @@ const componentsRoutes = {
   type: Route,
   path: "components",
   component: ComponentsPage,
-  category: "system",
+  category: "系统管理",
   isInSidebar: true,
   buildBreadCrumb() {
     return {

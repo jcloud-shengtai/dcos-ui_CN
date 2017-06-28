@@ -239,7 +239,7 @@ class PodDebugTabView extends React.Component {
     return (
       <Alert>
         {
-          "DC/OS 正在等待资源，无法为 "
+          "JSSP 正在部署，无法为 "
         }
         {DateUtil.getDuration(timeWaiting, null)}{"完成这次部署. "}
         <a className="clickable" onClick={this.handleJumpToRecentOffersClick}>

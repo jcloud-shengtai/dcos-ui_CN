@@ -108,7 +108,7 @@ var Modals = React.createClass({
 
     return {
       onClose,
-      title: "Install DC/OS CLI",
+      title: "Install JSSP CLI",
       showFooter: true,
       footer: (
         <div>

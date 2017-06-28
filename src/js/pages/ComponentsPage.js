@@ -9,7 +9,7 @@ class ComponentsPage extends React.Component {
 }
 
 ComponentsPage.routeConfig = {
-  label: "组件列表",
+  label: "组件",
   icon: <Icon id="components-inverse" size="small" family="product" />,
   matches: /^\/components/
 };

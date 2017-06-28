@@ -391,11 +391,11 @@ class NewCreateServiceModalForm extends Component {
   getSectionList() {
     if (this.state.isPod) {
       return [
-        <TabButton id="networking" label="Networking" key="multinetworking" />,
-        <TabButton id="volumes" label="Volumes" key="multivolumes" />,
+        <TabButton id="networking" label="网络" key="multinetworking" />,
+        <TabButton id="volumes" label="分区" key="multivolumes" />,
         <TabButton
           id="healthChecks"
-          label="节点状态检查"
+          label="健康检查"
           key="multihealthChecks"
         />,
         <TabButton
@@ -408,8 +408,8 @@ class NewCreateServiceModalForm extends Component {
 
     return [
       <TabButton id="networking" label="网络" key="networking" />,
-      <TabButton id="volumes" label="Volumes" key="volumes" />,
-      <TabButton id="healthChecks" label="节点状态监控" key="healthChecks" />,
+      <TabButton id="volumes" label="分区" key="volumes" />,
+      <TabButton id="healthChecks" label="健康检查" key="healthChecks" />,
       <TabButton id="environment" label="环境" key="environment" />
     ];
   }
@@ -587,7 +587,7 @@ class NewCreateServiceModalForm extends Component {
 
     const errorMap = DataValidatorUtil.errorArrayToMap(unmutedErrors);
     const serviceLabel = pluralize(
-      "Service",
+      "服务",
       findNestedPropertyInObject(appConfig, "containers.length") || 1
     );
 

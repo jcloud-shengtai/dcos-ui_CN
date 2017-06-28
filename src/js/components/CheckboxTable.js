@@ -218,6 +218,7 @@ class CheckboxTable extends React.Component {
         data={data}
         itemHeight={TableUtil.getRowHeight()}
         sortBy={{ prop: sortProp, order: sortOrder }}
+        emptyMessage="无数据"
       />
     );
   }

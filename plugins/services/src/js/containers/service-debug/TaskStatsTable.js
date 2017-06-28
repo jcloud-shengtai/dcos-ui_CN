@@ -11,10 +11,10 @@ const taskStatus = [
   "getStagedTaskCount"
 ];
 const nameMapping = {
-  startedAfterLastScaling: "Started After Last Scaling",
-  withLatestConfig: "With Latest Config",
-  withOutdatedConfig: "With Outdated Config",
-  totalSummary: "Total Summary"
+  startedAfterLastScaling: "自从上次扩展后的启动次数",
+  withLatestConfig: "使用最新配置",
+  withOutdatedConfig: "使用过期配置",
+  totalSummary: "总览"
 };
 const headerMapping = {
   getRunningTaskCount: "RUNNING",

@@ -19,7 +19,7 @@ class PodContainerArtifactsConfigSection extends React.Component {
         prop: "uri"
       },
       {
-        heading: "Executable",
+        heading: "可执行",
         prop: "executable",
         render(prop, row) {
           return (
@@ -43,7 +43,7 @@ class PodContainerArtifactsConfigSection extends React.Component {
         }
       },
       {
-        heading: "Cache",
+        heading: "缓存",
         prop: "cache",
         render(prop, row) {
           return (
@@ -55,7 +55,7 @@ class PodContainerArtifactsConfigSection extends React.Component {
         }
       },
       {
-        heading: "Destination Path",
+        heading: "目标地址",
         prop: "destPath"
       }
     ];
@@ -75,7 +75,7 @@ class PodContainerArtifactsConfigSection extends React.Component {
     return (
       <div>
         <ConfigurationMapHeading level={3}>
-          Container Artifacts
+          容器Artifacts
         </ConfigurationMapHeading>
         <ConfigurationMapTable
           columnDefaults={{ hideIfEmpty: true }}

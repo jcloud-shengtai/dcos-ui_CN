@@ -20,25 +20,25 @@ const COMMON_COLUMNS = [
     }
   },
   {
-    heading: "Interval",
+    heading: "间隔",
     prop: "interval",
     render(prop, row) {
       return <ConfigurationMapDurationValue units="sec" value={row[prop]} />;
     }
   },
   {
-    heading: "Timeout",
+    heading: "超时",
     prop: "timeout",
     render(prop, row) {
       return <ConfigurationMapDurationValue units="sec" value={row[prop]} />;
     }
   },
   {
-    heading: "Max Failures",
+    heading: "最大失败次数",
     prop: "maxFailures"
   },
   {
-    heading: "Container",
+    heading: "容器",
     prop: "container"
   }
 ];
@@ -47,7 +47,7 @@ class PodHealthChecksConfigSection extends React.Component {
   getCommandColumns() {
     return [
       {
-        heading: "Command",
+        heading: "命令",
         prop: "command"
       }
     ].concat(COMMON_COLUMNS);
@@ -68,15 +68,15 @@ class PodHealthChecksConfigSection extends React.Component {
   getEndpointsColumns() {
     return [
       {
-        heading: "Service Endpoint",
+        heading: "服务端点",
         prop: "endpoint"
       },
       {
-        heading: "Proto",
+        heading: "协议",
         prop: "protocol"
       },
       {
-        heading: "Path",
+        heading: "路径",
         prop: "path"
       }
     ].concat(COMMON_COLUMNS);
@@ -135,7 +135,7 @@ class PodHealthChecksConfigSection extends React.Component {
     return (
       <div>
         <ConfigurationMapHeading level={1}>
-          Health Checks
+          健康检查
         </ConfigurationMapHeading>
 
         {healthChecks.endpoints.length !== 0 &&
@@ -157,7 +157,7 @@ class PodHealthChecksConfigSection extends React.Component {
         {healthChecks.command.length !== 0 &&
           <div>
             <ConfigurationMapHeading level={2}>
-              Command Health Checks
+              命令健康检查
             </ConfigurationMapHeading>
             <ConfigurationMapSection key="pod-general-section">
               <ConfigurationMapTable

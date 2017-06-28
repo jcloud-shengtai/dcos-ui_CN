@@ -22,9 +22,9 @@ class ServiceDetail extends mixin(TabsMixin) {
     super(...arguments);
 
     this.tabs_tabs = {
-      tasks: "实例",
-      configuration: "配置",
-      debug: "调试"
+      tasks: "Instances",
+      configuration: "Configuration",
+      debug: "Debug"
     };
 
     this.state = {
@@ -86,7 +86,7 @@ class ServiceDetail extends mixin(TabsMixin) {
     // Add the Volumes tab if it isn't already there and the service has
     // at least one volume.
     if (this.tabs_tabs.volumes == null && this.hasVolumes()) {
-      this.tabs_tabs.volumes = "卷";
+      this.tabs_tabs.volumes = "Volumes";
       this.forceUpdate();
     }
   }
@@ -136,7 +136,7 @@ class ServiceDetail extends mixin(TabsMixin) {
     const actions = [];
 
     actions.push({
-      label: "Edit",
+      label: "编辑",
       onItemSelect() {
         router.push(
           `/services/overview/${encodeURIComponent(service.getId())}/edit/`

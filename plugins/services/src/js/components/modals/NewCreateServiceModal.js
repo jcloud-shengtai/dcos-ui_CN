@@ -551,10 +551,10 @@ class NewCreateServiceModal extends Component {
       );
     }
 
-    let title = "运行一个服务";
+    let title = "运行服务";
     const { location } = this.props;
     const { service } = this.state;
-    const serviceName = service ? `"${service.getName()}"` : "Service";
+    const serviceName = service ? `"${service.getName()}"` : "服务";
 
     if (this.isLocationEdit(location)) {
       title = `Edit ${serviceName}`;
@@ -721,7 +721,7 @@ class NewCreateServiceModal extends Component {
     } = this.state;
 
     const force = this.shouldForceSubmit();
-    const runButtonLabel = force ? "Force Run Service" : "Run Service";
+    const runButtonLabel = force ? "强制启动服务" : "启动服务";
     const runButtonClassNames = classNames("flush-vertical", {
       "button-primary": !force,
       "button-danger": force
@@ -870,7 +870,7 @@ class NewCreateServiceModal extends Component {
         {this.getModalContent()}
         <Confirm
           closeByBackdropClick={true}
-          header={<ModalHeading>Discard Changes?</ModalHeading>}
+          header={<ModalHeading>丢弃修改?</ModalHeading>}
           open={this.state.isConfirmOpen}
           onClose={this.handleCloseConfirmModal}
           leftButtonText="取消"

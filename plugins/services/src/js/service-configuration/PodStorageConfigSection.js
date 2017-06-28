@@ -18,15 +18,15 @@ class PodStorageConfigSection extends React.Component {
   getColumns() {
     return [
       {
-        heading: "Volume",
+        heading: "分区",
         prop: "volume"
       },
       {
-        heading: "Size",
+        heading: "空间",
         prop: "size"
       },
       {
-        heading: "Read Only",
+        heading: "只读",
         prop: "readOnly",
         render(prop, row) {
           return (
@@ -38,11 +38,11 @@ class PodStorageConfigSection extends React.Component {
         }
       },
       {
-        heading: "Container Mount Path",
+        heading: "容器挂载路径",
         prop: "mountPath"
       },
       {
-        heading: "Container",
+        heading: "容器",
         prop: "container"
       }
     ];

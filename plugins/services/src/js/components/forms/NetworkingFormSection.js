@@ -475,7 +475,7 @@ class NetworkingFormSection extends mixin(StoreMixin) {
               <FieldLabel>
                 <FormGroupHeading>
                   <FormGroupHeadingContent primary={true}>
-                    Service Endpoint Name
+                    服务端点名称
                   </FormGroupHeadingContent>
                   <FormGroupHeadingContent>
                     <Tooltip
@@ -612,7 +612,7 @@ class NetworkingFormSection extends mixin(StoreMixin) {
     const heading = (
       <FormGroupHeading>
         <FormGroupHeadingContent primary={true}>
-          Service Endpoints
+          服务端点
         </FormGroupHeadingContent>
         <FormGroupHeadingContent>
           <Tooltip
@@ -648,7 +648,7 @@ class NetworkingFormSection extends mixin(StoreMixin) {
             {heading}
           </h3>
           <p key="service-endpoints-description">
-            DC/OS 可以自动生成能够连接到负载均衡的服务地址.
+            JSSP 可以自动生成能够连接到负载均衡的服务地址.
           </p>
         </Tooltip>
       );
@@ -660,7 +660,7 @@ class NetworkingFormSection extends mixin(StoreMixin) {
           {heading}
         </h3>
         <p key="service-endpoints-description">
-          DC/OS 可以自动生成能够连接到负载均衡端点的服务地址.
+          JSSP 可以自动生成能够连接到负载均衡端点的服务地址.
         </p>
         {this.getServiceEndpoints()}
         <FormRow key="service-endpoints-add-button">
@@ -688,7 +688,7 @@ class NetworkingFormSection extends mixin(StoreMixin) {
           自动分配端口
         </h3>
         <p key="service-endpoints-description">
-          DC/OS 能够自动分配端口
+          JSSP 能够自动分配端口
         </p>
         <FieldLabel matchInputHeight={true}>
           <FieldInput
