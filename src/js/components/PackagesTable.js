@@ -129,7 +129,7 @@ class PackagesTable extends React.Component {
         table-display-on-row-hover"
         onClick={this.handleUninstallClick.bind(this, cosmosPackage)}
       >
-        Uninstall
+        卸载
       </a>
     );
   }
