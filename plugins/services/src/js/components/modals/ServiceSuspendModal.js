@@ -100,7 +100,7 @@ class ServiceSuspendModal extends React.Component {
 
     const heading = (
       <ModalHeading>
-        暂停 {itemText}
+        暂停{itemText}
       </ModalHeading>
     );
 
@@ -110,8 +110,9 @@ class ServiceSuspendModal extends React.Component {
         header={heading}
         open={open}
         onClose={onClose}
+        leftButtonText="取消"
         leftButtonCallback={onClose}
-        rightButtonText={`Suspend ${itemText}`}
+        rightButtonText={`暂停${itemText}`}
         rightButtonCallback={() => suspendItem(this.shouldForceUpdate())}
         showHeader={true}
       >

@@ -226,6 +226,7 @@ class RepositoriesTable extends mixin(StoreMixin) {
           header={heading}
           open={!!state.repositoryToRemove}
           onClose={this.handleDeleteCancel}
+          leftButtonText="取消"
           leftButtonCallback={this.handleDeleteCancel}
           rightButtonCallback={this.handleDeleteRepository}
           rightButtonClassName="button button-danger"

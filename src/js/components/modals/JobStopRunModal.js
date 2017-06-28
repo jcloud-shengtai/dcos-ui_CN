@@ -91,11 +91,11 @@ class JobStopRunModal extends mixin(StoreMixin) {
 
   render() {
     const { onClose, open, selectedItems } = this.props;
-    let rightButtonText = "Stop Job Run";
+    let rightButtonText = "停止运行中的任务";
     const selectedItemsLength = selectedItems.length;
 
     if (selectedItems.length > 1) {
-      rightButtonText = "Stop Job Runs";
+      rightButtonText = "停止运行中的任务";
     }
 
     return (
@@ -105,7 +105,7 @@ class JobStopRunModal extends mixin(StoreMixin) {
         header={this.getContentHeader(selectedItems, selectedItemsLength)}
         open={open}
         onClose={onClose}
-        leftButtonText="Close"
+        leftButtonText="关闭"
         leftButtonCallback={onClose}
         rightButtonText={rightButtonText}
         rightButtonClassName="button button-danger"
