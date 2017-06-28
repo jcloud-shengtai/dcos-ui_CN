@@ -107,7 +107,7 @@ class LoginPage extends mixin(StoreMixin) {
           showFooter={false}
         >
           <p className="text-align-center">
-            Unable to login to your DC/OS cluster. Clusters must be connected to the internet.
+            Unable to login to your JSSP cluster. Clusters must be connected to the internet.
           </p>
           <p className="flush-bottom text-align-center">
             {"Please contact your system administrator or see the "}

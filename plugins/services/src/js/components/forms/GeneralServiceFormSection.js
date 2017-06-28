@@ -347,12 +347,12 @@ class GeneralServiceFormSection extends Component {
       if (index === 0) {
         fieldLabel = placementConstraintLabel(
           "字段",
-          "如果你输入 `hostname`, 约束将会映射到 代理节点 hostname上. 如果你没有输入一个hostname的代理节点, 相关字段就会被当做一个 Mesos 代理节点的属性, 以允许您标记代理节点.",
+          "如果你输入 `hostname`, 约束将会映射到代理节点的hostname上. 如果你没有输入一个代理节点的hostname, 相关字段就会被当做一个代理节点的属性, 以允许您标记代理节点.",
           { isRequired: true }
         );
         operatorLabel = placementConstraintLabel(
           "Operator",
-          "Operators制定了你的应用可以在哪里运行.",
+          "Operators指定了你的应用可以在哪里运行.",
           { isRequired: true }
         );
       }
@@ -391,7 +391,7 @@ class GeneralServiceFormSection extends Component {
               type="text"
               value={String(constraint.operator)}
             >
-              <option value="">Select</option>
+              <option value="">选择</option>
               {this.getOperatorTypes()}
             </FieldSelect>
             <FieldError>{operatorError}</FieldError>
@@ -444,7 +444,7 @@ class GeneralServiceFormSection extends Component {
     const runtimeTooltipContent = (
       <span>
         {
-          "两种容器运行时环境都可以运行docker容器. DC/OS对Universal 容器 有着更好的支持 . "
+          "两种容器运行时环境都可以运行docker容器. JSSP对Universal容器有着更好的支持 . "
         }
         <a
           href={MetadataStore.buildDocsURI("/usage/containerizers/")}
