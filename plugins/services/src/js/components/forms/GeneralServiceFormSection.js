@@ -66,7 +66,7 @@ const containerRuntimes = {
 };
 
 function placementConstraintLabel(name, tooltipText, options = {}) {
-  const { isRequired = false, linkText = "More information" } = options;
+  const { isRequired = false, linkText = "更多信息" } = options;
 
   const tooltipContent = (
     <span>

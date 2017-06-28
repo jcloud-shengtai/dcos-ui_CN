@@ -120,7 +120,7 @@ class VolumesFormSection extends Component {
           href={MetadataStore.buildDocsURI("/usage/storage/external-storage/")}
           target="_blank"
         >
-          More information
+          更多信息
         </a>.
       </span>
     );
