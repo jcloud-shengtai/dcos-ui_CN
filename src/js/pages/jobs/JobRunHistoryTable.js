@@ -214,7 +214,7 @@ class JobRunHistoryTable extends React.Component {
           className="button button-stroke button-danger"
           onClick={this.handleStopClick}
         >
-          Stop
+          停止
         </div>
       </div>
     );
