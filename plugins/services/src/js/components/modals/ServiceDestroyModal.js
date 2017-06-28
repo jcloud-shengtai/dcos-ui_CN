@@ -149,7 +149,7 @@ class ServiceDestroyModal extends React.Component {
 
     const heading = (
       <ModalHeading className="text-danger">
-        Destroy {itemText}
+        销毁 {itemText}
       </ModalHeading>
     );
 
