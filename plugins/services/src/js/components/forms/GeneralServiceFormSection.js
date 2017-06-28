@@ -238,7 +238,7 @@ class GeneralServiceFormSection extends Component {
     const placementTooltipContent = (
       <span>
         {
-          "约束有三部分: a field name, an operator, and an optional parameter. The field can be the hostname of the agent node or any attribute of the agent node. "
+          "约束有三部分: 字段名, 操作符, 以及一个指定的参数. 字段可以是代理节点的主机名或者代理节点的任意属性。"
         }
         <a
           href="https://mesosphere.github.io/marathon/docs/constraints.html"
@@ -266,7 +266,7 @@ class GeneralServiceFormSection extends Component {
         <h3 className="short-bottom">
           <FormGroupHeading>
             <FormGroupHeadingContent primary={true}>
-              设置约束
+              位置约束
             </FormGroupHeadingContent>
             <FormGroupHeadingContent>
               <Tooltip
@@ -282,7 +282,7 @@ class GeneralServiceFormSection extends Component {
           </FormGroupHeading>
         </h3>
         <p>
-          通过设置约束来对应用程序进行相关限制。
+          通过设置位置约束来对应用程序进行相关限制。
         </p>
         {this.getPlacementConstraintsFields(data.constraints)}
         {errorNode}
@@ -294,7 +294,7 @@ class GeneralServiceFormSection extends Component {
                 path: "constraints"
               })}
             >
-              添加 Placement 约束
+              添加 位置约束
             </AddButton>
           </FormGroup>
         </FormRow>
