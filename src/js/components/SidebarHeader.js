@@ -124,7 +124,11 @@ class SidebarHeader extends mixin(StoreMixin) {
       },
       {
         html: "文档（敬请期待）",
-        id: "documentation"
+        id: "documentation",
+		onClick() {
+          SidebarActions.close();
+          global.open("https://market.jcloud.com/cloud/index.action", "_blank");
+        }
       },
       {
         html: "安装CLI（敬请期待）",
