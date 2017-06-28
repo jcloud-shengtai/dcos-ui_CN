@@ -84,7 +84,7 @@ class ServiceInfo extends React.Component {
           key="service-link"
           href={webURL}
           target="_blank"
-          title="在新窗口打开"
+          title="在新窗口中打开"
         >
           Open Service
         </a>

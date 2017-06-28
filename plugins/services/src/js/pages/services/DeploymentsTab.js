@@ -253,9 +253,9 @@ class DeploymentsTab extends mixin(StoreMixin) {
 
   renderAction(prop, deployment) {
     if (deployment != null) {
-      let linkText = "Rollback";
+      let linkText = "回滚";
       if (deployment.isStarting()) {
-        linkText = linkText + " & Remove";
+        linkText = linkText + " & 移除";
       }
 
       return (
@@ -386,7 +386,7 @@ class DeploymentsTab extends mixin(StoreMixin) {
 
     const heading = (
       <ModalHeading>
-        You're About To Rollback The Deployment
+        即将回滚部署
       </ModalHeading>
     );
 
@@ -401,7 +401,7 @@ class DeploymentsTab extends mixin(StoreMixin) {
           leftButtonText="取消"
           rightButtonClassName="button button-danger"
           rightButtonCallback={this.handleRollbackConfirm}
-          rightButtonText="Continue Rollback"
+          rightButtonText="继续回滚"
           showHeader={true}
         >
           <div className="text-align-center">
@@ -422,18 +422,15 @@ class DeploymentsTab extends mixin(StoreMixin) {
     const listOfServiceNames = StringUtil.humanizeArray(serviceNames);
     const serviceCount = serviceNames.length;
 
-    const service = StringUtil.pluralize("service", serviceCount);
-    const its = serviceCount === 1 ? "its" : "their";
-    const version = StringUtil.pluralize("version", serviceCount);
+    const service = StringUtil.pluralize("服务", serviceCount);
+    const its = serviceCount === 1 ? "它" : "它们";
+    const version = StringUtil.pluralize("版本", serviceCount);
 
     if (deploymentToRollback.isStarting()) {
-      return `This will stop the current deployment of ${listOfServiceNames}
-              and start a new deployment to remove the affected ${service}.`;
+      return `这将停止 ${listOfServiceNames} 的当前部署，并启动新的部署来移除受影响的${service}。`;
     }
 
-    return `This will stop the current deployment of ${listOfServiceNames} and
-            start a new deployment to revert the affected ${service} to ${its}
-            previous ${version}.`;
+    return `这将停止 ${listOfServiceNames} 的当前部署，并启动新的部署来将受影响的${service}还原到${its}以前的${version}。`;
   }
 
   renderRollbackError(deploymentRollbackError) {

@@ -94,7 +94,7 @@ class NetworkingFormSection extends mixin(StoreMixin) {
           href="https://mesosphere.github.io/marathon/docs/ports.html"
           target="_blank"
         >
-          More information
+          更多信息
         </a>
       </span>
     );
@@ -161,7 +161,7 @@ class NetworkingFormSection extends mixin(StoreMixin) {
       <span>
         {`服务内置负载均衡 (layer 4), 以及创建服务地址. 若想使用外部负载均衡 (layer 7), 创建一个外部的负载均衡并且附加与该服务上. `}
         <a href={loadBalancerDocsURI} target="_blank">
-          More Information
+          更多信息
         </a>
       </span>
     );
@@ -313,7 +313,7 @@ class NetworkingFormSection extends mixin(StoreMixin) {
 
     const assignHelpText = (
       <span>
-        {"Most services will use TCP. "}
+        {"大多数服务使用TCP协议. "}
         <a href="https://mesosphere.github.io/marathon/docs/ports.html">
           更多信息
         </a>

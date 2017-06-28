@@ -217,7 +217,7 @@ class PodInstancesTable extends React.Component {
               href={`http://${agentAddress}:${endpoint.allocatedHostPort}`}
               key={i}
               target="_blank"
-              title="Open in a new window"
+              title="在新窗口中打开"
             >
               {endpoint.allocatedHostPort}
             </a>

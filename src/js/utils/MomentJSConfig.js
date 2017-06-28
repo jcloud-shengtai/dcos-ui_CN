@@ -2,7 +2,7 @@ import moment from "moment";
 
 moment.updateLocale("en", {
   relativeTime: {
-    future: "in %s",
+    future: "%s内",
     past: "%s前",
     s: "%d 秒",
     m: "一分钟",
@@ -11,7 +11,7 @@ moment.updateLocale("en", {
     hh: "%d 小时",
     d: "一天",
     dd: "%d 天",
-    M: "一月",
+    M: "一个月",
     MM: "%d 月",
     y: "一年",
     yy: "%d 年"

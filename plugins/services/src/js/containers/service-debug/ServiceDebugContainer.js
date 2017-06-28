@@ -180,7 +180,7 @@ class ServiceDebugContainer extends React.Component {
       queue.declinedOffers.summary == null
     ) {
       introText =
-        "当你的服务正在部署或等待资源时，Offers会出现在这里.";
+        "当你的服务正在部署或等待资源时，资源分配会出现在这里.";
     } else {
       const { declinedOffers: { summary } } = queue;
       const { roles: { offers = 0 } } = summary;
@@ -206,7 +206,7 @@ class ServiceDebugContainer extends React.Component {
         }}
       >
         <ConfigurationMapHeading>
-          最近的资源 Offers{offerCount}
+          最近的资源分配{offerCount}
         </ConfigurationMapHeading>
         <p>{introText}</p>
         {mainContent}

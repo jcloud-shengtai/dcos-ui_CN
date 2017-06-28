@@ -119,7 +119,7 @@ class NestedServiceLinks extends React.Component {
           <Link
             className={minorLinkAnchorClasses}
             to="/services"
-            title="services"
+            title="服务"
           >
             服务
           </Link>

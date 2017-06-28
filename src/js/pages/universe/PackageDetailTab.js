@@ -217,7 +217,7 @@ class PackageDetailTab extends mixin(StoreMixin) {
         className="button button-success"
         onClick={this.handleInstallModalOpen}
       >
-        Install Package
+        点击安装
       </button>
     );
   }

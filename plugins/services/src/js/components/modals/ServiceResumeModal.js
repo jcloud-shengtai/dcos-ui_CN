@@ -104,7 +104,7 @@ class ServiceResumeModal extends React.Component {
     if (service.getLabels().MARATHON_SINGLE_INSTANCE_APP) {
       return (
         <p>
-          This service is currently suspended. Do you want to resume this service?
+          当前服务已暂停. 是否想要恢复?
         </p>
       );
     }
@@ -137,7 +137,7 @@ class ServiceResumeModal extends React.Component {
 
     const heading = (
       <ModalHeading>
-        Resume Service
+        恢复服务
       </ModalHeading>
     );
 
@@ -147,8 +147,9 @@ class ServiceResumeModal extends React.Component {
         header={heading}
         open={open}
         onClose={onClose}
+        leftButtonText="取消"
         leftButtonCallback={onClose}
-        rightButtonText="Resume Service"
+        rightButtonText="恢复服务"
         rightButtonClassName="button button-primary"
         rightButtonCallback={this.handleConfirmation}
         showHeader={true}
