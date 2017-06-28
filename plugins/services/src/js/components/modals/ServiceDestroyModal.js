@@ -99,11 +99,11 @@ class ServiceDestroyModal extends React.Component {
 
     return (
       <p>
-        Destroying
+        正在销毁
         {" "}
         <span className="emphasize">{serviceName}</span>
         {" "}
-        is irreversible. Are you sure you want to continue?
+        ，该操作不可逆. 确认继续?
       </p>
     );
   }

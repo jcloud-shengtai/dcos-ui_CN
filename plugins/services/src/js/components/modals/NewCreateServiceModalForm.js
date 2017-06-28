@@ -391,7 +391,7 @@ class NewCreateServiceModalForm extends Component {
   getSectionList() {
     if (this.state.isPod) {
       return [
-        <TabButton id="networking" label="联网" key="multinetworking" />,
+        <TabButton id="networking" label="网络" key="multinetworking" />,
         <TabButton id="volumes" label="分区" key="multivolumes" />,
         <TabButton
           id="healthChecks"
@@ -407,7 +407,7 @@ class NewCreateServiceModalForm extends Component {
     }
 
     return [
-      <TabButton id="networking" label="联网" key="networking" />,
+      <TabButton id="networking" label="网络" key="networking" />,
       <TabButton id="volumes" label="分区" key="volumes" />,
       <TabButton id="healthChecks" label="健康检查" key="healthChecks" />,
       <TabButton id="environment" label="环境" key="environment" />
