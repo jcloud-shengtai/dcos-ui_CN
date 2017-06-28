@@ -208,7 +208,7 @@ class OverviewDetailTab extends mixin(StoreMixin) {
         <div className="container">
           <ConfigurationMap>
             <ConfigurationMapHeading className="flush-top">
-              集群详细地址
+              集群详情
             </ConfigurationMapHeading>
             <ConfigurationMapHeading level={2}>
               通用
