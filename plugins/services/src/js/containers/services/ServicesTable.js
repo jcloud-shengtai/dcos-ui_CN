@@ -242,9 +242,9 @@ class ServicesTable extends React.Component {
     const isDeploying = serviceStatus === "Deploying";
 
     const conciseOverview = ` (${tasksRunning}/${instancesCount})`;
-    let verboseOverview = ` (${tasksRunning} ${StringUtil.pluralize("Instance", tasksRunning)})`;
+    let verboseOverview = ` (${tasksRunning} ${StringUtil.pluralize("个实例", tasksRunning)})`;
     if (tasksRunning !== instancesCount) {
-      verboseOverview = ` (${tasksRunning} of ${instancesCount} Instances)`;
+      verboseOverview = ` (${instancesCount} 个实例中的 ${tasksRunning} 个)`;
     }
 
     return (
