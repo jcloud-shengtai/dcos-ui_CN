@@ -47,7 +47,7 @@ class ServiceStatusDSLSection extends React.Component {
                   name="is_running"
                   type="checkbox"
                 />
-                正在运行
+                RUNNING
               </FieldLabel>
               <FieldLabel>
                 <FieldInput
@@ -56,7 +56,7 @@ class ServiceStatusDSLSection extends React.Component {
                   name="is_deploying"
                   type="checkbox"
                 />
-                正在部署
+                DEPLOYING
               </FieldLabel>
               <FieldLabel>
                 <FieldInput
@@ -65,7 +65,7 @@ class ServiceStatusDSLSection extends React.Component {
                   name="is_suspended"
                   type="checkbox"
                 />
-                已暂停
+                SUSPENDED
               </FieldLabel>
             </FormGroup>
           </div>
@@ -78,7 +78,7 @@ class ServiceStatusDSLSection extends React.Component {
                   name="is_delayed"
                   type="checkbox"
                 />
-                已延迟
+                DELAYED
               </FieldLabel>
               <FieldLabel>
                 <FieldInput
@@ -87,7 +87,7 @@ class ServiceStatusDSLSection extends React.Component {
                   name="is_waiting"
                   type="checkbox"
                 />
-                等待中
+                WAITING
               </FieldLabel>
             </FormGroup>
           </div>

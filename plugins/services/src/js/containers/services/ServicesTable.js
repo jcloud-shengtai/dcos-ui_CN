@@ -307,7 +307,7 @@ class ServicesTable extends React.Component {
           <span>
             {"全局应用/分组状态 概览. "}
             <a href={Links.statusHelpLink} target="_blank">
-              Read more
+              了解更多
             </a>.
           </span>
         ),

@@ -132,7 +132,7 @@ class MultiContainerVolumesFormSection extends Component {
       <h2 className="flush-top short-bottom">
         <FormGroupHeading>
           <FormGroupHeadingContent primary={true}>
-            Volumes
+            分区
           </FormGroupHeadingContent>
           <FormGroupHeadingContent>
             <Tooltip
@@ -158,7 +158,7 @@ class MultiContainerVolumesFormSection extends Component {
         <div>
           {this.getHeadline()}
           <p>
-            {"配置卷信息前，请 "}
+            {"配置分区信息前，请 "}
             <a
               onClick={handleTabChange.bind(null, "services")}
               className="clickable"
@@ -175,10 +175,10 @@ class MultiContainerVolumesFormSection extends Component {
       <div>
         {this.getHeadline()}
         <p>
-          通过配置首选卷以创建一个状态服务.首选卷你能够确保实例在重启时不丢失数据.
+          通过配置首选分区以创建一个状态服务.首选分区使你能够确保实例在重启时不丢失数据.
         </p>
         <h3 className="short-bottom">
-          临时卷
+          临时分区
         </h3>
         <p>
           在您的容器中选择一个位置.
@@ -191,7 +191,7 @@ class MultiContainerVolumesFormSection extends Component {
               path: "volumeMounts"
             })}
           >
-            增加临时卷
+            增加临时分区
           </AddButton>
         </div>
       </div>

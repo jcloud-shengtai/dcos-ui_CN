@@ -111,7 +111,7 @@ const MarathonAppValidators = {
 
     if (hasAppResidency !== hasPersistentVolumes) {
       const message =
-        "应用定义必须包含 持久化的卷 和 " +
+        "应用定义必须包含 持久化的分区 和 " +
         "定义居留权";
       const type = PROP_MISSING_ALL;
       const variables = {

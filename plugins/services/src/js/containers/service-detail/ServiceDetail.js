@@ -213,7 +213,7 @@ class ServiceDetail extends mixin(TabsMixin) {
 
     if (this.hasVolumes()) {
       tabs.push({
-        label: "卷",
+        label: "分区",
         routePath: routePrefix + "/volumes",
         callback: () => {
           this.setState({ currentTab: "volumes" });
