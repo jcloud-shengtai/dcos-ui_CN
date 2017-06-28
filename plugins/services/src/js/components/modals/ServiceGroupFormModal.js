@@ -97,9 +97,9 @@ class ServiceGroupFormModal extends React.Component {
         definition={this.getNewGroupFormDefinition()}
       >
         <p className="text-align-center flush-top">
-          {"为新的分组指定一个以开始 "}
+          {"为新的分组指定一个以 "}
           <span className="emphasize">{parentGroupId}</span>
-          {" 的名称 "}
+          {" 开始的名称 "}
 
         </p>
         {this.getErrorMessage()}
