@@ -265,7 +265,7 @@ const serviceRoutes = [
                             getCrumbs(params) {
                               return [
                                 {
-                                  label: "卷",
+                                  label: "分区",
                                   route: {
                                     params,
                                     to: "/services/overview/:id/tasks/:taskID/volumes"

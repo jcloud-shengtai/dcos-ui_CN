@@ -68,7 +68,7 @@ class ServiceVolumeContainer extends React.Component {
 
     if (!volume) {
       return (
-        <ServiceItemNotFound message={`无法找到 卷 '${volumeId}'.`} />
+        <ServiceItemNotFound message={`无法找到 分区 '${volumeId}'.`} />
       );
     }
 
