@@ -27,8 +27,7 @@ const PodContainersConfigSection = ({ appConfig, onEditClick }) => {
       <div>
         <ConfigurationMapHeading level={2}>Containers</ConfigurationMapHeading>
         <Alert>
-          No containers specified! Please specify at least one container when
-          creating a multi-container definition!
+          未指定容器! 请至少指定一个容器!
         </Alert>
       </div>
     );

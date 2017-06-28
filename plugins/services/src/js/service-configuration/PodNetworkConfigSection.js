@@ -33,24 +33,24 @@ class PodNetworkConfigSection extends React.Component {
   getColumns() {
     return [
       {
-        heading: "Name",
+        heading: "名称",
         prop: "name"
       },
       {
-        heading: "Protocol",
+        heading: "协议",
         prop: "protocol"
       },
       {
-        heading: "Port",
+        heading: "端口",
         prop: "port"
       },
       {
-        heading: "Load Balanced Address",
+        heading: "负载均衡地址",
         prop: "lbAddress",
         placeholder: <em>未启用</em>
       },
       {
-        heading: "Container",
+        heading: "容器",
         prop: "container"
       }
     ];
@@ -94,12 +94,12 @@ class PodNetworkConfigSection extends React.Component {
 
     return (
       <div>
-        <ConfigurationMapHeading level={1}>Network</ConfigurationMapHeading>
+        <ConfigurationMapHeading level={1}>网络</ConfigurationMapHeading>
         <ConfigurationMapSection key="pod-general-section">
 
           {/* General section */}
           <ConfigurationMapRow>
-            <ConfigurationMapLabel>Network Type</ConfigurationMapLabel>
+            <ConfigurationMapLabel>网络类型</ConfigurationMapLabel>
             <ConfigurationMapValueWithDefault
               value={getNetworkTypes(appConfig.networks)}
             />
@@ -111,7 +111,7 @@ class PodNetworkConfigSection extends React.Component {
 
           {/* Service endpoints */}
           <ConfigurationMapHeading level={3}>
-            Service Endpoints
+            服务端点
           </ConfigurationMapHeading>
           <ConfigurationMapTable
             columnDefaults={{ hideIfEmpty: true }}

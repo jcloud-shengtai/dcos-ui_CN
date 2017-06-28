@@ -63,7 +63,7 @@ const PodContainerConfigSection = ({
 
       {/* Container image goes to top */}
       <ConfigurationMapRow>
-        <ConfigurationMapLabel>Container Image</ConfigurationMapLabel>
+        <ConfigurationMapLabel>容器镜像</ConfigurationMapLabel>
         <ConfigurationMapValueWithDefault
           value={findNestedPropertyInObject(containerConfig, "image.id")}
         />
@@ -73,7 +73,7 @@ const PodContainerConfigSection = ({
         />
       </ConfigurationMapRow>
       <ConfigurationMapRow>
-        <ConfigurationMapLabel>Force pull on launch</ConfigurationMapLabel>
+        <ConfigurationMapLabel>启动时强制拉取</ConfigurationMapLabel>
         <ConfigurationMapBooleanValue
           value={findNestedPropertyInObject(containerConfig, "image.forcePull")}
         />
@@ -95,7 +95,7 @@ const PodContainerConfigSection = ({
         </ConfigurationMapRow>}
       {Boolean(fields.resources.mem) &&
         <ConfigurationMapRow>
-          <ConfigurationMapLabel>Memory</ConfigurationMapLabel>
+          <ConfigurationMapLabel>内存</ConfigurationMapLabel>
           <ConfigurationMapSizeValue value={fields.resources.mem} />
           <ConfigurationMapEditAction
             onEditClick={onEditClick}
@@ -104,7 +104,7 @@ const PodContainerConfigSection = ({
         </ConfigurationMapRow>}
       {Boolean(fields.resources.disk) &&
         <ConfigurationMapRow>
-          <ConfigurationMapLabel>Disk</ConfigurationMapLabel>
+          <ConfigurationMapLabel>磁盘</ConfigurationMapLabel>
           <ConfigurationMapSizeValue value={fields.resources.disk} />
           <ConfigurationMapEditAction
             onEditClick={onEditClick}
@@ -133,7 +133,7 @@ const PodContainerConfigSection = ({
         </ConfigurationMapRow>}
       {Boolean(fields.command) &&
         <ConfigurationMapRow>
-          <ConfigurationMapLabel>Command</ConfigurationMapLabel>
+          <ConfigurationMapLabel>命令</ConfigurationMapLabel>
           <ConfigurationMapMultilineValue value={fields.command} />
           <ConfigurationMapEditAction
             onEditClick={onEditClick}

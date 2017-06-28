@@ -75,7 +75,7 @@ class ServiceGroupFormModal extends React.Component {
         isClose: true
       },
       {
-        text: "创建分组",
+        text: "创建组",
         className: "button button-success button-medium",
         isSubmit: true
       }
@@ -87,7 +87,7 @@ class ServiceGroupFormModal extends React.Component {
         buttonDefinition={buttonDefinition}
         disabled={isPending}
         modalProps={{
-          header: <ModalHeading>创建分组</ModalHeading>,
+          header: <ModalHeading>创建组</ModalHeading>,
           showHeader: true
         }}
         onClose={onClose}

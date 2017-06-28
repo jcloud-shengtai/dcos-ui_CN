@@ -22,7 +22,7 @@ class PodLabelsConfigSection extends React.Component {
         prop: "value"
       },
       {
-        heading: "Container",
+        heading: "容器",
         prop: "container"
       }
     ];

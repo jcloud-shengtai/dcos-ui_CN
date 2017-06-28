@@ -51,7 +51,7 @@ class ServiceNetworkingConfigSection extends ServiceConfigBaseSectionDisplay {
       tabViewID: "networking",
       values: [
         {
-          heading: "Network",
+          heading: "网络",
           headingLevel: 1
         },
         {
@@ -100,7 +100,7 @@ class ServiceNetworkingConfigSection extends ServiceConfigBaseSectionDisplay {
 
             const columns = [
               {
-                heading: getColumnHeadingFn("Name"),
+                heading: getColumnHeadingFn("名称"),
                 prop: keys.name,
                 render(prop, row) {
                   return getDisplayValue(row[prop]);
@@ -109,7 +109,7 @@ class ServiceNetworkingConfigSection extends ServiceConfigBaseSectionDisplay {
                 sortable: true
               },
               {
-                heading: getColumnHeadingFn("Protocol"),
+                heading: getColumnHeadingFn("协议"),
                 prop: keys.protocol,
                 className: getColumnClassNameFn(),
                 render(prop, row) {
@@ -121,7 +121,7 @@ class ServiceNetworkingConfigSection extends ServiceConfigBaseSectionDisplay {
                 sortable: true
               },
               {
-                heading: getColumnHeadingFn("Host Port"),
+                heading: getColumnHeadingFn("地址"),
                 prop: keys.port,
                 className: getColumnClassNameFn(),
                 render(prop, row) {
@@ -130,7 +130,7 @@ class ServiceNetworkingConfigSection extends ServiceConfigBaseSectionDisplay {
                 sortable: true
               },
               {
-                heading: getColumnHeadingFn("Load Balanced Address"),
+                heading: getColumnHeadingFn("负载均衡地址"),
                 prop: "",
                 className: getColumnClassNameFn(),
                 render(prop, row) {
@@ -144,7 +144,7 @@ class ServiceNetworkingConfigSection extends ServiceConfigBaseSectionDisplay {
                     );
                   }
 
-                  return <em>Not Enabled</em>;
+                  return <em>未启用</em>;
                 },
                 sortable: true
               }
@@ -158,7 +158,7 @@ class ServiceNetworkingConfigSection extends ServiceConfigBaseSectionDisplay {
               });
 
               columns.splice(hostPortIndex, 0, {
-                heading: getColumnHeadingFn("Container Port"),
+                heading: getColumnHeadingFn("容器端口"),
                 prop: "containerPort",
                 className: getColumnClassNameFn(),
                 render(prop, row) {
