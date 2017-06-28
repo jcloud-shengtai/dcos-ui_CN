@@ -369,7 +369,7 @@ class VolumesFormSection extends Component {
 
     const tooltipContent = (
       <span>
-        {"DC/OS 提供了多种存储选项. "}
+        {"JSSP 提供了多种存储选项. "}
         <a href={MetadataStore.buildDocsURI("/usage/storage/")} target="_blank">
           更多信息
         </a>.
