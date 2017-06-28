@@ -313,7 +313,7 @@ class NetworkingFormSection extends mixin(StoreMixin) {
 
     const assignHelpText = (
       <span>
-        {"Most services will use TCP. "}
+        {"大多数服务使用TCP协议. "}
         <a href="https://mesosphere.github.io/marathon/docs/ports.html">
           更多信息
         </a>
