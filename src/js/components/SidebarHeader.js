@@ -123,20 +123,14 @@ class SidebarHeader extends mixin(StoreMixin) {
         selectable: false
       },
       {
-        html: "文档",
+		className: "dropdown-menu-section-header",
+        html: "文档(敬请期待)",
         id: "documentation",
-        onClick() {
-          SidebarActions.close();
-          global.open(MetadataStore.buildDocsURI("/"), "_blank");
-        }
       },
       {
-        html: "安装 CLI",
+		className: "dropdown-menu-section-header",
+        html: "安装 CLI(敬请期待)",
         id: "install-cli",
-        onClick() {
-          SidebarActions.close();
-          SidebarActions.openCliInstructions();
-        }
       }
     ];
 
