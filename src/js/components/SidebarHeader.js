@@ -123,13 +123,11 @@ class SidebarHeader extends mixin(StoreMixin) {
         selectable: false
       },
       {
-		className: "dropdown-menu-section-header",
-        html: "文档(敬请期待)",
+        html: "文档（敬请期待）",
         id: "documentation"
       },
       {
-		className: "dropdown-menu-section-header",
-        html: "安装 CLI(敬请期待)",
+        html: "安装CLI（敬请期待）",
         id: "install-cli"
       }
     ];
