@@ -89,10 +89,10 @@ class ServiceDestroyModal extends React.Component {
     if (service instanceof Framework) {
       return (
         <p>
-          This will only destroy the package scheduler for
+          该操作只会销毁
           {" "}
           <span className="emphasize">{serviceName}</span>
-          . Any tasks that were started by this scheduler will persist in the system. Are you sure you want to continue?
+          的调度。其他的调度将不受影响。确认继续？
         </p>
       );
     }

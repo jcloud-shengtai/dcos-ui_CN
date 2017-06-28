@@ -60,7 +60,7 @@ class ServicesTable extends React.Component {
         className="table-cell-icon table-display-on-row-hover"
         href={service.getWebURL()}
         target="_blank"
-        title="Open in a new window"
+        title="在新窗口中打开"
       >
         <Icon
           color="neutral"
