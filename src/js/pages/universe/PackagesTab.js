@@ -131,7 +131,7 @@ class PackagesTab extends mixin(StoreMixin) {
         className="button button-success"
         onClick={this.handleInstallModalOpen.bind(this, cosmosPackage)}
       >
-        Install Package
+        点击安装
       </button>
     );
   }

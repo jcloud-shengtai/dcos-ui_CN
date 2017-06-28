@@ -17,16 +17,22 @@ function getDefaultMessage() {
 
   return (
     <p className="text-align-center flush-bottom">
-      You can also join us on our
-      {" "}
-      {slackLink}
-      {" "}
-      or send us an email at
-      {" "}
-      {supportLink}
-      .
+
     </p>
   );
+  // 汉化版本删除
+  // return (
+  //   <p className="text-align-center flush-bottom">
+  //     You can also join us on our
+  //     {" "}
+  //     {slackLink}
+  //     {" "}
+  //     or send us an email at
+  //     {" "}
+  //     {supportLink}
+  //     .
+  //   </p>
+  // );
 }
 
 class RequestErrorMsg extends React.Component {
