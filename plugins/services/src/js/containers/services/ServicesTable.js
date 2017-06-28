@@ -60,7 +60,7 @@ class ServicesTable extends React.Component {
         className="table-cell-icon table-display-on-row-hover"
         href={service.getWebURL()}
         target="_blank"
-        title="Open in a new window"
+        title="在新窗口中打开"
       >
         <Icon
           color="neutral"
@@ -242,9 +242,11 @@ class ServicesTable extends React.Component {
     const isDeploying = serviceStatus === "Deploying";
 
     const conciseOverview = ` (${tasksRunning}/${instancesCount})`;
-    let verboseOverview = ` (${tasksRunning} ${StringUtil.pluralize("Instance", tasksRunning)})`;
-    if (tasksRunning !== instancesCount) {
-      verboseOverview = ` (${tasksRunning} of ${instancesCount} Instances)`;
+    let verboseOverview = ` (${tasksRunning} ${StringUtil.pluralize("个实例运行中", tasksRunning)})`;
+    if(instancesCount === 0){
+      verboseOverview = ` (无实例)`;
+    }else if (tasksRunning !== instancesCount) {
+      verboseOverview = ` (${tasksRunning}个实例运行中，共${instancesCount}个)`;
     }
 
     return (
@@ -307,7 +309,7 @@ class ServicesTable extends React.Component {
           <span>
             {"全局应用/分组状态 概览. "}
             <a href={Links.statusHelpLink} target="_blank">
-              Read more
+              了解更多
             </a>.
           </span>
         ),

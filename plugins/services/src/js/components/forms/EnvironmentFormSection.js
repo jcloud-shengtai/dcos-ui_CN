@@ -156,7 +156,7 @@ class EnvironmentFormSection extends Component {
     const envTooltipContent = (
       <span>
         {
-          "DC/OS 也可以暴露环境变量和元数据. "
+          "JSSP 也可以暴露环境变量和元数据. "
         }
         <a
           href="https://mesosphere.github.io/marathon/docs/task-environment-vars.html"

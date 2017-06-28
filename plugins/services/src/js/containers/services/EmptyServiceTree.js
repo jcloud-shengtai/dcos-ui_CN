@@ -8,17 +8,17 @@ const EmptyServiceTree = function({ onCreateGroup, onCreateService }) {
   const footer = (
     <div className="button-collection flush-bottom">
       <button className="button button-stroke" onClick={onCreateGroup}>
-        创建一个分组
+        创建组
       </button>
       <button className="button button-success" onClick={onCreateService}>
-        运行一个服务
+        运行服务
       </button>
     </div>
   );
 
   return (
     <AlertPanel>
-      <AlertPanelHeader>No running services</AlertPanelHeader>
+      <AlertPanelHeader>没有运行中的服务</AlertPanelHeader>
       <p className="tall">
         运行一个新的服务或者创建一个分组来帮助你规划组织你的服务.
       </p>

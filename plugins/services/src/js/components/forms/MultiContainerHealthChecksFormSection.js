@@ -375,7 +375,7 @@ class MultiContainerHealthChecksFormSection extends Component {
           <AddButton
             onClick={this.props.onAddItem.bind(this, { path, value: index })}
           >
-            Add Health Check
+            增加健康检查
           </AddButton>
         </div>
       );
@@ -419,7 +419,7 @@ class MultiContainerHealthChecksFormSection extends Component {
               </FormGroupHeading>
             </FieldLabel>
             <FieldSelect name={`${path}.protocol`} value={healthCheck.protocol}>
-              <option value="">Select Protocol</option>
+              <option value="">选择协议</option>
               <option value={COMMAND}>Command</option>
               <option value={HTTP}>HTTP</option>
               <option value={TCP}>TCP</option>

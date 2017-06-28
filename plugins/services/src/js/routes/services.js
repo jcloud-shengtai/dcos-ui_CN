@@ -243,7 +243,7 @@ const serviceRoutes = [
                         hideHeaderNavigation: true,
                         isTab: true,
                         path: "volumes",
-                        title: "卷",
+                        title: "分区",
                         type: Route,
                         buildBreadCrumb() {
                           return {
@@ -265,7 +265,7 @@ const serviceRoutes = [
                             getCrumbs(params) {
                               return [
                                 {
-                                  label: "卷",
+                                  label: "分区",
                                   route: {
                                     params,
                                     to: "/services/overview/:id/tasks/:taskID/volumes"

@@ -66,7 +66,7 @@ class ServiceHealthChecksConfigSection extends ServiceConfigBaseSectionDisplay {
                 level={1}
               >
 
-                Health Checks
+                健康检查
               </ConfigurationMapHeading>
             );
           }

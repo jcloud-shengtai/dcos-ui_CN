@@ -24,9 +24,9 @@ class PodDetail extends mixin(TabsMixin) {
     super(...arguments);
 
     this.tabs_tabs = {
-      instances: "实例",
-      configuration: "配置",
-      debug: "调试"
+      instances: "Instances",
+      configuration: "Configuration",
+      debug: "Debug"
     };
 
     this.state = {

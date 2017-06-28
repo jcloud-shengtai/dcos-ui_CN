@@ -45,7 +45,7 @@ class ServiceDebugContainer extends React.Component {
 
   getValueText(value) {
     if (value == null || value === "") {
-      return <p>Unspecified</p>;
+      return <p>未指定</p>;
     }
 
     return <span>{value}</span>;
@@ -54,7 +54,7 @@ class ServiceDebugContainer extends React.Component {
   getLastTaskFailureInfo() {
     const lastTaskFailure = this.props.service.getLastTaskFailure();
     if (lastTaskFailure == null) {
-      return <p>This app does not have failed tasks</p>;
+      return <p>该应用没有失败的任务</p>;
     }
 
     const {
@@ -123,11 +123,11 @@ class ServiceDebugContainer extends React.Component {
   getLastVersionChange() {
     const versionInfo = this.props.service.getVersionInfo();
     if (versionInfo == null) {
-      return <p>This app does not have version change information</p>;
+      return <p>该应用没有版本变更信息</p>;
     }
 
     const { lastScalingAt, lastConfigChangeAt } = versionInfo;
-    let lastScaling = "No operation since last config change";
+    let lastScaling = "自从上次配置变更后无相关操作";
     if (lastScalingAt !== lastConfigChangeAt) {
       lastScaling = (
         <span>
@@ -180,7 +180,7 @@ class ServiceDebugContainer extends React.Component {
       queue.declinedOffers.summary == null
     ) {
       introText =
-        "当你的服务正在部署或等待资源时，Offers会出现在这里.";
+        "当你的服务正在部署或等待资源时，资源分配会出现在这里.";
     } else {
       const { declinedOffers: { summary } } = queue;
       const { roles: { offers = 0 } } = summary;
@@ -206,7 +206,7 @@ class ServiceDebugContainer extends React.Component {
         }}
       >
         <ConfigurationMapHeading>
-          最近的资源 Offers{offerCount}
+          最近的资源分配{offerCount}
         </ConfigurationMapHeading>
         <p>{introText}</p>
         {mainContent}
@@ -279,7 +279,7 @@ class ServiceDebugContainer extends React.Component {
     return (
       <Alert>
         {
-          "DC/OS 正在等待资源，无法完成这次 "
+          "JSSP 正在等待资源，无法完成这次 "
         }
         {DateUtil.getDuration(timeWaiting, null)}{"部署. "}
         <a className="clickable" onClick={this.handleJumpToRecentOffersClick}>

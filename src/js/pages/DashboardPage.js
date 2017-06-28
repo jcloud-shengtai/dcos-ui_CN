@@ -40,9 +40,9 @@ function getMesosState() {
 
 const DashboardBreadcrumbs = () => {
   const crumbs = [
-    <Breadcrumb key={0} title="仪表盘">
+    <Breadcrumb key={0} title="概览">
       <BreadcrumbTextContent>
-        <Link to="/dashboard">仪表盘</Link>
+        <Link to="/dashboard">概览</Link>
       </BreadcrumbTextContent>
     </Breadcrumb>
   ];
@@ -57,7 +57,7 @@ var DashboardPage = React.createClass({
 
   statics: {
     routeConfig: {
-      label: "仪表盘",
+      label: "概览",
       icon: <Icon id="graph-inverse" size="small" family="product" />,
       matches: /^\/dashboard/
     },
@@ -135,7 +135,7 @@ var DashboardPage = React.createClass({
 
     return (
       <Link to="/components" className="button button-rounded button-stroke">
-       {`显示全部 ${componentCount} 个组件`}
+       {`显示全部${componentCount}个组件`}
       </Link>
     );
   },
@@ -145,7 +145,7 @@ var DashboardPage = React.createClass({
     if (!servicesCount) {
       return null;
     }
-    var textContent = "显示全部 ";
+    var textContent = "查看所有";
     if (servicesCount > this.props.servicesListLength) {
       textContent += servicesCount + " ";
     }
@@ -177,7 +177,7 @@ var DashboardPage = React.createClass({
           <div className={columnClasses}>
             <Panel
               className="dashboard-panel dashboard-panel-chart dashboard-panel-chart-timeseries panel"
-              heading={this.getHeading("CPU分配率")}
+              heading={this.getHeading("CPU分配")}
             >
               <ResourceTimeSeriesChart
                 colorIndex={0}
@@ -192,7 +192,7 @@ var DashboardPage = React.createClass({
           <div className={columnClasses}>
             <Panel
               className="dashboard-panel dashboard-panel-chart dashboard-panel-chart-timeseries panel"
-              heading={this.getHeading("內存分配率")}
+              heading={this.getHeading("內存分配")}
             >
               <ResourceTimeSeriesChart
                 colorIndex={6}
@@ -207,7 +207,7 @@ var DashboardPage = React.createClass({
           <div className={columnClasses}>
             <Panel
               className="dashboard-panel dashboard-panel-chart dashboard-panel-chart-timeseries panel"
-              heading={this.getHeading("磁盘分配率")}
+              heading={this.getHeading("磁盘分配")}
             >
               <ResourceTimeSeriesChart
                 colorIndex={3}
@@ -222,7 +222,7 @@ var DashboardPage = React.createClass({
           <div className={columnClasses}>
             <Panel
               className="dashboard-panel dashboard-panel-list dashboard-panel-list-service-health allow-overflow panel"
-              heading={this.getHeading("服务健康")}
+              heading={this.getHeading("应用状态")}
               footer={this.getViewAllServicesBtn()}
               footerClass="text-align-center"
             >

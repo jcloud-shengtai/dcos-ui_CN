@@ -140,7 +140,7 @@ class KillPodInstanceModal extends React.Component {
         header={header}
         open={open}
         onClose={onClose}
-        leftButtonText="Close"
+        leftButtonText="关闭"
         leftButtonCallback={onClose}
         rightButtonText={buttonText}
         rightButtonClassName="button button-danger"

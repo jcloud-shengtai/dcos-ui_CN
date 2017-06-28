@@ -75,7 +75,7 @@ class ServiceGroupFormModal extends React.Component {
         isClose: true
       },
       {
-        text: "创建分组",
+        text: "创建组",
         className: "button button-success button-medium",
         isSubmit: true
       }
@@ -87,7 +87,7 @@ class ServiceGroupFormModal extends React.Component {
         buttonDefinition={buttonDefinition}
         disabled={isPending}
         modalProps={{
-          header: <ModalHeading>创建分组</ModalHeading>,
+          header: <ModalHeading>创建组</ModalHeading>,
           showHeader: true
         }}
         onClose={onClose}
@@ -97,9 +97,9 @@ class ServiceGroupFormModal extends React.Component {
         definition={this.getNewGroupFormDefinition()}
       >
         <p className="text-align-center flush-top">
-          {"为新的分组指定一个以开始 "}
+          {"为新的分组指定一个以 "}
           <span className="emphasize">{parentGroupId}</span>
-          {" 的名称 "}
+          {" 开始的名称 "}
 
         </p>
         {this.getErrorMessage()}

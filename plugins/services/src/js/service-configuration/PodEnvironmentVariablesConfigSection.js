@@ -67,7 +67,7 @@ const PodEnvironmentVariablesConfigSection = ({ appConfig, onEditClick }) => {
   return (
     <div>
       <ConfigurationMapHeading level={1}>
-        Environment Variables
+        环境变量
       </ConfigurationMapHeading>
       <ConfigurationMapSection key="pod-general-section">
         <ConfigurationMapTable

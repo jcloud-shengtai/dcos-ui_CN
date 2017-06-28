@@ -67,7 +67,6 @@ const ServiceList = React.createClass({
           tooltipContent = HealthTypesDescription.NA;
         }
       }
-
       let healthLabel = HealthLabels[state.key];
       if (!healthProcessed) {
         healthLabel = <Loader size="small" type="ballBeat" />;

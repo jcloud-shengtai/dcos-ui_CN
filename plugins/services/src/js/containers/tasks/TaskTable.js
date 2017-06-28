@@ -267,7 +267,7 @@ class TaskTable extends React.Component {
       <div className="flex-box flex-box-align-vertical-center
         table-cell-flex-box flex-align-items-center flex-direction-top-to-bottom">
         <Tooltip
-          content="View logs"
+          content="查看日志"
           wrapperClassName="tooltip-wrapper text-align-center description"
         >
           <Link to={linkTo} title={title}>

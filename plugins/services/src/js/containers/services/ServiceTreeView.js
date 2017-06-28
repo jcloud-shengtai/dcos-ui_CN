@@ -95,9 +95,9 @@ class ServiceTreeView extends React.Component {
         <Page.Header
           breadcrumbs={<ServiceBreadcrumbs serviceID={serviceTree.id} />}
           actions={[
-            { onItemSelect: modalHandlers.createGroup, label: "创建分组" }
+            { onItemSelect: modalHandlers.createGroup, label: "创建组" }
           ]}
-          addButton={{ onItemSelect: createService, label: "运行一个服务" }}
+          addButton={{ onItemSelect: createService, label: "运行服务" }}
         />
         <div>
           {this.getFilterBar()}

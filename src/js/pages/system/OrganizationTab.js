@@ -505,6 +505,7 @@ class OrganizationTab extends mixin(StoreMixin, InternalStorageMixin) {
               data={visibleItems}
               itemHeight={TableUtil.getRowHeight()}
               sortBy={{ prop: sortProp, order: "asc" }}
+              emptyMessage="无数据"
             />
           </div>
         </div>

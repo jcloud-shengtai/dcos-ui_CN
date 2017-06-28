@@ -120,7 +120,7 @@ class VolumesFormSection extends Component {
           href={MetadataStore.buildDocsURI("/usage/storage/external-storage/")}
           target="_blank"
         >
-          More information
+          更多信息
         </a>.
       </span>
     );
@@ -191,8 +191,7 @@ class VolumesFormSection extends Component {
 
     return (
       <option value="HOST">
-        主机卷
-
+        主机分区
       </option>
     );
   }
@@ -226,7 +225,7 @@ class VolumesFormSection extends Component {
               <FieldLabel>
                 <FormGroupHeading>
                   <FormGroupHeadingContent primary={true}>
-                    卷类型
+                    分区类型
                   </FormGroupHeadingContent>
                 </FormGroupHeading>
               </FieldLabel>
@@ -236,7 +235,7 @@ class VolumesFormSection extends Component {
               >
                 <option>请选择...</option>
                 {this.getHostOption(dockerImage)}
-                <option value="PERSISTENT">默认卷</option>
+                <option value="PERSISTENT">默认分区</option>
               </FieldSelect>
             </FormGroup>
           </FormRow>
@@ -278,7 +277,7 @@ class VolumesFormSection extends Component {
 
       let sizeField = (
         <Tooltip
-          content="Docker Runtime 只支持默认尺寸的隐藏卷, 如果您想修改大小， 请选择 Mesos Runtime."
+          content="Docker Runtime 只支持默认尺寸的隐藏分区, 如果您想修改大小， 请选择 Mesos Runtime."
           width={300}
           scrollContainer=".gm-scroll-view"
           wrapperClassName="tooltip-wrapper tooltip-block-wrapper text-align-center"
@@ -369,7 +368,7 @@ class VolumesFormSection extends Component {
 
     const tooltipContent = (
       <span>
-        {"DC/OS 提供了多种存储选项. "}
+        {"JSSP 提供了多种存储选项. "}
         <a href={MetadataStore.buildDocsURI("/usage/storage/")} target="_blank">
           更多信息
         </a>.
@@ -381,7 +380,7 @@ class VolumesFormSection extends Component {
         <h2 className="flush-top short-bottom">
           <FormGroupHeading>
             <FormGroupHeadingContent primary={true}>
-              卷
+              分区
             </FormGroupHeadingContent>
             <FormGroupHeadingContent>
               <Tooltip
@@ -397,18 +396,18 @@ class VolumesFormSection extends Component {
           </FormGroupHeading>
         </h2>
         <p>
-          配置首选卷以创建一个状态服务. 首选卷可以让实例重启时保留数据.
+          配置首选分区以创建一个状态服务. 首选分区可以让实例重启时保留数据.
         </p>
         <h3 className="short-bottom">
           <FormGroupHeading>
             <FormGroupHeadingContent primary={true}>
-              本地卷
+              本地分区
             </FormGroupHeadingContent>
           </FormGroupHeading>
         </h3>
         <p>
           {
-            "如果需要快速访问存储的数据，请选择本地持久卷. "
+            "如果需要快速访问存储的数据，请选择本地持久分区. "
           }
           <a
             href={MetadataStore.buildDocsURI(
@@ -427,19 +426,19 @@ class VolumesFormSection extends Component {
               path: "localVolumes"
             })}
           >
-            添加本地卷
+            添加本地分区
           </AddButton>
         </div>
         <h3 className="short-bottom">
           <FormGroupHeading>
             <FormGroupHeadingContent primary={true}>
-              外部卷
+              外部分区
             </FormGroupHeadingContent>
           </FormGroupHeading>
         </h3>
         <p>
           {
-            "如果您的服务对容错有要求，请选择一个外部卷. "
+            "如果您的服务对容错有要求，请选择一个外部分区. "
           }
           <a
             href={MetadataStore.buildDocsURI(
@@ -462,7 +461,7 @@ class VolumesFormSection extends Component {
                 path: "externalVolumes"
               })}
             >
-              增加外部卷
+              增加外部分区
             </AddButton>
           </FormGroup>
         </FormRow>

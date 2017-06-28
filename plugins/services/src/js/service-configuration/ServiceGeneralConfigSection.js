@@ -67,7 +67,7 @@ class ServiceGeneralConfigSection extends ServiceConfigBaseSectionDisplay {
       tabViewID: "services",
       values: [
         {
-          heading: "General",
+          heading: "概况",
           headingLevel: 1
         },
         {
@@ -102,7 +102,7 @@ class ServiceGeneralConfigSection extends ServiceConfigBaseSectionDisplay {
         },
         {
           key: "disk",
-          label: "磁盘",
+          label: "硬盘",
           transformValue(value) {
             if (value == null) {
               return value;

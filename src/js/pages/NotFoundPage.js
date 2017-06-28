@@ -27,7 +27,7 @@ var NotFoundPage = React.createClass({
           <p>
             The page you requested cannot be found. Check the address you provided, or head back to the
             {" "}
-            <Link to="/dashboard">仪表盘</Link>
+            <Link to="/dashboard">概览</Link>
             .
           </p>
         </AlertPanel>

@@ -66,7 +66,7 @@
         "0.2.0-1": 0,
         "1.0.4-2.2.5": 5
       },
-      "description": "Apache Cassandra running on DC/OS",
+      "description": "Apache Cassandra 在 JSSP 上运行",
       "framework": true,
       "tags": [
         "data",
@@ -239,7 +239,7 @@
       "versions": {
         "1.0.0-1.4.0": 0
       },
-      "description": "Alluxio Enterprise Edition (AEE). \n\n Alluxio, formerly Tachyon, is the world's first system that unifies disparate storage systems at memory speed. With Alluxio, enterprises can manage data efficiently, accelerate business analytics, and ease the adoption of hybrid cloud. \n\n Please refer to https://alluxio.com/docs/ for a detailed operation guide. \n\n Release Notes:  \n Version 1.0.0 of the DC/OS Service is the first release of this capability. With this integration, you can deploy Alluxio in minutes and realize fast on-demand analytics. Choose between command line and GUI based installation to suit your preferences.",
+      "description": "Alluxio Enterprise Edition (AEE). \n\n Alluxio, formerly Tachyon, is the world's first system that unifies disparate storage systems at memory speed. With Alluxio, enterprises can manage data efficiently, accelerate business analytics, and ease the adoption of hybrid cloud. \n\n Please refer to https://alluxio.com/docs/ for a detailed operation guide. \n\n Release Notes:  \n Version 1.0.0 of the JSSP Service is the first release of this capability. With this integration, you can deploy Alluxio in minutes and realize fast on-demand analytics. Choose between command line and GUI based installation to suit your preferences.",
       "framework": true,
       "tags": [
         "enterprise",
@@ -337,7 +337,7 @@
       "versions": {
         "0.24.1-0.1": 0
       },
-      "description": "cAdvisor (Container Advisor) provides container users an understanding of the resource usage and performance characteristics of their running containers. It is a running daemon that collects, aggregates, processes, and exports information about running containers. Specifically, for each container it keeps resource isolation parameters, historical resource usage, histograms of complete historical resource usage and network statistics. This data is exported by container and machine-wide.\n\nNOTE: This package will install by default a single instance of cAdvisor in each host of your cluster.\n\nThis package is intended to be used alongside the DC/OS 'influxdb' and 'grafana' packages for a cluster-wide monitoring solution.\n\nInstallation Documentation: https://github.com/dcos/examples/tree/master/cadvisor-influxdb-grafana\n\n",
+      "description": "cAdvisor (Container Advisor) provides container users an understanding of the resource usage and performance characteristics of their running containers. It is a running daemon that collects, aggregates, processes, and exports information about running containers. Specifically, for each container it keeps resource isolation parameters, historical resource usage, histograms of complete historical resource usage and network statistics. This data is exported by container and machine-wide.\n\nNOTE: This package will install by default a single instance of cAdvisor in each host of your cluster.\n\nThis package is intended to be used alongside the JSSP 'influxdb' and 'grafana' packages for a cluster-wide monitoring solution.\n\nInstallation Documentation: https://github.com/dcos/examples/tree/master/cadvisor-influxdb-grafana\n\n",
       "framework": false,
       "tags": [
         "docker",

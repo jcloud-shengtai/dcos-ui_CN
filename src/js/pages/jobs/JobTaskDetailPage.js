@@ -15,9 +15,9 @@ class JobTaskDetailPage extends React.Component {
 
     const routePrefix = `/jobs/${encodeURIComponent(id)}/tasks/${encodeURIComponent(taskID)}`;
     const tabs = [
-      { label: "Details", routePath: routePrefix + "/details" },
-      { label: "Files", routePath: routePrefix + "/files" },
-      { label: "Logs", routePath: routePrefix + "/logs" }
+      { label: "信息", routePath: routePrefix + "/details" },
+      { label: "文件", routePath: routePrefix + "/files" },
+      { label: "日志", routePath: routePrefix + "/logs" }
     ];
 
     const task = MesosStateStore.getTaskFromTaskID(taskID);

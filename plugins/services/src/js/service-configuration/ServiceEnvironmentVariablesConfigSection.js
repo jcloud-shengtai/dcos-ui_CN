@@ -32,7 +32,7 @@ class ServiceEnvironmentVariablesConfigSection
       values: [
         {
           key: "env",
-          heading: "Environment Variables",
+          heading: "环境变量",
           headingLevel: 1
         },
         {

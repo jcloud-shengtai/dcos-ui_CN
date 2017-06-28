@@ -538,7 +538,7 @@ class MultiContainerNetworkingFormSection extends mixin(StoreMixin) {
           </FormGroupHeading>
         </h3>
         <p>
-          DC/OS 可以动态的生成能够连接到负载均衡端点的服务地址
+          JSSP 可以动态的生成能够连接到负载均衡端点的服务地址
         </p>
         {this.getServiceEndpoints()}
       </div>

@@ -93,7 +93,7 @@ const General = {
           }
         },
         disk: {
-          title: "磁盘 (MiB)",
+          title: "硬盘 (MiB)",
           default: JobResources.DEFAULT_DISK,
           type: "number",
           getter(job) {

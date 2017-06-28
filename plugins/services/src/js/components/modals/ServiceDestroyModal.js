@@ -89,21 +89,21 @@ class ServiceDestroyModal extends React.Component {
     if (service instanceof Framework) {
       return (
         <p>
-          This will only destroy the package scheduler for
+          该操作只会销毁
           {" "}
           <span className="emphasize">{serviceName}</span>
-          . Any tasks that were started by this scheduler will persist in the system. Are you sure you want to continue?
+          的调度。其他的调度将不受影响。确认继续？
         </p>
       );
     }
 
     return (
       <p>
-        Destroying
+        正在销毁
         {" "}
         <span className="emphasize">{serviceName}</span>
         {" "}
-        is irreversible. Are you sure you want to continue?
+        ，该操作不可逆. 确认继续?
       </p>
     );
   }
@@ -137,19 +137,19 @@ class ServiceDestroyModal extends React.Component {
   render() {
     const { isPending, onClose, open, service } = this.props;
 
-    let itemText = "Service";
+    let itemText = "服务";
 
     if (service instanceof Pod) {
       itemText = "Pod";
     }
 
     if (service instanceof ServiceTree) {
-      itemText = "Group";
+      itemText = "组";
     }
 
     const heading = (
       <ModalHeading className="text-danger">
-        Destroy {itemText}
+        销毁{itemText}
       </ModalHeading>
     );
 

@@ -186,7 +186,7 @@ class PodDebugTabView extends React.Component {
       queue.declinedOffers.summary == null
     ) {
       introText =
-        "当你的服务正在部署或等待资源时，Offers会出现在这里.";
+        "当你的服务正在部署或等待资源时，资源分配会出现在这里.";
     } else {
       const { declinedOffers: { summary } } = queue;
       const { roles: { offers = 0 } } = summary;
@@ -212,7 +212,7 @@ class PodDebugTabView extends React.Component {
         }}
       >
         <ConfigurationMapHeading>
-          最近资源 Offers{offerCount}
+          最近的资源分配{offerCount}
         </ConfigurationMapHeading>
         <p>{introText}</p>
         {mainContent}
@@ -239,11 +239,11 @@ class PodDebugTabView extends React.Component {
     return (
       <Alert>
         {
-          "DC/OS 正在等待资源，无法为 "
+          "JSSP 正在部署，无法为 "
         }
         {DateUtil.getDuration(timeWaiting, null)}{"完成这次部署. "}
         <a className="clickable" onClick={this.handleJumpToRecentOffersClick}>
-          See recent resource offers
+          查看最近的资源分配
         </a>.
       </Alert>
     );
