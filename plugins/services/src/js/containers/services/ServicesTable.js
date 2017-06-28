@@ -244,11 +244,11 @@ class ServicesTable extends React.Component {
     const conciseOverview = ` (${tasksRunning}/${instancesCount})`;
     let verboseOverview = ` (${tasksRunning} ${StringUtil.pluralize("个运行中的实例", tasksRunning)})`;
     if(instancesCount === 0){
-      verboseOverview = `无实例`;
+      verboseOverview = ` (无实例)`;
     }else if (tasksRunning !== instancesCount) {
       verboseOverview = ` (${tasksRunning}个运行中的实例，共${instancesCount}个)`;
     }else if (tasksRunning === instancesCount){
-      verboseOverview = `所有实例运行中`;
+      verboseOverview = ` (所有实例运行中)`;
     }
 
     return (
