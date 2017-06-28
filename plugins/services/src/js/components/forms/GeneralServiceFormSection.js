@@ -266,7 +266,7 @@ class GeneralServiceFormSection extends Component {
         <h3 className="short-bottom">
           <FormGroupHeading>
             <FormGroupHeadingContent primary={true}>
-              Placement 约束
+              设置约束
             </FormGroupHeadingContent>
             <FormGroupHeadingContent>
               <Tooltip
@@ -282,7 +282,7 @@ class GeneralServiceFormSection extends Component {
           </FormGroupHeading>
         </h3>
         <p>
-          Constraints control where apps run to allow optimization for either fault tolerance or locality.
+          通过设置约束来对应用程序进行相关限制。
         </p>
         {this.getPlacementConstraintsFields(data.constraints)}
         {errorNode}

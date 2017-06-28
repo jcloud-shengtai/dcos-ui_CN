@@ -54,7 +54,7 @@ class RequestErrorMsg extends React.Component {
 
 RequestErrorMsg.defaultProps = {
   columnClasses: {},
-  header: "Cannot Connect With The Server",
+  header: "无法连接到服务器",
   message: getDefaultMessage()
 };
 
