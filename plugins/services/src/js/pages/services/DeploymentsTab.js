@@ -355,7 +355,7 @@ class DeploymentsTab extends mixin(StoreMixin) {
   renderPopulated(deploymentsItems) {
     const deploymentsCount = deploymentsItems.length;
     const deploymentsLabel = StringUtil.pluralize(
-      "Deployment",
+      "部署",
       deploymentsCount
     );
 
@@ -363,7 +363,7 @@ class DeploymentsTab extends mixin(StoreMixin) {
       <Page>
         <Page.Header breadcrumbs={<DeploymentsBreadcrumbs />} />
         <h4 className="flush-top">
-          {deploymentsCount} Active {deploymentsLabel}
+          {deploymentsCount} 个正在{deploymentsLabel}
         </h4>
         <Table
           className="table table-borderless-outer table-borderless-inner-columns

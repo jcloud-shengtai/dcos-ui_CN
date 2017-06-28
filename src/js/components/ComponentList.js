@@ -31,7 +31,7 @@ class ComponentList extends React.Component {
             className: "dashboard-health-list-health-label",
             content: (
               <div key="health" className={healthClasses}>
-                {health.titleView}
+                {health.title}
               </div>
             ),
             tag: "div"

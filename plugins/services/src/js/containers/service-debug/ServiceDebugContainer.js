@@ -279,7 +279,7 @@ class ServiceDebugContainer extends React.Component {
     return (
       <Alert>
         {
-          "DC/OS 正在等待资源，无法完成这次 "
+          "JSSP 正在等待资源，无法完成这次 "
         }
         {DateUtil.getDuration(timeWaiting, null)}{"部署. "}
         <a className="clickable" onClick={this.handleJumpToRecentOffersClick}>
