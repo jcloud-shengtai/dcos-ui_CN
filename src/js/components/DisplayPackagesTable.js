@@ -93,7 +93,7 @@ class DisplayPackagesTable extends React.Component {
           className="button button-success"
           onClick={this.props.onDeploy.bind(this, packageToDeploy)}
         >
-          安装
+          Install
         </button>
       </div>
     );
