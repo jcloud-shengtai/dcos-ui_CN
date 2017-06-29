@@ -50,14 +50,14 @@ class JobStopRunModal extends mixin(StoreMixin) {
   }
 
   getContentHeader(selectedItems, selectedItemsLength) {
-    let headerContent = ` ${selectedItemsLength} Job Runs`;
+    let headerContent = ` ${selectedItemsLength} 任务`;
     if (selectedItemsLength === 1) {
-      headerContent = "this";
+      headerContent = "这个任务";
     }
 
     return (
       <ModalHeading key="confirmHeader">
-        {`Are you sure you want to stop ${headerContent}?`}
+        {`确定要停止${headerContent}?`}
       </ModalHeading>
     );
   }
@@ -66,14 +66,14 @@ class JobStopRunModal extends mixin(StoreMixin) {
     let bodyText;
 
     if (selectedItemsLength === 1) {
-      bodyText = `the job run with id ${selectedItems[0]}`;
+      bodyText = `id为 ${selectedItems[0]}的任务`;
     } else {
-      bodyText = "the selected job runs";
+      bodyText = "已选择的任务";
     }
 
     return (
       <span key="confirmText">
-        You are about to stop {bodyText}.
+        {bodyText}将会停止。
       </span>
     );
   }
