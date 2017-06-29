@@ -181,11 +181,10 @@ class JobDetailPage extends mixin(StoreMixin, TabsMixin) {
       "取消后不能再恢复.";
 
     if (/stopCurrentJobRuns=true/.test(errorMsg)) {
-      actionButtonLabel = "Stop Current Runs and Destroy Job";
+      actionButtonLabel = "停止并取消任务";
       stopCurrentJobRuns = true;
       message =
-        `Couldn't destroy ${id} as there are currently active job ` +
-        "runs. Do you want to stop all runs and destroy the job?";
+        "${id} 正在执行，无法取消。确认要停止并取消任务吗？";
     }
 
     const content = (
