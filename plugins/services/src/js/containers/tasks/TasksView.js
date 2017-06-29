@@ -244,7 +244,7 @@ class TasksView extends mixin(SaveStateMixin) {
           inverseStyle={inverseStyle}
           isFiltering={filterByStatus !== "all" || searchString !== ""}
           onReset={this.resetFilter}
-          name={"任务"}
+          name={"task"}
           totalLength={tasks.length}
         />
         <FilterBar rightAlignLastNChildren={rightAlignLastNChildren}>

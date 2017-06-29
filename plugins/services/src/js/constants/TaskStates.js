@@ -1,7 +1,7 @@
 const TaskStates = {
   TASK_CREATED: {
     stateTypes: ["active", "success"],
-    displayName: "已创建"
+    displayName: "Created"
   },
 
   TASK_STAGING: {
@@ -11,47 +11,47 @@ const TaskStates = {
 
   TASK_STARTING: {
     stateTypes: ["active", "success"],
-    displayName: "正在启动"
+    displayName: "Starting"
   },
 
   TASK_STARTED: {
     stateTypes: ["active", "success"],
-    displayName: "已启动"
+    displayName: "Started"
   },
 
   TASK_RUNNING: {
     stateTypes: ["active", "success"],
-    displayName: "正在运行"
+    displayName: "Running"
   },
 
   TASK_KILLING: {
     stateTypes: ["active", "failure"],
-    displayName: "正在终止"
+    displayName: "Killing"
   },
 
   TASK_FINISHED: {
     stateTypes: ["completed", "success"],
-    displayName: "已完成"
+    displayName: "Finished"
   },
 
   TASK_KILLED: {
     stateTypes: ["completed", "failure"],
-    displayName: "已终止"
+    displayName: "Killed"
   },
 
   TASK_FAILED: {
     stateTypes: ["completed", "failure"],
-    displayName: "失败"
+    displayName: "Failed"
   },
 
   TASK_LOST: {
     stateTypes: ["completed", "failure"],
-    displayName: "丢失"
+    displayName: "Lost"
   },
 
   TASK_ERROR: {
     stateTypes: ["completed", "failure"],
-    displayName: "出错"
+    displayName: "Error"
   },
 
   TASK_GONE: {
@@ -66,17 +66,17 @@ const TaskStates = {
 
   TASK_DROPPED: {
     stateTypes: ["completed", "failure"],
-    displayName: "已丢弃"
+    displayName: "Dropped"
   },
 
   TASK_UNREACHABLE: {
     stateTypes: ["completed", "failure"],
-    displayName: "不可达"
+    displayName: "Unreachable"
   },
 
   TASK_UNKNOWN: {
     stateTypes: ["completed", "failure"],
-    displayName: "未知"
+    displayName: "Unknown"
   }
 };
 
