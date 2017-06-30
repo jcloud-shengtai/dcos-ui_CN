@@ -127,7 +127,7 @@ class SidebarHeader extends mixin(StoreMixin) {
         id: "documentation",
 		onClick() {
           SidebarActions.close();
-          global.open(top.location.hostname + "/jssp-help.pdf", "_blank");
+          global.open("/jssp-help.pdf", "_blank");
         }
       },
       {
