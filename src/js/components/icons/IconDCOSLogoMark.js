@@ -5,7 +5,7 @@ class IconDCOSLogoMark extends React.Component {
     return (
       <svg
         className={this.props.className}
-        width="200"
+        width="100"
         height="200"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
