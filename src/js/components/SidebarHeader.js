@@ -123,8 +123,12 @@ class SidebarHeader extends mixin(StoreMixin) {
         selectable: false
       },
       {
-        html: "文档（敬请期待）",
-        id: "documentation"
+        html: "文档",
+        id: "documentation",
+		onClick() {
+          SidebarActions.close();
+          global.open(top.location.hostname + "/jssp-help.pdf", "_blank");
+        }
       },
       {
         html: "安装CLI（敬请期待）",
